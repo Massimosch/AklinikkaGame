@@ -149,7 +149,7 @@
   align-self: stretch; 
   content: "";
   grid-column: 1;
-  grid-row: 1:
+  grid-row: 1;
   position: absolute;
   width: 22px;
   flex: 1 0 0;

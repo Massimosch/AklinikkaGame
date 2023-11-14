@@ -3,21 +3,21 @@ const StartSceneData = {
   {
     "_comment" : "Tänne voi laittaa random kommentteja scenestä tai muuta?",
     "type" : "linear",
-    "background" : "koulun_piha",
+    "background" : "KoulunPiha.png",
     "characters" : [],
     "text_type" : "infobox",
     "text_position" : "middle",
-    "text" : "t_sofi_outside_drama",
+    "text" : "t_sofi_outside_narrator_1",
     "next_scene" : "SofillaOnTietoa_2"
   },
   "SofillaOnTietoa_2":
   {
     "type" : "options",
-    "background" : "koulun_piha",
+    "background" : "KoulunPiha.png",
     "characters" : ["HahmoSofi"],
     "text_type" : "dialogue",
     "text_position" : "dialogue_left",
-    "text" : "sofi_outside_drama",
+    "text" : "t_sofi_outside_drama",
     "player_choice" : 
     [{
       "text" : "t_sofi_outside_option_1",
@@ -31,7 +31,7 @@ const StartSceneData = {
   "SofillaOnTietoaHaloo":
   {
     "type" : "options",
-    "background" : "koulun_piha",
+    "background" : "KoulunPiha.png",
     "characters" : ["HahmoSofi"],
     "text_type" : "dialogue",
     "text_position" : "dialogue_left",
@@ -51,7 +51,7 @@ const StartSceneData = {
   {
     "comment" : "____________Tästä alkaa terkkari keskustelu",
     "type" : "linear",
-    "background" : "koulun_piha_roskiksilla",
+    "background" : "Roskikset.png",
     "characters" :  [],
     "text_type" : "infobox",
     "text_position" : "middle",
@@ -61,7 +61,7 @@ const StartSceneData = {
   "SofillaOnTietoaTerkkarille_1" : 
   {
     "type" : "options",
-    "background" : "koulun_piha_roskiksilla",
+    "background" : "Roskikset.png",
     "characters" : ["HahmoKouluterkka"],
     "text_type" : "infobox",
     "text_position" : "dialogue_left",
@@ -81,7 +81,7 @@ const StartSceneData = {
   {
     "comment" : "tän scenen avulla vois pohtia animaatioita/fadein/hahmo focusta selkeyden vuoksi",
     "type" : "linear",
-    "background" : "koulun_piha_roskiksilla",
+    "background" : "Roskikset.png",
     "characters" : ["HahmoSofi", "HahmoLydia"],
     "text_type" : "dialogue",
     "text_position" : "dialogue_left",
@@ -92,7 +92,7 @@ const StartSceneData = {
   {
     "comment" : "tän scenen avulla vois pohtia animaatioita/fadein/hahmo focusta selkeyden vuoksi",
     "type" : "linear",
-    "background" : "koulun_piha_roskiksilla",
+    "background" : "Roskikset.png",
     "characters" : ["HahmoSofi", "HahmoLydia"],
     "text_type" : "dialogue",
     "text_position" : "dialogue_right",
@@ -103,7 +103,7 @@ const StartSceneData = {
   {
     "comment" : "tän scenen avulla vois pohtia animaatioita/fadein/hahmo focusta selkeyden vuoksi",
     "type" : "linear",
-    "background" : "koulun_piha_roskiksilla",
+    "background" : "Roskikset.png",
     "characters" : ["HahmoSofi", "HahmoLydia"],
     "text_type" : "dialogue",
     "text_position" : "dialogue_left",
@@ -114,7 +114,7 @@ const StartSceneData = {
   {
     "comment" : "tän scenen avulla vois pohtia animaatioita/fadein/hahmo focusta selkeyden vuoksi",
     "type" : "linear",
-    "background" : "koulun_piha_roskiksilla",
+    "background" : "Roskikset.png",
     "characters" : ["HahmoSofi", "HahmoLydia"],
     "text_type" : "dialogue",
     "text_position" : "dialogue_left",
@@ -125,7 +125,7 @@ const StartSceneData = {
   {
     "comment" : "tän scenen avulla vois pohtia animaatioita/fadein/hahmo focusta selkeyden vuoksi",
     "type" : "options",
-    "background" : "koulun_piha_roskiksilla",
+    "background" : "Roskikset.png",
     "characters" : ["HahmoLydia"],
     "text_type" : "dialogue",
     "text_position" : "dialogue_right",
