@@ -1,155 +1,311 @@
 const StartSceneData = {
-  "SofillaOnTietoa_1":
-  {
-    "_comment" : "Tänne voi laittaa random kommentteja scenestä tai muuta?",
-    "type" : "linear",
-    "background" : "KoulunPiha.png",
-    "characters" : [],
-    "text_type" : "infobox",
-    "text_position" : "middle",
-    "text" : "t_sofi_outside_narrator_1",
-    "next_scene" : "SofillaOnTietoa_2"
-  },
-  "SofillaOnTietoa_2":
-  {
-    "type" : "options",
-    "background" : "KoulunPiha.png",
-    "characters" : ["HahmoSofi"],
-    "text_type" : "dialogue",
-    "text_position" : "dialogue_left",
-    "text" : "t_sofi_outside_drama",
-    "player_choice" : 
-    [{
-      "text" : "t_sofi_outside_option_1",
-      "next_scene" : "SofillaOnTietoaRoskiksille"
-    },
-    {
-      "text" : "t_sofi_outside_option_2",
-      "next_scene" : "SofillaOnTietoaHaloo"
-    }]
-  },
-  "SofillaOnTietoaHaloo":
-  {
-    "type" : "options",
-    "background" : "KoulunPiha.png",
-    "characters" : ["HahmoSofi"],
-    "text_type" : "dialogue",
-    "text_position" : "dialogue_left",
-    "text" : "t_sofi_outside_drama_2",
-    "player_choice" : 
-    [{
-      "text" : "t_sofi_outside_drama_option_deny",
-      "next_scene" : "TempDemoEnd"
-    },
-    {
-      "text" : "t_sofi_outside_drama_option_okay",
-      "next_scene" : "LydianHuolet_1"
-    }]
+  "SofillaOnTietoaAlku": {
+    "_comment": "",
+    "type": "linear",
+    "background": "KoulunPiha",
+    "characters": ["HahmoSofi"],
+    "text_type": "narrator",
+    "text_position": "",
+    "text": "tSofillaOnTietoaAlku",
+    "next_scene": "SofillaOnTietoaDraamaa"
   },
 
-  "SofillaOnTietoaRoskiksille":
-  {
-    "comment" : "____________Tästä alkaa terkkari keskustelu",
-    "type" : "linear",
-    "background" : "Roskikset.png",
-    "characters" :  [],
-    "text_type" : "infobox",
-    "text_position" : "middle",
-    "text" : "t_sofi_outside_towards_trash_narrator",
-    "next_scene" : "SofillaOnTietoaTerkkarille_1"
-  },
-  "SofillaOnTietoaTerkkarille_1" : 
-  {
-    "type" : "options",
-    "background" : "Roskikset.png",
-    "characters" : ["HahmoKouluterkka"],
-    "text_type" : "infobox",
-    "text_position" : "dialogue_left",
-    "text" : "t_sofi_outisde_nurse",
-    "player_choice" : 
-    [{
-      "text" : "t_sofi_outside_nurse_option_yes",
-      "next_scene" : "TempDemoEnd"
-    },
-    {
-      "text" : "t_sofi_outside_nurse_option_no",
-      "next_scene" : "LydianHuolet_1"
-    }]
+  "SofillaOnTietoaDraamaa": {
+    "_comment": "",
+    "type": "options",
+    "background": "KoulunPiha",
+    "characters": ["HahmoSofi"],
+    "text_type": "speech",
+    "text_position": "speechLeft",
+    "text": "tSofillaOnTietoaDraamaa",
+    "player_choice": [
+      {
+        "text": "tSofillaOnTietoaKatsomaanEi",
+        "next_scene": "SofillaOnTietoaHaloo"
+      },
+      {
+        "text": "tSofillaOnTietoaKatsomaanJoo",
+        "next_scene": "SofillaOnTietoaRoskiksille"
+      }
+    ]
   },
 
-  "LydianHuolet_1":
-  {
-    "comment" : "tän scenen avulla vois pohtia animaatioita/fadein/hahmo focusta selkeyden vuoksi",
-    "type" : "linear",
-    "background" : "Roskikset.png",
-    "characters" : ["HahmoSofi", "HahmoLydia"],
-    "text_type" : "dialogue",
-    "text_position" : "dialogue_left",
-    "text" : "t_sofia_lydia_vape_1",
-    "next_scene" : "LydianHuolet_2"
+  "SofillaOnTietoaHaloo": {
+    "_comment": "",
+    "type": "options",
+    "background": "KoulunPiha",
+    "characters": ["HahmoSofi"],
+    "text_type": "speech",
+    "text_position": "speechLeft",
+    "text": "tSofillaOnTietoaHaloo",
+    "player_choice": [
+      {
+        "text": "tSofillaOnTietoaHalooEiPysty",
+        "next_scene": "Juomaautomaatti1"
+      },
+      {
+        "text": "tSofillaOnTietoaHalooOkei",
+        "next_scene": "LydianHuolet1"
+      }
+    ]
   },
-  "LydianHuolet_2":
-  {
-    "comment" : "tän scenen avulla vois pohtia animaatioita/fadein/hahmo focusta selkeyden vuoksi",
-    "type" : "linear",
-    "background" : "Roskikset.png",
-    "characters" : ["HahmoSofi", "HahmoLydia"],
-    "text_type" : "dialogue",
-    "text_position" : "dialogue_right",
-    "text" : "t_sofia_lydia_vape_2",
-    "next_scene" : "LydianHuolet_3"
+
+  "SofillaOnTietoaRoskiksille": {
+    "_comment": "",
+    "type": "linear",
+    "background": "KoulunPiha",
+    "characters": ["HahmoSofi"],
+    "text_type": "narrator",
+    "text_position": "",
+    "text": "tSofillaOnTietoaRoskiksille",
+    "next_scene": "KerrotaankoTerkalle"
   },
-  "LydianHuolet_3":
-  {
-    "comment" : "tän scenen avulla vois pohtia animaatioita/fadein/hahmo focusta selkeyden vuoksi",
-    "type" : "linear",
-    "background" : "Roskikset.png",
-    "characters" : ["HahmoSofi", "HahmoLydia"],
-    "text_type" : "dialogue",
-    "text_position" : "dialogue_left",
-    "text" : "t_sofia_lydia_vape_3",
-    "next_scene" : "LydianHuolet_4"
+
+  "KerrotaankoTerkalle": {
+    "_comment": "",
+    "type": "options",
+    "background": "KoulunPiha",
+    "characters": ["HahmoKouluterkka"],
+    "text_type": "speech",
+    "text_position": "speechLeft",
+    "text": "tKerrotaankoTerkalle",
+    "player_choice": [
+      {
+        "text": "tKerrotaankoTerkalleEi",
+        "next_scene": "LydianHuolet1"
+      },
+      {
+        "text": "tKerrotaankoTerkalleJoo",
+        "next_scene": "TerkanVastaus"
+      }
+    ]
   },
-  "LydianHuolet_4":
-  {
-    "comment" : "tän scenen avulla vois pohtia animaatioita/fadein/hahmo focusta selkeyden vuoksi",
-    "type" : "linear",
-    "background" : "Roskikset.png",
-    "characters" : ["HahmoSofi", "HahmoLydia"],
-    "text_type" : "dialogue",
-    "text_position" : "dialogue_left",
-    "text" : "t_sofia_lydia_vape_4",
-    "next_scene" : "LydianHuolet_5"
+
+  "TerkanVastaus": {
+    "_comment": "",
+    "type": "linear",
+    "background": "KoulunPiha",
+    "characters": ["HahmoKouluterkka"],
+    "text_type": "speech",
+    "text_position": "speechLeft",
+    "text": "tTerkanVastaus",
+    "next_scene": "MitaTiedatVapesta"
   },
-  "LydianHuolet_5":
-  {
-    "comment" : "tän scenen avulla vois pohtia animaatioita/fadein/hahmo focusta selkeyden vuoksi",
-    "type" : "options",
-    "background" : "Roskikset.png",
-    "characters" : ["HahmoLydia"],
-    "text_type" : "dialogue",
-    "text_position" : "dialogue_right",
-    "text" : "t_sofia_lydia_vape_5",
-    "player_choice" : 
-    [{
-      "text" : "t_sofia_lydia_vape_choice_help",
-      "next_scene" : "TempDemoEnd"
-    },
-    {
-      "text" : "t_sofia_lydia_vape_choice_leave",
-      "next_scene" : "TempDemoEnd"
-    }]
+
+  "LydianHuolet1": {
+    "_comment": "",
+    "type": "linear",
+    "background": "Roskikset",
+    "characters": ["HahmoSofi", "HahmoLydia"],
+    "text_type": "speech",
+    "text_position": "speechLeft",
+    "text": "tLydianHuolet1",
+    "next_scene": "LydianHuolet2"
   },
-  "TempDemoEnd":
-  {
-    "comment" : "MUISTETAAN POISTAA",
-    "type" : "linear",
-    "background" : null,
-    "characters" : [],
-    "text_type" : "infobox",
-    "text_position" : "middle",
-    "text" : "t_TempDemoEnd",
-    "next_scene" : "TempDemoEnd"
-  }
+
+  "LydianHuolet2": {
+    "_comment": "",
+    "type": "linear",
+    "background": "Roskikset",
+    "characters": ["HahmoSofi", "HahmoLydia"],
+    "text_type": "speech",
+    "text_position": "speechRight",
+    "text": "tLydianHuolet2",
+    "next_scene": "LydianHuolet3"
+  },
+
+  "LydianHuolet3": {
+    "_comment": "",
+    "type": "linear",
+    "background": "Roskikset",
+    "characters": ["HahmoSofi", "HahmoLydia"],
+    "text_type": "speech",
+    "text_position": "speechLeft",
+    "text": "tLydianHuolet3",
+    "next_scene": "LydianHuolet4"
+  },
+
+  "LydianHuolet4": {
+    "_comment": "",
+    "type": "linear",
+    "background": "Roskikset",
+    "characters": ["HahmoSofi", "HahmoLydia"],
+    "text_type": "speech",
+    "text_position": "speechLeft",
+    "text": "tLydianHuolet4",
+    "next_scene": "LydianHuolet5"
+  },
+
+  "LydianHuolet5": {
+    "_comment": "speech",
+    "type": "linear",
+    "background": "Roskikset",
+    "characters": ["HahmoSofi", "HahmoLydia"],
+    "text_type": "speech",
+    "text_position": "speechRight",
+    "text": "tLydianHuolet5",
+    "next_scene": "LydianHuolet6"
+  },
+
+  "LydianHuolet6": {
+    "_comment": "",
+    "type": "options",
+    "background": "Roskikset",
+    "characters": ["HahmoSofi", "HahmoLydia"],
+    "text_type": "speech",
+    "text_position": "speechRight",
+    "text": "tLydianHuolet6",
+    "player_choice": [
+      {
+        "text": "tLydianHuolet6Lahdetaan",
+        "next_scene": "AnuKuulee1"
+      },
+      {
+        "text": "tLydianHuolet6Autetaan",
+        "next_scene": "LydianNude1"
+      }
+    ]
+  },
+
+  "LydianNude1": {
+    "_comment": "",
+    "type": "linear",
+    "background": "Roskikset",
+    "characters": ["HahmoLydia"],
+    "text_type": "speech",
+    "text_position": "speechLeft",
+    "text": "tLydianNude1",
+    "next_scene": "LydianNude2"
+  },
+
+  "LydianNude2": {
+    "_comment": "",
+    "type": "linear",
+    "background": "Roskikset",
+    "characters": ["HahmoLydia"],
+    "text_type": "speech",
+    "text_position": "speechLeft",
+    "text": "tLydianNude2",
+    "next_scene": "LydianNude3"
+  },
+
+  "LydianNude3": {
+    "_comment": "",
+    "type": "options",
+    "background": "Roskikset",
+    "characters": ["HahmoLydia"],
+    "text_type": "narrator",
+    "text_position": "",
+    "text": "tLydianNude3",
+    "player_choice": [
+      {
+        "text": "tLydianNude3Koulu",
+        "next_scene": "LydianNude4"
+      },
+      {
+        "text": "tLydianNude3SVS",
+        "next_scene": "LydianNude4"
+      },
+      {
+        "text": "tLydianNude3Aikuinen",
+        "next_scene": "LydianNude4"
+      }
+    ]
+  },
+
+  "LydianNude4": {
+    "_comment": "",
+    "type": "linear",
+    "background": "Roskikset",
+    "characters": ["HahmoLydia"],
+    "text_type": "narrator",
+    "text_position": "",
+    "text": "tLydianNude4",
+    "next_scene": "LydianNude5"
+  },
+
+  "LydianNude5": {
+    "_comment": "",
+    "type": "linear",
+    "background": "Roskikset",
+    "characters": ["HahmoLydia"],
+    "text_type": "speech",
+    "text_position": "speechLeft",
+    "text": "tLydianNude5",
+    "next_scene": "Energiajuomat1"
+  },
+
+  "AnuKuulee1": {
+    "_comment": "",
+    "type": "options",
+    "background": "Roskikset",
+    "characters": ["HahmoKuraattoriAnu", "HahmoSofi"],
+    "text_type": "speech",
+    "text_position": "speechLeft",
+    "text": "tAnuKuulee1",
+    "player_choice": [
+      {
+        "text": "tAnuKuulee1OK",
+        "next_scene": "AnuKuulee2Lydia"
+      },
+      {
+        "text": "tAnuKuulee1Lydia",
+        "next_scene": "SofinViiltely1"
+      }
+    ]
+  },
+
+  "SofinViiltely1": {
+    "_comment": "",
+    "type": "linear",
+    "background": "Roskikset",
+    "characters": ["HahmoSofi"],
+    "text_type": "speech",
+    "text_position": "speechLeft",
+    "text": "tSofinViiltely1",
+    "next_scene": "SofinViiltely2"
+  },
+
+  "SofinViiltely2": {
+    "_comment": "",
+    "type": "options",
+    "background": "Roskikset",
+    "characters": ["HahmoSofi"],
+    "text_type": "speech",
+    "text_position": "speechLeft",
+    "text": "tSofinViiltely2",
+    "player_choice": [
+      {
+        "text": "tSofinViiltely2Itsekin",
+        "next_scene": "TukipalvelutHyvaAjatus"
+      },
+      {
+        "text": "tSofinViiltely2OK",
+        "next_scene": "TukipalvelutPidaMielessa"
+      }
+    ]
+  },
+
+  "TukipalvelutHyvaAjatus": {
+    "_comment": "",
+    "type": "linear",
+    "background": "Roskikset",
+    "characters": [],
+    "text_type": "narrator",
+    "text_position": "",
+    "text": "tTukipalvelutHyvaAjatus",
+    "next_scene": "Energiajuomat1"
+  },
+
+  "TukipalvelutPidaMielessa": {
+    "_comment": "",
+    "type": "linear",
+    "background": "Roskikset",
+    "characters": [],
+    "text_type": "narrator",
+    "text_position": "",
+    "text": "tTukipalvelutPidaMielessa",
+    "next_scene": "Energiajuomat1"
+  },
 }
 export default StartSceneData

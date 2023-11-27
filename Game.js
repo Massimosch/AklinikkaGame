@@ -1,4 +1,4 @@
-import StartSceneData from "/Data/StartSceneData.js";
+import StartSceneData from "/data/StartSceneData.js";
 import Suomi from "./data/suomi.js";
 
 const mainGameContainer = document.querySelector('.game-flex-container');
@@ -7,8 +7,8 @@ const settingsMenu = document.querySelector('.top-options-menu');
 const infoboxElement = document.querySelector('.narratorBox');
 const infoboxText = document.querySelector('.narratorBoxText');
 
-const speechBubbleElement = document.querySelector('.speechBubble');
-const speechBubbleText = document.querySelector('.speechBubbleText');
+const speechBubbleLeft = document.querySelector('.speechBubbleLeft');
+const speechBubbleRight = document.querySelector('.speechBubbleRight');
 
 // array queries
 const characterElements = document.querySelectorAll('.character');
@@ -19,9 +19,11 @@ let currentBackground;
 let language = Suomi;
 let currentScene;
 let nextScene;
+let transitionDelayTime;
+let delayTimeInSeconds = 0.25;
 
 // game setup
-nextScene = StartSceneData.SofillaOnTietoa_1;
+nextScene = StartSceneData.SofillaOnTietoaAlku;
 addClickEventListener();
 PopulateScene();
 
@@ -30,6 +32,13 @@ function addClickEventListener(){
   mainGameContainer.addEventListener("click", event => {
 
     // double click speed timer here to avoid accidental progress?
+    const currentTimeInSeconds = new Date().getTime() / 1000;
+    
+    if (currentTimeInSeconds - transitionDelayTime < delayTimeInSeconds) {
+      console.log(`Clicked too fast need to wait delayTime = ${delayTimeInSeconds}`);
+      return;
+    }
+    transitionDelayTime = currentTimeInSeconds;
 
     if (event.target === settingsMenu){
       //TODO settings menu opening?
@@ -55,9 +64,9 @@ function addClickEventListener(){
 function PopulateScene(){
 
   // background image change
-  if (nextScene.background !== currentBackground && nextScene.background !== null){
+  if (nextScene.background !== null && nextScene.background !== currentBackground){
     currentBackground = nextScene.background;
-    mainGameContainer.style.backgroundImage = "url(images/backgrounds/" + currentBackground + ")";
+    mainGameContainer.style.backgroundImage = "url(images/backgrounds/" + currentBackground + ".png)";
   }
 
   // draw characters here
@@ -70,10 +79,10 @@ function PopulateScene(){
     characterElements[i].classList.remove('hidden');
   }
 
-  if (nextScene.text_type === "dialogue"){
+  if (nextScene.text_type === "dialogue" || nextScene.text_type === "speech"){
     WriteDialogue();
   }
-  if (nextScene.text_type === "infobox"){
+  if (nextScene.text_type === "infobox" || nextScene.text_type === "narrator"){
     WriteInfobox();
   }
   PlayerChoiceSetup();
@@ -84,12 +93,22 @@ function PopulateScene(){
 function WriteInfobox(){
   infoboxElement.classList.remove('hidden');
   infoboxText.textContent = language[nextScene.text];
-  speechBubbleElement.classList.add('hidden');
+  speechBubbleLeft.classList.add('hidden');
+  speechBubbleRight.classList.add('hidden');
 }
 function WriteDialogue(){
-  speechBubbleElement.classList.remove('hidden');
-  speechBubbleText.textContent = language[nextScene.text];
   infoboxElement.classList.add('hidden');
+
+  if (nextScene.text_position === "speechLeft"){
+    speechBubbleLeft.classList.remove('hidden');
+    speechBubbleRight.classList.add('hidden');
+    speechBubbleLeft.textContent = language[nextScene.text];
+  }
+  else{
+    speechBubbleRight.classList.remove('hidden');
+    speechBubbleLeft.classList.add('hidden');
+    speechBubbleRight.textContent = language[nextScene.text];
+  }
 }
 
 // player choice box setup
