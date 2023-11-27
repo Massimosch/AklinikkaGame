@@ -34,15 +34,150 @@ body {
 .top-options-menu{
   align-self: flex-end;
   padding: 3%;
+  z-index: 11;
+
+  /* position: relative; it doesn't work */
+
 }
 
-.top-text-container{
-  display: flex;
-  flex-direction: column;
+#game-buttons {
+  /*position: absolute;*/
+  top: 0;
+  left: 0;
+  z-index: 13;
+  background-color: white;
+  padding: 10px;
+  border: 1px solid black;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  z-index: 10;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent black overlay */
+  display: flex;
+  justify-content: center;
   align-items: center;
-  top: 50px;
+  flex-direction: column;
+}
+
+#game-buttons button {
+  margin: 0 10px;
+  display: block;
+  position: relative;
+}
+
+#game-buttons.active {
+  display: block;
+}
+
+
+.startbutton {
+  background-color: #FFF8EE;
+  border-radius: 11px;
+  border: 2px solid #000;
+  color: #000;
+  padding: 12px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  font-family: JetBrains Mono;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.starticon {
+    position: relative;
+    display: block;
+    height: 65px;
+    width: 80px;
+  margin-right: -8px;
+  }
+
+  .pausemenubutton {
+    background-color: #FFF8EE;
+    border-radius: 11px;
+    border: 2px solid #000;
+    width: 350px; /* Tätä leveysasiaa pitää vielä miettiä */
+    color: #000;
+    padding: 25px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    font-family: JetBrains Mono;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    display: flex;
+    align-items: center;
+    gap: 17px;
+  }
+
+  .backicon {
+      position: relative;
+      display: block;
+      height: 55px;
+      width: 55px;
+    flex-shrink: 0;
+  }
+
+  .homeicon {
+      position: relative;
+      display: block;
+      height: 55px;
+      width: 55px;
+    flex-shrink: 0;
+    }
+
+.top-text-container{
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+   z-index: 10;
+   align-items: center;
+   top: 50px;
+}
+
+/* Animation */
+ @keyframes fadeIn {
+  from {
+    opacity: 0;
+  } to {
+    opacity: 1;
+  }
+ }
+
+ .speechBubbleLeft {
+  opacity: 0;
+}
+
+ .speechBubbleLeft {
+  animation-name: fadeIn;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+.speechBubbleRight {
+  opacity: 0;
+}
+
+ .speechBubbleRight {
+  animation-name: fadeIn;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+.top-text-container {
+  opacity: 0;
+}
+
+.top-text-container {
+  animation-name: fadeIn;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
 }
 
 
@@ -60,6 +195,16 @@ body {
   align-items: flex-end safe;
   flex-direction: row;
 }
+#info-screen {
+  position: absolute;
+  width: auto;
+  height: auto;
+}
+#player-customize {
+  position: absolute;
+  width: auto;
+  height: auto;
+}
 
 .character{
   aspect-ratio: 1/1;
@@ -76,12 +221,74 @@ body {
 
 .bottom-choice-container{
   margin-top: auto;
-
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
   row-gap: 10px;
+  z-index: 10;
+  padding-bottom: 3vh;
+}
+
+.choiceBox {
+  position: relative;
+  left: -100%; /* Initial position off-screen to the left */
+  opacity: 0; /* Initially set opacity to 0 to make it invisible */
+  visibility: hidden; /* Initially set visibility to hidden */
+  animation: slideFromLeft 3s forwards; /* Apply the animation with a duration of 2 seconds */
+}
+
+@keyframes slideFromLeft {
+  from {
+    left: -100%; /* Initial position off-screen to the left */
+    opacity: 0; /* Initial opacity set to 0 */
+    visibility: hidden; /* Initial visibility set to hidden */
+  }
+  to {
+    left: 0; /* Move the element to its intended position */
+    opacity: 1; /* Set opacity to 1 to make it visible */
+    visibility: visible; /* Set visibility to visible */
+  }
+}
+
+.startpage-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  max-width: 1080px;
+  max-height: 70vh;
+  z-index: 10;
+  padding-bottom: 3vh;
+}
+
+.startpagecharacter-container{
+flex: 1;
+}
+
+.startpagecharacter{
+  max-height: 70vh;
+  width: auto;
+  z-index: 1;
+}
+
+.startmenubuttons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+    flex-grow: 1;
+    z-index: 10;
+}
+
+.startpage-footer{
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1080px;
   z-index: 10;
   padding-bottom: 3vh;
 }

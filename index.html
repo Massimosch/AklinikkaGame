@@ -23,12 +23,54 @@
 <body>
   <!-- flexbox main container -->
   <div class="game-flex-container">
+
     <div class="top-options-menu">
-      <img src="images/UI/MenuIcon.png" alt="menu">
+      <button id="pauseMenuButton">pauseMenuButton</button>
+      
+      <div id="game-buttons" style="display: none;">
+        <!-- <button id="start-button">Start</button> 
+        <button class="startbutton" id="start-button">
+          Aloita<br>peli
+          <svg class="starticon" role="img" viewBox="0 0 65 80" xmlns="http://www.w3.org/2000/svg">
+        <path id="Polygon 1" d="M61.6694 36.9114C64.1335 38.4956 64.115 42.104 61.6347 43.6627L7.85227 77.4634C5.18062 79.1424 1.70766 77.2115 1.72389 74.0561L2.07446 5.90334C2.09069 2.74791 5.58334 0.852834 8.23758 2.55928L61.6694 36.9114Z" fill="#90E2FD" stroke="black" stroke-width="2"/>
+        </svg> 
+          </button>
+          <br> --> 
+          
+        <!-- <button id="continue-button">Continue</button> -->
+        <button class="pausemenubutton" id="pause-button">
+          <svg class="backicon" viewBox="0 0 55 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g id="&#240;&#159;&#166;&#134; icon &#34;back square&#34;">
+          <g id="Group">
+          <path id="Vector" d="M19.55 52.7212H35.45C48.7 52.7212 54 47.5491 54 34.6188V19.1024C54 6.17212 48.7 1 35.45 1H19.55C6.3 1 1 6.17212 1 19.1024V34.6188C1 47.5491 6.3 52.7212 19.55 52.7212Z" fill="#90E2FD" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <g id="Vector_2">
+          <path d="M19.55 35.602H32.5879C37.0929 35.602 40.7499 32.0332 40.7499 27.6369C40.7499 23.2406 37.0929 19.6719 32.5879 19.6719H14.6475" fill="#90E2FD"/>
+          <path d="M19.55 35.602H32.5879C37.0929 35.602 40.7499 32.0332 40.7499 27.6369C40.7499 23.2406 37.0929 19.6719 32.5879 19.6719H14.6475" stroke="#292D32" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+          </g>
+          <g id="Vector_3">
+          <path d="M18.4105 23.6792L14.25 19.5933L18.4105 15.5332" fill="#90E2FD"/>
+          <path d="M18.4105 23.6792L14.25 19.5933L18.4105 15.5332" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </g>
+          </g>
+          </g>
+          </svg> 
+              Jatka peliä 
+            </button>
+            <br>
+            <!--  <button id="restart-button">Restart</button> -->
+            <button class="pausemenubutton" id="restart-button">
+              <svg class="homeicon" viewBox="0 0 59 57" fill="none" role="img" xmlns="http://www.w3.org/2000/svg">
+          <g id="&#240;&#159;&#166;&#134; icon &#34;home 1&#34;">
+          <path id="Vector" d="M23.3924 2.92602L23.3932 2.92542C26.6871 0.343813 31.9456 0.362651 35.2803 2.95556C35.2804 2.95567 35.2806 2.95578 35.2807 2.95589L54.1565 17.6921C54.1576 17.693 54.1588 17.6939 54.16 17.6948C55.3192 18.6184 56.2988 20.0413 56.9256 21.6421C57.5524 23.2429 57.7935 24.937 57.5691 26.3698L53.9386 47.5708C53.9385 47.5718 53.9383 47.5727 53.9381 47.5737C53.1874 51.783 48.9994 55.271 44.6016 55.271H14.0405C9.58248 55.271 5.48361 51.8651 4.73299 47.6031C4.73287 47.6024 4.73274 47.6017 4.73261 47.6009L1.10065 26.3911L1.10024 26.3888C0.849439 24.9448 1.07655 23.2464 1.70231 21.645C2.32776 20.0444 3.3197 18.6224 4.50623 17.6985L4.50798 17.6972L23.3924 2.92602ZM29.3211 48.127C31.0323 48.127 32.4834 46.7456 32.4834 45.0168V36.5762C32.4834 34.8475 31.0323 33.466 29.3211 33.466C27.6099 33.466 26.1588 34.8475 26.1588 36.5762V45.0168C26.1588 46.7456 27.6099 48.127 29.3211 48.127Z" fill="#BFF8FF" stroke="black" stroke-width="2"/>
+          </g>
+          </svg>
+              Palaa alkuun
+            </button>
+            
+      </div>
     </div>
 
     <div class="top-text-container">
-
       <div class="narratorBox">
         <div class="details">
           <div class="shine" id="shine1"></div>

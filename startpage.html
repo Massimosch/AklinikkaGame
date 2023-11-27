@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" type="text/css" href="UIstyles.css" />
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+  <link rel="stylesheet" type="text/css" href="buttonstyles.css" />
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Jura&display=swap"
+    rel="stylesheet">
+  <!--
+      font-family: 'JetBrains Mono', monospace;
+      font-family: 'Jura', sans-serif;
+    -->
+</head>
+
+<body>
+  <!-- flexbox main container -->
+  <div class="game-flex-container">
+
+    <div class="top-text-container">
+      <img src="/images/UI/Logo_Color.png" width="50%">
+    </div>
+
+    <div class="startpage-container">
+      <div class="startpagecharacter-container">
+        <img class="startpagecharacter" src="images/characters/HahmoLydia.png">
+      </div>
+
+      <div class="startmenubuttons">
+      
+        <button class="startbutton">
+          Aloita<br>peli
+          <svg class="starticon" role="img" viewBox="0 0 65 80" xmlns="http://www.w3.org/2000/svg">
+          <path id="Polygon 1" d="M61.6694 36.9114C64.1335 38.4956 64.115 42.104 61.6347 43.6627L7.85227 77.4634C5.18062 79.1424 1.70766 77.2115 1.72389 74.0561L2.07446 5.90334C2.09069 2.74791 5.58334 0.852834 8.23758 2.55928L61.6694 36.9114Z" fill="#90E2FD" stroke="black" stroke-width="2"/>
+          </svg> 
+        </button>
+        <br>
+
+        <button class="languagebutton">
+          <svg class="langicon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M29.559 0H9.853C4.41415 0 0 4.39444 0 9.81359V21.5978V23.5684C0 28.9875 4.41415 33.382 9.853 33.382H12.8089C13.341 33.382 14.0504 33.7367 14.3854 34.1702L17.3413 38.0917C18.6419 39.8258 20.7701 39.8258 22.0707 38.0917L25.0266 34.1702C25.401 33.6776 25.9922 33.382 26.6031 33.382H29.559C34.9979 33.382 39.412 28.9875 39.412 23.5684V9.81359C39.412 4.39444 34.9979 0 29.559 0ZM11.8236 19.706C10.7201 19.706 9.853 18.8192 9.853 17.7354C9.853 16.6516 10.7398 15.7648 11.8236 15.7648C12.9074 15.7648 13.7942 16.6516 13.7942 17.7354C13.7942 18.8192 12.9271 19.706 11.8236 19.706ZM19.706 19.706C18.6025 19.706 17.7354 18.8192 17.7354 17.7354C17.7354 16.6516 18.6222 15.7648 19.706 15.7648C20.7898 15.7648 21.6766 16.6516 21.6766 17.7354C21.6766 18.8192 20.8095 19.706 19.706 19.706ZM27.5884 19.706C26.4849 19.706 25.6178 18.8192 25.6178 17.7354C25.6178 16.6516 26.5046 15.7648 27.5884 15.7648C28.6722 15.7648 29.559 16.6516 29.559 17.7354C29.559 18.8192 28.6919 19.706 27.5884 19.706Z" fill="#A9A7FE"/>
+          </svg>
+          Suomi
+        </button>
+        
+        <button class="languagebutton">
+          <svg class="langicon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M29.559 0H9.853C4.41415 0 0 4.39444 0 9.81359V21.5978V23.5684C0 28.9875 4.41415 33.382 9.853 33.382H12.8089C13.341 33.382 14.0504 33.7367 14.3854 34.1702L17.3413 38.0917C18.6419 39.8258 20.7701 39.8258 22.0707 38.0917L25.0266 34.1702C25.401 33.6776 25.9922 33.382 26.6031 33.382H29.559C34.9979 33.382 39.412 28.9875 39.412 23.5684V9.81359C39.412 4.39444 34.9979 0 29.559 0ZM11.8236 19.706C10.7201 19.706 9.853 18.8192 9.853 17.7354C9.853 16.6516 10.7398 15.7648 11.8236 15.7648C12.9074 15.7648 13.7942 16.6516 13.7942 17.7354C13.7942 18.8192 12.9271 19.706 11.8236 19.706ZM19.706 19.706C18.6025 19.706 17.7354 18.8192 17.7354 17.7354C17.7354 16.6516 18.6222 15.7648 19.706 15.7648C20.7898 15.7648 21.6766 16.6516 21.6766 17.7354C21.6766 18.8192 20.8095 19.706 19.706 19.706ZM27.5884 19.706C26.4849 19.706 25.6178 18.8192 25.6178 17.7354C25.6178 16.6516 26.5046 15.7648 27.5884 15.7648C28.6722 15.7648 29.559 16.6516 29.559 17.7354C29.559 18.8192 28.6919 19.706 27.5884 19.706Z" fill="#A9A7FE"/>
+          </svg>
+          English
+        </button>
+        
+        <button class="languagebutton">
+          <svg class="langicon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M29.559 0H9.853C4.41415 0 0 4.39444 0 9.81359V21.5978V23.5684C0 28.9875 4.41415 33.382 9.853 33.382H12.8089C13.341 33.382 14.0504 33.7367 14.3854 34.1702L17.3413 38.0917C18.6419 39.8258 20.7701 39.8258 22.0707 38.0917L25.0266 34.1702C25.401 33.6776 25.9922 33.382 26.6031 33.382H29.559C34.9979 33.382 39.412 28.9875 39.412 23.5684V9.81359C39.412 4.39444 34.9979 0 29.559 0ZM11.8236 19.706C10.7201 19.706 9.853 18.8192 9.853 17.7354C9.853 16.6516 10.7398 15.7648 11.8236 15.7648C12.9074 15.7648 13.7942 16.6516 13.7942 17.7354C13.7942 18.8192 12.9271 19.706 11.8236 19.706ZM19.706 19.706C18.6025 19.706 17.7354 18.8192 17.7354 17.7354C17.7354 16.6516 18.6222 15.7648 19.706 15.7648C20.7898 15.7648 21.6766 16.6516 21.6766 17.7354C21.6766 18.8192 20.8095 19.706 19.706 19.706ZM27.5884 19.706C26.4849 19.706 25.6178 18.8192 25.6178 17.7354C25.6178 16.6516 26.5046 15.7648 27.5884 15.7648C28.6722 15.7648 29.559 16.6516 29.559 17.7354C29.559 18.8192 28.6919 19.706 27.5884 19.706Z" fill="#A9A7FE"/>
+          </svg>
+          Svenska
+        </button>
+      </div>
+
+      <div class="startpagecharacter-container">
+        <img class="startpagecharacter" src="images/characters/HahmoKuraattoriAnu.png">
+      </div>
+
+    </div>  
+
+    <div class="startpage-footer">
+      <p>Hukkaputki © A-klinikkasäätiö 2023</p>
+    </div>
+  </div>
+
+</body>
+
+</html>
