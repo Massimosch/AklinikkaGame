@@ -33,6 +33,8 @@ PopulateScene();
 function addClickEventListener() {
   mainGameContainer.addEventListener('click', event => {
     // double click speed timer here to avoid accidental progress?
+    //debug
+    console.log('Clicked Element:', event.target);
     const currentTimeInSeconds = new Date().getTime() / 1000;
 
     if (currentTimeInSeconds - transitionDelayTime < delayTimeInSeconds) {
@@ -84,9 +86,24 @@ function addClickEventListener() {
       PopulateScene();
       return;
     }
+
+    //debug
+    console.log(
+      'Current Scene Type:',
+      currentScene ? currentScene.type : '???'
+    );
+
     // if choice elements clicked, set nextscene
     for (let i = 0; i < playerChoiceElements.length; i++) {
       if (event.target.parentElement === playerChoiceElements[i]) {
+        //debug
+        console.log(
+          'Next Scene (Player Choice):',
+          nextScene.player_choice
+            ? StartSceneData[nextScene.player_choice[i].next_scene]
+            : '???'
+        );
+        //---
         nextScene = StartSceneData[currentScene.player_choice[i].next_scene];
         PopulateScene();
         return;
@@ -164,12 +181,23 @@ function WriteDialogue() {
 
 // player choice box setup
 function PlayerChoiceSetup() {
+  //debug
+  console.log('Current Scene Type:', currentScene ? currentScene.type : '???');
   for (let i = 0; i < playerChoiceElements.length; i++) {
     // hide null choices
     if (nextScene.type === 'linear' || i >= nextScene.player_choice.length) {
       playerChoiceElements[i].classList.add('hidden');
     } else {
       playerChoiceElements[i].classList.remove('hidden');
+
+      //debug
+      console.log(
+        `Player Choice ${i + 1} Text:`,
+        nextScene.player_choice
+          ? language[nextScene.player_choice[i].text]
+          : '???'
+      );
+
       playerChoiceTextElements[i].textContent =
         language[nextScene.player_choice[i].text];
     }

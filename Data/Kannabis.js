@@ -2,8 +2,8 @@ const Kannabis = {
   RoopeJointti1: {
     _comment: '',
     type: 'options',
-    background: '',
-    characters: ['HahmoRoope'],
+    background: 'Roskikset',
+    characters: ['HahmoTuomas'],
     text_type: 'speech',
     text_position: 'speechLeft',
     text: 'tRoopeJointti1',
