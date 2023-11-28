@@ -1,4 +1,4 @@
-import StartSceneData from "/data/StartSceneData.js";
+import StartSceneData from "./data/StartSceneData.js";
 import SuomiData from "./data/suomi.js";
 //import EnglishData from "./data/english.js";
 //import SwedishData from "./data/swedish.js";
