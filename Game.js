@@ -1,5 +1,17 @@
+//import StartSceneData from '/data/StartSceneData.js';
 import StartSceneData from '/data/StartSceneData.js';
 import Suomi from './data/suomi.js';
+import LydianHuolet from '/data/LydianHuolet.js';
+import MironKotona from '/data/MironKotona.js';
+import MironTapaaminen from '/data/MironTapaaminen.js';
+import RoopenNuuskat from '/data/RoopenNuuskat.js';
+import OppituntiAlkamassa from '/data/OppituntiAlkamassa.js';
+import RoopenSteroidit from '/data/RoopenSteroidit.js';
+import SofiaSaattamassa from '/data/SofiaSaattamassa.js';
+import SofinKotona from '/data/SofinKotona.js';
+import SofillaOnTietoa from '/data/SofillaOnTietoa.js';
+import SofinSomeTauko from '/data/SofinSometauko.js';
+import Kannabis from '/data/Kannabis.js';
 
 const mainGameContainer = document.querySelector('.game-flex-container');
 
@@ -28,6 +40,37 @@ let delayTimeInSeconds = 0.25;
 nextScene = StartSceneData.SofillaOnTietoaAlku;
 addClickEventListener();
 PopulateScene();
+
+const sceneDatas = [
+  LydianHuolet,
+  MironKotona,
+  MironTapaaminen,
+  RoopenNuuskat,
+  OppituntiAlkamassa,
+  RoopenSteroidit,
+  SofiaSaattamassa,
+  SofinKotona,
+  SofillaOnTietoa,
+  SofinSomeTauko,
+  Kannabis,
+];
+
+function getScene(sceneName) {
+  // Check in StartSceneData first
+  if (StartSceneData[sceneName]) {
+    return StartSceneData[sceneName];
+  }
+
+  // Check in each Kannabis module
+  for (const sceneData of sceneDatas) {
+    if (sceneData[sceneName]) {
+      return sceneData[sceneName];
+    }
+  }
+
+  // Scene not found
+  return null;
+}
 
 // click event listener
 function addClickEventListener() {
@@ -80,12 +123,21 @@ function addClickEventListener() {
         gameButtons.style.display = 'none';
       });
     }
+    //-------------------Testi---------------------
+    if (currentScene.type === 'linear') {
+      nextScene = getScene(currentScene.next_scene);
+      PopulateScene();
+      return;
+    }
 
+    //------------------------------------------------
+    /*
     if (currentScene.type === 'linear') {
       nextScene = StartSceneData[currentScene.next_scene];
       PopulateScene();
       return;
     }
+    */
 
     //debug
     console.log(
@@ -113,6 +165,14 @@ function addClickEventListener() {
 }
 
 function PopulateScene() {
+  //-----------------
+  if (!nextScene) {
+    console.error('nextScene on nul');
+    return;
+  }
+
+  //------------
+
   // background image change
   if (
     nextScene.background !== null &&
@@ -203,3 +263,4 @@ function PlayerChoiceSetup() {
     }
   }
 }
+export default sceneDatas;

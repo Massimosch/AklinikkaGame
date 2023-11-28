@@ -307,7 +307,7 @@ const StartSceneData = {
     text_type: 'narrator',
     text_position: '',
     text: 'tTukipalvelutPidaMielessa',
-    next_scene: 'RoopenJointti1',
+    next_scene: Kannabis.RoopeJointti1,
   },
 };
 export default StartSceneData;
