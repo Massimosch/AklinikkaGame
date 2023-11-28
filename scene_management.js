@@ -1,7 +1,7 @@
-import StartSceneData from "./data/StartSceneData.js";
-import SuomiData from "./data/suomi.js";
-//import EnglishData from "./data/english.js";
-//import SwedishData from "./data/swedish.js";
+import StartSceneData from "./scene_data/StartSceneData.js";
+import SuomiData from "./languages/suomi.js";
+//import EnglishData from "./languages/english.js";
+//import SwedishData from "./languages/swedish.js";
 
 const mainGameContainer = document.querySelector('.game-flex-container');
 
