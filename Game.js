@@ -56,19 +56,16 @@ const sceneDatas = [
 ];
 
 function getScene(sceneName) {
-  // Check in StartSceneData first
   if (StartSceneData[sceneName]) {
     return StartSceneData[sceneName];
   }
 
-  // Check in each Kannabis module
   for (const sceneData of sceneDatas) {
     if (sceneData[sceneName]) {
       return sceneData[sceneName];
     }
   }
 
-  // Scene not found
   return null;
 }
 
