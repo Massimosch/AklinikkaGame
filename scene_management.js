@@ -44,6 +44,7 @@ const swedishButton = document.querySelector('.swedish-button');
 
 // Testi eri branchien testaukseen
 /*  
+    Kannabis.RoopeJointti1
     LydianHuolet.LydianHuolet1
     MironKotona.MatkallaMirolle1
     MironTapaaminen.Energiajuomat1
@@ -62,8 +63,8 @@ const swedishButton = document.querySelector('.swedish-button');
   Vaihda StartSceneData.SofillaOnTietoaAlku johonkin noista yllä olevista tai omaan sceneen.
   Ja currentDataFile siihen alkupätkään joka on se filu. Alta esimerkki
 */
-let gameStartingScene = OppituntiAlkamassa.Oppitunti1;
-let currentDataFile = OppituntiAlkamassa;
+let gameStartingScene = Kannabis.RoopeJointti1;
+let currentDataFile = Kannabis;
 
 let currentBackground;
 let language = SuomiData;
