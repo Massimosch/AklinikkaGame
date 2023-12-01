@@ -30,11 +30,11 @@ const SofinSometauko = {
     player_choice: [
       {
         text: "tSofinSometauko3EnPystyis",
-        next_scene: "tSofinSometauko4",
+        next_scene: "SofinSometauko4",
       },
       {
         text: "tSofinSometauko3Miksi",
-        next_scene: "tSofinSometauko4",
+        next_scene: "SofinSometauko4",
       },
     ],
   },
@@ -59,33 +59,31 @@ const SofinSometauko = {
     player_choice: [
       {
         text: "tSofinSometauko5Liikaa",
-        next_scene: "tSometaukoInfobox2",
+        next_scene: "SometaukoInfobox2",
       },
       {
-        text: "tSofinsometauko5Hyotya",
-        next_scene: "tSometaukoInfobox1",
+        text: "tSofinSometauko5Hyotya",
+        next_scene: "SometaukoInfobox1",
       },
     ],
   },
   SometaukoInfobox1: {
-    _comment: "",
+    _comment: "Molemmat vaihtoehdot jatkaa kohtaukseen Oppitunti1",
     type: "linear",
     background: "Kaytava",
     characters: ["HahmoSofi"],
-    text_type: "speech",
-    text_position: "speechLeft",
+    text_type: "narrator",
     text: "tSometaukoInfobox1",
-    next_scene: "",
+    next_scene: "Oppitunti1",
   },
   SometaukoInfobox2: {
-    _comment: "",
+    _comment: "Molemmat vaihtoehdot jatkaa kohtaukseen Oppitunti1",
     type: "linear",
     background: "Kaytava",
     characters: ["HahmoSofi"],
-    text_type: "speech",
-    text_position: "speechLeft",
+    text_type: "narrator",
     text: "tSometaukoInfobox2",
-    next_scene: "",
+    next_scene: "Oppitunti1",
   },
 }
 export default SofinSometauko;
