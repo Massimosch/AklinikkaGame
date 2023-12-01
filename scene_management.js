@@ -48,10 +48,15 @@ const swedishButton = document.querySelector('.swedish-button');
 // Testi eri branchien testaukseen
 /*  
     PelinAlku.PelinAlku
-    Kannabis.RoopeJointti1
+    SofillaOnTietoa.SofillaOnTietoaAlku
     LydianHuolet.LydianHuolet1
-    MironKotona.MatkallaMirolle1
+    EnergiajuomaNuuskaRahapelit.Juomaautomaatti1
+    TuomaksenKiusaaminen.TuomaksenKiusaaminen1
     MironTapaaminen.Energiajuomat1
+
+
+    Kannabis.RoopeJointti1
+    MironKotona.MatkallaMirolle1
     OppituntiAlkamassa.Oppitunti1
     RoopenNuuskat.MitaTiedatVapesta
     RoopenSteroidit.RoopenSteroidit1
@@ -67,8 +72,8 @@ const swedishButton = document.querySelector('.swedish-button');
   Vaihda StartSceneData.SofillaOnTietoaAlku johonkin noista yllä olevista tai omaan sceneen.
   Ja currentDataFile siihen alkupätkään joka on se filu. Alta esimerkki
 */
-let gameStartingScene = TuomaksenKiusaaminen.TuomaksenKiusaaminen1;
-let currentDataFile = TuomaksenKiusaaminen;
+let gameStartingScene = MironTapaaminen.Energiajuomat1;
+let currentDataFile = MironTapaaminen;
 
 let currentBackground;
 let language = SuomiData;

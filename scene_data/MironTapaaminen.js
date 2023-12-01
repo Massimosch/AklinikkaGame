@@ -2,10 +2,9 @@ const MironTapaaminen = {
   Energiajuomat1: {
     _comment: "",
     type: "linear",
-    background: "",
+    background: "Kaytava",
     characters: [""],
-    text_type: "speech",
-    text_position: "speechLeft",
+    text_type: "narrator",
     text: "tEnergiajuomat1",
     next_scene: "Energiajuomat2",
   },
@@ -13,8 +12,8 @@ const MironTapaaminen = {
   Energiajuomat2: {
     _comment: "",
     type: "options",
-    background: "",
-    characters: [""],
+    background: "Kaytava",
+    characters: ["HahmoSofi"],
     text_type: "speech",
     text_position: "speechLeft",
     text: "tEnergiajuomat2",
@@ -24,7 +23,7 @@ const MironTapaaminen = {
         next_scene: "MiroTapaaminen",
       },
       {
-        text: "tEnergiaJuomat2Onko",
+        text: "tEnergiajuomat2Onko",
         next_scene: "EnergiajuomatInfobox",
       },
     ],
@@ -33,10 +32,9 @@ const MironTapaaminen = {
   EnergiajuomatInfobox: {
     _comment: "",
     type: "linear",
-    background: "",
+    background: "EnergiajuomaPinkki",
     characters: [""],
-    text_type: "speech",
-    text_position: "speechLeft",
+    text_type: "narrator",
     text: "tEnergiajuomatInfobox",
     next_scene: "Energiajuomat3",
   },
@@ -44,18 +42,17 @@ const MironTapaaminen = {
   Energiajuomat3: {
     _comment: "",
     type: "options",
-    background: "",
+    background: "EnergiajuomaPinkki",
     characters: [""],
-    text_type: "speech",
-    text_position: "speechLeft",
+    text_type: "narrator",
     text: "tEnergiajuomat3",
     player_choice: [
       {
-        text: "tEnergiajuomat2En",
+        text: "tEnergiajuomat3En",
         next_scene: "MiroTapaaminen",
       },
       {
-        text: "tEnergiaJuomat2Joo",
+        text: "tEnergiajuomat3Joo",
         next_scene: "MiroTapaaminen",
       },
     ],
@@ -64,8 +61,27 @@ const MironTapaaminen = {
   MiroTapaaminen: {
     _comment: "",
     type: "options",
-    background: "",
-    characters: [""],
+    background: "Kaytava",
+    characters: ["HahmoMiro"],
+    text_type: "narrator",
+    text: "tMiroTapaaminen",
+    player_choice: [
+      {
+        text: "tHuonoPaiva",
+        next_scene: "SofinSometauko1",
+      },
+      {
+        text: "tMitenMenee",
+        next_scene: "MiroLintsaaminen",
+      },
+    ],
+  },
+
+  MiroLintsaaminen: {
+    _comment: "",
+    type: "options",
+    background: "Kaytava",
+    characters: ["HahmoMiro"],
     text_type: "speech",
     text_position: "speechLeft",
     text: "tMiroLintsaaminen",
@@ -84,22 +100,21 @@ const MironTapaaminen = {
   MironTilanne1: {
     _comment: "",
     type: "linear",
-    background: "",
-    characters: [""],
+    background: "Kaytava",
+    characters: ["HahmoMiro"],
     text_type: "speech",
     text_position: "speechLeft",
     text: "tMironTilanne1",
     next_scene: "MironTilanne2",
   },
 
-  MiroTilanne2: {
+  MironTilanne2: {
     _comment: "",
     type: "options",
-    background: "",
-    characters: [""],
-    text_type: "speech",
-    text_position: "speechLeft",
-    text: "tMiroTilanne2",
+    background: "Kaytava",
+    characters: ["HahmoMiro"],
+    text_type: "narrator",
+    text: "tMironTilanne2",
     player_choice: [
       {
         text: "tMironTilanne2Sekasin",
@@ -119,10 +134,9 @@ const MironTapaaminen = {
   SekasinInfobox: {
     _comment: "",
     type: "linear",
-    background: "",
+    background: "Kaytava",
     characters: [""],
-    text_type: "speech",
-    text_position: "speechLeft",
+    text_type: "narrator",
     text: "tSekasinInfobox",
     next_scene: "MironTilanne2Hienoa",
   },
@@ -130,10 +144,9 @@ const MironTapaaminen = {
   LasinenInfobox: {
     _comment: "",
     type: "linear",
-    background: "",
+    background: "Kaytava",
     characters: [""],
-    text_type: "speech",
-    text_position: "speechLeft",
+    text_type: "narrator",
     text: "tLasinenInfobox",
     next_scene: "MironTilanne2Hienoa",
   },
@@ -141,10 +154,9 @@ const MironTapaaminen = {
   MironTilanne2Hienoa: {
     _comment: "",
     type: "linear",
-    background: "",
-    characters: [""],
-    text_type: "speech",
-    text_position: "speechLeft",
+    background: "Kaytava",
+    characters: ["HahmoMiro"],
+    text_type: "narrator",
     text: "tMironTilanne2Hienoa",
     next_scene: "Oppitunti1",
   },
