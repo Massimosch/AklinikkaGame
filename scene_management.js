@@ -62,8 +62,8 @@ const swedishButton = document.querySelector('.swedish-button');
   Vaihda StartSceneData.SofillaOnTietoaAlku johonkin noista yllä olevista tai omaan sceneen.
   Ja currentDataFile siihen alkupätkään joka on se filu. Alta esimerkki
 */
-let gameStartingScene = SofinSomeTauko.SofinSometauko1;
-let currentDataFile = SofinSomeTauko;
+let gameStartingScene = OppituntiAlkamassa.Oppitunti1;
+let currentDataFile = OppituntiAlkamassa;
 
 let currentBackground;
 let language = SuomiData;
@@ -123,7 +123,7 @@ function addClickEventListener() {
     if (ClickedTooFast() === true) {
       return;
     }
-    
+
     // if pause menu is open and player clicks outside it into game screen, pause ends
     if (pauseMenuOpen === true) {
       ContinueGame();
@@ -165,7 +165,7 @@ function ClickedTooFast() {
 }
 
 function PopulateScene() {
-  
+
   // background image change
   if (nextScene.background !== null && nextScene.background !== currentBackground) {
     currentBackground = nextScene.background;
@@ -175,6 +175,11 @@ function PopulateScene() {
   // draw characters here
   for (let i = 0; i < characterElements.length; i++) {
     if (i >= nextScene.characters.length) {
+      characterElements[i].classList.add('hidden');
+      continue;
+    }
+    // data täyttö fix
+    if (nextScene.characters[i] == "") {
       characterElements[i].classList.add('hidden');
       continue;
     }
@@ -189,21 +194,21 @@ function PopulateScene() {
     WriteInfobox();
   }
   PlayerChoiceSetup();
-  
+
   ResetAnimations();
   AnimateScene();
   // maybe use current scene later somewhere dunno
   currentScene = nextScene;
 }
 
-function ResetAnimations(){
+function ResetAnimations() {
   topTextElement.classList.remove('fade-in-animation');
   bottomTextElement.classList.remove('fade-in-animation');
   // "in order to know what the offsetWidth is, the browser has to abandon 
   // its plan of batching the changes and perform the reflow of the page right now"
   void topTextElement.offsetWidth;
 }
-function AnimateScene(){
+function AnimateScene() {
   topTextElement.classList.add('fade-in-animation');
   bottomTextElement.classList.add('fade-in-animation');
 }
@@ -243,6 +248,9 @@ function PlayerChoiceSetup() {
     else {
       playerChoiceElements[i].classList.remove('hidden');
       playerChoiceTextElements[i].textContent = language[nextScene.player_choice[i].text];
+      if (language[nextScene.player_choice[i].text] == null) {
+        console.error("next scene text missing, typo here:? " + nextScene.player_choice[i].text);
+      }
     }
   }
 }
