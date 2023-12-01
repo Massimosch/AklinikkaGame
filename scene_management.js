@@ -7,7 +7,7 @@ import PelinAlku from "./scene_data/PelinAlku.js";
 import LydianHuolet from '/scene_data/LydianHuolet.js';
 import MironKotona from '/scene_data/MironKotona.js';
 import MironTapaaminen from '/scene_data/MironTapaaminen.js';
-import RoopenNuuskat from '/scene_data/RoopenNuuskat.js';
+import EnergiajuomaNuuskaRahapelit from '/scene_data/EnergiajuomaNuuskaRahapelit.js';
 import OppituntiAlkamassa from '/scene_data/OppituntiAlkamassa.js';
 import RoopenSteroidit from '/scene_data/RoopenSteroidit.js';
 import SofiaSaattamassa from '/scene_data/SofiaSaattamassa.js';
@@ -15,6 +15,8 @@ import SofinKotona from '/scene_data/SofinKotona.js';
 import SofillaOnTietoa from '/scene_data/SofillaOnTietoa.js';
 import SofinSomeTauko from "./scene_data/SofinSometauko.js";
 import Kannabis from '/scene_data/Kannabis.js';
+import TuomaksenKiusaaminen from '/scene_data/TuomaksenKiusaaminen.js';
+
 
 const mainGameContainer = document.querySelector('.game-flex-container');
 
@@ -65,8 +67,8 @@ const swedishButton = document.querySelector('.swedish-button');
   Vaihda StartSceneData.SofillaOnTietoaAlku johonkin noista yllä olevista tai omaan sceneen.
   Ja currentDataFile siihen alkupätkään joka on se filu. Alta esimerkki
 */
-let gameStartingScene = PelinAlku.PelinAlku;
-let currentDataFile = PelinAlku;
+let gameStartingScene = TuomaksenKiusaaminen.TuomaksenKiusaaminen1;
+let currentDataFile = TuomaksenKiusaaminen;
 
 let currentBackground;
 let language = SuomiData;
