@@ -174,6 +174,10 @@ function PopulateScene() {
 
   // draw characters here
   for (let i = 0; i < characterElements.length; i++) {
+    if (nextScene.characters === null || nextScene.characters === undefined){
+      characterElements[i].classList.add('hidden');
+      continue;
+    }
     if (i >= nextScene.characters.length) {
       characterElements[i].classList.add('hidden');
       continue;
