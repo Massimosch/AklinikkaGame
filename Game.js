@@ -29,6 +29,8 @@ const characterElements = document.querySelectorAll('.character');
 const playerChoiceElements = document.querySelectorAll('.choiceBox');
 const playerChoiceTextElements = document.querySelectorAll('.choiceBoxText');
 
+let gameStartingScene = OppituntiAlkamassa.Oppitunti1;
+let currentDataFile = OppituntiAlkamassa;
 let currentBackground;
 let language = Suomi;
 let currentScene;
