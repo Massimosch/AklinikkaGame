@@ -3,6 +3,7 @@ import SuomiData from "./languages/suomi.js";
 //import EnglishData from "./languages/english.js";
 //import SwedishData from "./languages/swedish.js";
 
+import PelinAlku from "./scene_data/PelinAlku.js";
 import LydianHuolet from '/scene_data/LydianHuolet.js';
 import MironKotona from '/scene_data/MironKotona.js';
 import MironTapaaminen from '/scene_data/MironTapaaminen.js';
@@ -44,6 +45,7 @@ const swedishButton = document.querySelector('.swedish-button');
 
 // Testi eri branchien testaukseen
 /*  
+    PelinAlku.PelinAlku
     Kannabis.RoopeJointti1
     LydianHuolet.LydianHuolet1
     MironKotona.MatkallaMirolle1
@@ -63,8 +65,8 @@ const swedishButton = document.querySelector('.swedish-button');
   Vaihda StartSceneData.SofillaOnTietoaAlku johonkin noista yllä olevista tai omaan sceneen.
   Ja currentDataFile siihen alkupätkään joka on se filu. Alta esimerkki
 */
-let gameStartingScene = Kannabis.RoopeJointti1;
-let currentDataFile = Kannabis;
+let gameStartingScene = PelinAlku.PelinAlku;
+let currentDataFile = PelinAlku;
 
 let currentBackground;
 let language = SuomiData;
