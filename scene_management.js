@@ -3,6 +3,18 @@ import SuomiData from "./languages/suomi.js";
 //import EnglishData from "./languages/english.js";
 //import SwedishData from "./languages/swedish.js";
 
+import LydianHuolet from '/data/LydianHuolet.js';
+import MironKotona from '/data/MironKotona.js';
+import MironTapaaminen from '/data/MironTapaaminen.js';
+import RoopenNuuskat from '/data/RoopenNuuskat.js';
+import OppituntiAlkamassa from '/data/OppituntiAlkamassa.js';
+import RoopenSteroidit from '/data/RoopenSteroidit.js';
+import SofiaSaattamassa from '/data/SofiaSaattamassa.js';
+import SofinKotona from '/data/SofinKotona.js';
+import SofillaOnTietoa from '/data/SofillaOnTietoa.js';
+import SofinSomeTauko from '/data/SofinSometauko.js';
+import Kannabis from '/data/Kannabis.js';
+
 const mainGameContainer = document.querySelector('.game-flex-container');
 
 const infoboxElement = document.querySelector('.narratorBox');
@@ -30,6 +42,27 @@ const suomiButton = document.querySelector('.suomi-button');
 const englishButton = document.querySelector('.english-button');
 const swedishButton = document.querySelector('.swedish-button');
 
+// Testi eri branchien testaukseen
+/*  
+    LydianHuolet.LydianHuolet1
+    MironKotona.MatkallaMirolle1
+    MironTapaaminen.Energiajuomat1
+    OppituntiAlkamassa.Oppitunti1
+    RoopenNuuskat.MitaTiedatVapesta
+    RoopenSteroidit.RoopenSteroidit1
+    SofiaSaattamassa.SofiSaattaa1
+    SofinKotona.SofinKotona
+    SofinSometauko.SofinSometauko1
+    TuomaksenKiusaaminen.TuomaksenKiusaaminen1
+
+    Jos tuolla on eri alkuja, kun eka scene, 
+    niin pitää muuttaa gameStartingScene muuttujaa siihen mihin haluaa
+
+  eli tässä alla oleva gameStartingScene pitää vaihtaa osotteeseen mihin haluaa
+  Vaihda StartSceneData.SofillaOnTietoaAlku johonkin noista yllä olevista tai omaan sceneen.
+*/
+let gameStartingScene = StartSceneData.SofillaOnTietoaAlku;
+
 
 let currentBackground;
 let language = SuomiData;
@@ -39,7 +72,6 @@ let transitionDelayTime;
 let delayTimeInSeconds = 0.22;
 let pauseMenuOpen = false;
 
-let gameStartingScene = StartSceneData.SofillaOnTietoaAlku;
 
 // game setup
 nextScene = gameStartingScene;
