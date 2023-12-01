@@ -83,15 +83,15 @@ const OppituntiAlkamassa = {
     text: "tOppitunti6",
     player_choice: [
       {
-        text: "tOppitunti6lfA",
+        text: "tOppitunti6IfA",
         next_scene: "Oppitunti7",
       },
       {
-        text: "tOppitunti6lfB",
+        text: "tOppitunti6IfB",
         next_scene: "Oppitunti7",
       },
       {
-        text: "tOppitunti6lfC",
+        text: "tOppitunti6IfC",
         next_scene: "Oppitunti7",
       },
     ],
@@ -198,18 +198,18 @@ const OppituntiAlkamassa = {
     _comment: "",
     type: "options",
     background: "Luokkahuone",
-    characters: ["HahmoOpettajaPirkka"],
-    text_type: "speech",
+    characters: [""],
+    text_type: "narrator",
     text_position: "speechLeft",
     text: "tKouluLoppuu",
     player_choice: [
       {
         text: "tKouluLoppuuBileisiin",
-        next_scene: "Oppitunti12",
+        next_scene: "RoopeSteroidit1",
       },
       {
         text: "tKouluLoppuuKotiin",
-        next_scene: "Oppitunti12",
+        next_scene: "Tekstari1",
       },
     ],
   },
