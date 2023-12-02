@@ -1,4 +1,32 @@
 const RoopenNuuskat = {
+  MitaTiedatVapesta: {
+    _comment: "",
+    type: "options",
+    background: "Kaytava",
+    characters: [""],
+    text_type: "narrator",
+    text: "tMitaTiedatVapesta",
+    player_choice: [
+      {
+        text: "tMitaTiedatVapestaEVVK",
+        next_scene: "VapeInfobox",
+      },
+      {
+        text: "tMitaTiedatVapestaEnTieda",
+        next_scene: "VapeInfobox",
+      },
+    ],
+  },
+
+  VapeInfobox: {
+    _comment: "",
+    type: "linear",
+    background: "Kaytava",
+    characters: [""],
+    text_type: "narrator",
+    text: "tVapeInfobox",
+    next_scene: "Juomaautomaatti1",
+  },
 
   Juomaautomaatti1: {
     _comment: "",

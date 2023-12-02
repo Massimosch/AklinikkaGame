@@ -32,7 +32,7 @@ body {
 
 
 .top-options-menu {
-  background-image: url("images/UI/MenuIcon.svg");
+  background-image: url("images/UI/MenuIcon.png");
   align-self: flex-end;
   padding: 3%;
   margin: 1%;
@@ -100,6 +100,16 @@ body {
   justify-content: flex-end safe;
   align-items: flex-end safe;
   flex-direction: row;
+}
+#info-screen {
+  position: absolute;
+  width: auto;
+  height: auto;
+}
+#player-customize {
+  position: absolute;
+  width: auto;
+  height: auto;
 }
 
 .character {
