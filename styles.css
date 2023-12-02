@@ -101,6 +101,16 @@ body {
   align-items: flex-end safe;
   flex-direction: row;
 }
+#info-screen {
+  position: absolute;
+  width: auto;
+  height: auto;
+}
+#player-customize {
+  position: absolute;
+  width: auto;
+  height: auto;
+}
 
 .character {
   /*aspect-ratio: 1/1;*/
