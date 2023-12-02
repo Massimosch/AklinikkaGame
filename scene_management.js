@@ -34,15 +34,17 @@ const playerChoiceTextElements = document.querySelectorAll('.choiceBoxText');
 const topTextElement = document.querySelector('.top-text-container');
 const bottomTextElement = document.querySelector('.bottom-choice-container');
 
-//Pause menu
-const pauseMenuIcon = document.querySelector('.top-options-menu');
+// Pause menu
+/*const pauseMenuIcon = document.querySelector('.top-options-menu');
 const pauseMenu = document.querySelector('.pauseMenuBox');
 const continueButton = document.querySelector('.continue-button');
 const restartButton = document.querySelector('.restart-button');
 // pause language switch buttons
 const suomiButton = document.querySelector('.suomi-button');
 const englishButton = document.querySelector('.english-button');
-const swedishButton = document.querySelector('.swedish-button');
+const swedishButton = document.querySelector('.swedish-button'); 
+*/ 
+
 
 // Testi eri branchien testaukseen
 /*  
@@ -79,17 +81,17 @@ let currentScene;
 let nextScene;
 let transitionDelayTime;
 let delayTimeInSeconds = 0.22;
-let pauseMenuOpen = false;
+//let pauseMenuOpen = false;
 
 // game setup
 nextScene = gameStartingScene;
 addClickEventListener();
 PopulateScene();
-continueButton.addEventListener('click', ContinueGame);
+/*continueButton.addEventListener('click', ContinueGame);
 restartButton.addEventListener('click', RestartGame);
 suomiButton.addEventListener('click', ChangeLanguage('suomi'));
 englishButton.addEventListener('click', ChangeLanguage('english'));
-swedishButton.addEventListener('click', ChangeLanguage('swedish'));
+swedishButton.addEventListener('click', ChangeLanguage('swedish'));*/
 
 // This is for switching the SceneData file from the SceneDataArray at addClickEventlistener
 function getSceneData(sceneName) {
@@ -116,6 +118,7 @@ function getSceneData(sceneName) {
   return null;
 }
 
+/*
 function OpenPauseMenu() {
   pauseMenuOpen = true;
   pauseMenu.classList.remove('hidden');
@@ -144,8 +147,9 @@ function ChangeLanguage(chosenLanguage) {
     default:
       console.log('typo in language button events??');
       break;
-  }
-}
+  }}
+*/
+
 
 // click event listener
 function addClickEventListener() {
@@ -155,7 +159,7 @@ function addClickEventListener() {
     }
 
     // if pause menu is open and player clicks outside it into game screen, pause ends
-    if (pauseMenuOpen === true) {
+    /*if (pauseMenuOpen === true) {
       ContinueGame();
       return;
     }
@@ -164,7 +168,7 @@ function addClickEventListener() {
       pauseMenuOpen = true;
       OpenPauseMenu();
       return;
-    }
+    }*/
 
     if (currentScene.type === 'linear') {
       nextScene = getSceneData(currentScene.next_scene);
