@@ -15,9 +15,55 @@ body {
   flex-direction: column;
 }
 
-.game-flex-container{
+.start-page {
+  background-color: rgb(240, 232, 245);
+}
+
+.startpage-container{
   display: flex;
-  align-items:flex-start safe;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  max-width: 1080px;
+  max-height: 70vh;
+  z-index: 10;
+  padding-bottom: 3vh;
+}
+
+.startpagecharacter-container{
+flex: 1;
+}
+
+.startpagecharacter{
+  max-height: 70vh;
+  width: auto;
+  z-index: 1;
+}
+
+.startmenubuttons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+    flex-grow: 1;
+    z-index: 10;
+} 
+
+.startpage-footer{
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1080px;
+  z-index: 10;
+  padding-bottom: 3vh;
+}
+
+.game-flex-container {
+  display: flex;
+  align-items: flex-start safe;
   height: 100vh;
   width: 100vw;
   max-width: 1080px;
@@ -25,35 +71,76 @@ body {
   justify-content: flex-start safe;
   flex-direction: column;
   z-index: 0;
-  background-image:url("images/backgrounds/KoulunPiha.png");
+  background-image: url("images/backgrounds/KoulunPiha.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 
-.top-options-menu{
+.top-options-menu {
+  background-image: url("images/UI/MenuIcon.svg");
   align-self: flex-end;
   padding: 3%;
+  margin: 1%;
+  z-index: 11;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
-.top-text-container{
+.pausemenubutton {
+  background-color: #FFF8EE;
+  border-radius: 11px;
+  border: 2px solid #000;
+  width: 350px;
+  /* Tätä leveysasiaa pitää vielä miettiä */
+  color: #000;
+  padding: 25px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  font-family: JetBrains Mono;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  display: flex;
+  align-items: center;
+  gap: 17px;
+}
+
+.backicon {
+  position: relative;
+  display: block;
+  height: 55px;
+  width: 55px;
+  flex-shrink: 0;
+}
+
+.homeicon {
+  position: relative;
+  display: block;
+  height: 55px;
+  width: 55px;
+  flex-shrink: 0;
+}
+
+.top-text-container {
   display: flex;
   flex-direction: column;
   width: 100%;
   z-index: 10;
   align-items: center;
-  top: 50px; 
-} 
+  top: 50px;
+}
 
-
-.character-container{
+.character-container {
   position: absolute;
   /* copypaste from main game container*/
-  height: 100vh;
+  height: 80vh;
   width: 100vw;
   max-width: 1080px;
   max-height: 1920px;
+  bottom: 0;
   padding-bottom: 2vh;
+  padding-top: 12vh;
   display: flex;
   flex-shrink: 3;
   justify-content: flex-end safe;
@@ -61,12 +148,12 @@ body {
   flex-direction: row;
 }
 
-.character{
-  aspect-ratio: 1/1;
+.character {
+  /*aspect-ratio: 1/1;*/
   padding-bottom: 10vh;
-  max-width: 500px;
-  flex-shrink: 1;
-  background-image:url("images/characters/HahmoSofi.png");
+  /*max-width: 500px;*/
+  flex: 1 1 0px;
+  background-image: url("images/characters/HahmoSofi.png");
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: contain;
@@ -74,9 +161,8 @@ body {
 }
 
 
-.bottom-choice-container{
+.bottom-choice-container {
   margin-top: auto;
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -86,6 +172,22 @@ body {
   padding-bottom: 3vh;
 }
 
+
+
+.fade-in-animation {
+  animation-name: fade-in;
+  animation-duration: 0.4s;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
 
 .hidden {
   display: none;
