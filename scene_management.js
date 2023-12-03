@@ -89,6 +89,7 @@ function GetSceneData(sceneName) {
 
   for (const sceneData of sceneDataFiles) {
     if (sceneData[sceneName]) {
+      currentDataFile = sceneData;
       return sceneData[sceneName];
     }
   }
