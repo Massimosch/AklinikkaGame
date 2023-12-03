@@ -100,6 +100,11 @@ function AddClickEventListener() {
       return;
     }
 
+    if (nextScene == null) {
+      console.error('Scene not found?: ' + nextScene);
+      return;
+    }
+    
     // if pause menu is open and player clicks outside it into game screen, pause ends
     /*if (pauseMenuOpen === true) {
       ContinueGame();
