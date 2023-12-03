@@ -4,18 +4,18 @@ import SuomiData from './languages/suomi.js';
 //import SwedishData from "./languages/swedish.js";
 
 import PelinAlku from './scene_data/PelinAlku.js';
-import LydianHuolet from '/scene_data/LydianHuolet.js';
-import MironKotona from '/scene_data/MironKotona.js';
+import LydianHuolet from './scene_data/LydianHuolet.js';
+import MironKotona from './scene_data/MironKotona.js';
 import MironTapaaminen from './scene_data/MironTapaaminen.js';
-import EnergiajuomaNuuskaRahapelit from '/scene_data/EnergiajuomaNuuskaRahapelit.js';
-import OppituntiAlkamassa from '/scene_data/OppituntiAlkamassa.js';
-import RoopenSteroidit from '/scene_data/RoopenSteroidit.js';
-import SofiaSaattamassa from '/scene_data/SofiaSaattamassa.js';
-import SofinKotona from '/scene_data/SofinKotona.js';
-import SofillaOnTietoa from '/scene_data/SofillaOnTietoa.js';
+import EnergiajuomaNuuskaRahapelit from './scene_data/EnergiajuomaNuuskaRahapelit.js';
+import OppituntiAlkamassa from './scene_data/OppituntiAlkamassa.js';
+import RoopenSteroidit from './scene_data/RoopenSteroidit.js';
+import SofiaSaattamassa from './scene_data/SofiaSaattamassa.js';
+import SofinKotona from './scene_data/SofinKotona.js';
+import SofillaOnTietoa from './scene_data/SofillaOnTietoa.js';
 import SofinSomeTauko from './scene_data/SofinSometauko.js';
-import Kannabis from '/scene_data/Kannabis.js';
-import TuomaksenKiusaaminen from '/scene_data/TuomaksenKiusaaminen.js';
+import Kannabis from './scene_data/Kannabis.js';
+import TuomaksenKiusaaminen from './scene_data/TuomaksenKiusaaminen.js';
 
 const mainGameContainer = document.querySelector('.game-flex-container');
 
