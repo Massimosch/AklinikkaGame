@@ -57,17 +57,13 @@ const pauseMenuElement = document.querySelector('.top-options-menu');
   ja antaa sen scenen data filun currentDataFileen.
 */
 function StartSetup(){
-  currentDataFile = PelinAlku;
   nextScene = GetSceneData("EnsimmainenScene");
-  language = SuomiData;
-  console.log(nextScene);
-  console.log(currentDataFile);
 }
 
-let currentDataFile;
+let currentDataFile = PelinAlku;
 
 let currentBackground;
-let language;
+let language = SuomiData;
 let currentScene;
 let nextScene;
 
