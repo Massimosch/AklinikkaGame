@@ -1,48 +1,48 @@
 const Kannabis = {
-  RoopeJointti1: {
+  RoopenJointti1: {
     _comment: "",
     type: "options",
     background: "RoopenKoti",
     characters: ["HahmoRoope"],
     text_type: "speech",
     text_position: "speechLeft",
-    text: "tRoopeJointti1",
+    text: "tRoopenJointti1",
     player_choice: [
       {
-        text: "tRoopeJointti1Ei",
-        next_scene: "RoopeJointti2",
+        text: "tRoopenJointti1Ei",
+        next_scene: "RoopenJointti2",
       },
       {
-        text: "tRoopeJointti1Okei",
-        next_scene: "RoopeJointti3",
+        text: "tRoopenJointti1Okei",
+        next_scene: "RoopenJointti3",
       },
     ],
   },
-  RoopeJointti2: {
+  RoopenJointti2: {
     _comment: "",
     type: "linear",
     background: "RoopenKoti",
     characters: [],
     text_type: "narrator",
     text_position: "",
-    text: "tRoopeJointti2",
+    text: "tRoopenJointti2",
     next_scene: "Puistobileisiin",
   },
 
-  RoopeJointti3: {
+  RoopenJointti3: {
     _comment: "",
     type: "options",
     background: "Kannabis",
     characters: [""],
     text_type: "narrator",
-    text: "tRoopeJointti3",
+    text: "tRoopenJointti3",
     player_choice: [
       {
-        text: "tRoopeJointti3En",
+        text: "tRoopenJointti3En",
         next_scene: "Kannabis1",
       },
       {
-        text: "tRoopeJointti3Joo",
+        text: "tRoopenJointti3Joo",
         next_scene: "Kannabis1",
       },
     ],

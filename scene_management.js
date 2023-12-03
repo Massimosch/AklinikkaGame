@@ -6,7 +6,7 @@ import SuomiData from './languages/suomi.js';
 import PelinAlku from './scene_data/PelinAlku.js';
 import LydianHuolet from '/scene_data/LydianHuolet.js';
 import MironKotona from '/scene_data/MironKotona.js';
-import MironTapaaminen from '/scene_data/MironTapaaminen.js';
+import MironTapaaminen from './scene_data/MironTapaaminen.js';
 import EnergiajuomaNuuskaRahapelit from '/scene_data/EnergiajuomaNuuskaRahapelit.js';
 import OppituntiAlkamassa from '/scene_data/OppituntiAlkamassa.js';
 import RoopenSteroidit from '/scene_data/RoopenSteroidit.js';
@@ -54,9 +54,7 @@ const swedishButton = document.querySelector('.swedish-button');
     EnergiajuomaNuuskaRahapelit.Juomaautomaatti1
     TuomaksenKiusaaminen.TuomaksenKiusaaminen1
     MironTapaaminen.Energiajuomat1
-
-
-    Kannabis.RoopeJointti1
+    Kannabis.RoopenJointti1
     MironKotona.MatkallaMirolle1
     OppituntiAlkamassa.Oppitunti1
     RoopenNuuskat.MitaTiedatVapesta
@@ -65,7 +63,6 @@ const swedishButton = document.querySelector('.swedish-button');
     SofinKotona.SofinKotona
     SofinSometauko.SofinSometauko1
     TuomaksenKiusaaminen.TuomaksenKiusaaminen1
-
     Jos tuolla on eri alkuja, kun eka scene, 
     niin pitää muuttaa gameStartingScene muuttujaa siihen mihin haluaa
 
@@ -73,14 +70,14 @@ const swedishButton = document.querySelector('.swedish-button');
   Vaihda StartSceneData.SofillaOnTietoaAlku johonkin noista yllä olevista tai omaan sceneen.
   Ja currentDataFile siihen alkupätkään joka on se filu. Alta esimerkki
 */
-let gameStartingScene = MironTapaaminen.Energiajuomat1;
+let gameStartingScene = PelinAlku.PelinAlku;
 
 let currentBackground;
 let language = SuomiData;
 let currentScene;
 let nextScene;
 let transitionDelayTime;
-let delayTimeInSeconds = 0.22;
+let delayTimeInSeconds = 0.1;
 //let pauseMenuOpen = false;
 
 // game setup
@@ -96,11 +93,13 @@ swedishButton.addEventListener('click', ChangeLanguage('swedish'));*/
 // This is for switching the SceneData file from the SceneDataArray at addClickEventlistener
 function getSceneData(sceneName) {
   const sceneDataArray = [
+    PelinAlku,
     LydianHuolet,
     MironKotona,
     MironTapaaminen,
-    RoopenNuuskat,
     OppituntiAlkamassa,
+    EnergiajuomaNuuskaRahapelit,
+    TuomaksenKiusaaminen,
     RoopenSteroidit,
     SofiaSaattamassa,
     SofinKotona,
@@ -114,7 +113,7 @@ function getSceneData(sceneName) {
       return sceneData[sceneName];
     }
   }
-
+  console.error('Scene not found: ' + sceneName);
   return null;
 }
 
@@ -157,7 +156,10 @@ function addClickEventListener() {
     if (ClickedTooFast() === true) {
       return;
     }
-
+    if (nextScene == null) {
+      console.error('Scene not found?: ' + nextScene);
+      return;
+    }
     // if pause menu is open and player clicks outside it into game screen, pause ends
     /*if (pauseMenuOpen === true) {
       ContinueGame();

@@ -205,7 +205,7 @@ const OppituntiAlkamassa = {
     player_choice: [
       {
         text: "tKouluLoppuuBileisiin",
-        next_scene: "RoopeSteroidit1",
+        next_scene: "RoopenSteroidit1",
       },
       {
         text: "tKouluLoppuuKotiin",

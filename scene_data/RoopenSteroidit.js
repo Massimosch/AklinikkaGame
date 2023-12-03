@@ -29,11 +29,11 @@ const RoopenSteroidit = {
     text: "tRoopenRahapelit",
     player_choice: [
       {
-        text: "tRoopeSteroidit3Tiedan",
-        next_scene: "RoopePillerit1",
+        text: "tRoopenSteroidit3Tiedan",
+        next_scene: "RoopenPillerit1",
       },
       {
-        text: "tRoopeSteroidit3Mita",
+        text: "tRoopenSteroidit3Mita",
         next_scene: "SteroiditInfobox1",
       },
     ],
@@ -56,7 +56,7 @@ const RoopenSteroidit = {
     text_type: "speech",
     text_position: "speechLeft",
     text: "tSteroiditInfobox2",
-    next_scene: "RoopeSteroidit4",
+    next_scene: "RoopenSteroidit4",
   },
   RoopenSteroidit4: {
     _comment: "",
@@ -65,27 +65,27 @@ const RoopenSteroidit = {
     characters: ["HahmoRoope"],
     text_type: "speech",
     text_position: "speechLeft",
-    text: "tRoopeSteroidit4",
+    text: "tRoopenSteroidit4",
     player_choice: [
       {
-        text: "tRoopeSteroidit4Okei",
-        next_scene: "RoopePillerit1",
+        text: "tRoopenSteroidit4Okei",
+        next_scene: "RoopenPillerit1",
       },
       {
-        text: "tRoopeSteroidit4IhaSama",
-        next_scene: "RoopePillerit1",
+        text: "tRoopenSteroidit4IhaSama",
+        next_scene: "RoopenPillerit1",
       },
     ],
   },
-  RoopePillerit1: {
+  RoopenPillerit1: {
     _comment: "",
     type: "linear",
     background: "",
     characters: [""],
     text_type: "speech",
     text_position: "speechLeft",
-    text: "tRoopePillerit1",
-    next_scene: "RoopePillerit2",
+    text: "tRoopenPillerit1",
+    next_scene: "RoopenPillerit2",
   },
   RoopenPilleri2: {
     _comment: "",
@@ -94,67 +94,67 @@ const RoopenSteroidit = {
     characters: ["HahmoRoope"],
     text_type: "speech",
     text_position: "speechLeft",
-    text: "tRoopePillerit2",
+    text: "tRoopenPillerit2",
     player_choice: [
       {
-        text: "tRoopePillerit2Ei",
-        next_scene: "RoopePillerit3EiTotta",
+        text: "tRoopenPillerit2Ei",
+        next_scene: "RoopenPillerit3EiTotta",
       },
       {
-        text: "tRoopePillerit2Joo",
-        next_scene: "RoopePillerit3JooOletkoVarma",
+        text: "tRoopenPillerit2Joo",
+        next_scene: "RoopenPillerit3JooOletkoVarma",
       },
     ],
   },
-  RoopePillerit3JooOletkoVarma: {
+  RoopenPillerit3JooOletkoVarma: {
     _comment: "Puuttuu nextScene",
     type: "linear",
     background: "",
     characters: [""],
     text_type: "speech",
     text_position: "speechLeft",
-    text: "tRoopePillerit3JooOletkoVarma",
+    text: "tRoopenPillerit3JooOletkoVarma",
     next_scene: "",
   },
-  RoopePillerit3EiTotta: {
+  RoopenPillerit3EiTotta: {
     _comment: "Puuttuu nextScene",
     type: "linear",
     background: "",
     characters: [""],
     text_type: "speech",
     text_position: "speechLeft",
-    text: "tRoopePillerit3EiTotta",
+    text: "tRoopenPillerit3EiTotta",
     next_scene: "",
   },
-  RoopePillerit3Okei: {
+  RoopenPillerit3Okei: {
     _comment: "",
     type: "linear",
     background: "",
     characters: [""],
     text_type: "speech",
     text_position: "speechLeft",
-    text: "tRoopePillerit3Okei",
-    next_scene: "RoopeJointti1",
+    text: "tRoopenPillerit3Okei",
+    next_scene: "RoopenJointti1",
   },
-  RoopePillerit3IhaSama: {
+  RoopenPillerit3IhaSama: {
     _comment: "",
     type: "linear",
     background: "",
     characters: [""],
     text_type: "speech",
     text_position: "speechLeft",
-    text: "tRoopePillerit3IhaSama",
-    next_scene: "RoopePillerit4",
+    text: "tRoopenPillerit3IhaSama",
+    next_scene: "RoopenPillerit4",
   },
-  RoopePillerit4: {
+  RoopenPillerit4: {
     _comment: "",
     type: "linear",
     background: "Pillerit",
     characters: [""],
     text_type: "speech",
     text_position: "speechLeft",
-    text: "tRoopePillerit4",
-    next_scene: "RoopeJointti1",
+    text: "tRoopenPillerit4",
+    next_scene: "RoopenJointti1",
   },
 };
 export default RoopenSteroidit;
