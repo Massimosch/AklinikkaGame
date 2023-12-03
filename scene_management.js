@@ -58,7 +58,7 @@ const pauseMenuElement = document.querySelector('.top-options-menu');
 */
 function StartSetup(){
   currentDataFile = PelinAlku;
-  nextScene = getSceneData("EnsimmainenScene");
+  nextScene = GetSceneData("EnsimmainenScene");
   language = SuomiData;
   console.log(nextScene);
   console.log(currentDataFile);
@@ -82,7 +82,7 @@ AddClickEventListener();
 PopulateScene();
 
 // This is for switching the SceneData file
-function getSceneData(sceneName) {
+function GetSceneData(sceneName) {
   if (currentDataFile[sceneName]) {
     return currentDataFile[sceneName];
   }
@@ -116,14 +116,14 @@ function AddClickEventListener() {
     }*/
 
     if (currentScene.type === 'linear') {
-      nextScene = getSceneData(currentScene.next_scene);
+      nextScene = GetSceneData(currentScene.next_scene);
       PopulateScene();
       return;
     }
     // if choice elements clicked, set nextscene
     for (let i = 0; i < playerChoiceElements.length; i++) {
       if (event.target.parentElement === playerChoiceElements[i]) {
-        nextScene = getSceneData(currentScene.player_choice[i].next_scene);
+        nextScene = GetSceneData(currentScene.player_choice[i].next_scene);
         PopulateScene();
         return;
       }
