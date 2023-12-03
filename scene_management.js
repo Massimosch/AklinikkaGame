@@ -104,7 +104,7 @@ function AddClickEventListener() {
       console.error('Scene not found?: ' + nextScene);
       return;
     }
-    
+
     // if pause menu is open and player clicks outside it into game screen, pause ends
     /*if (pauseMenuOpen === true) {
       ContinueGame();
@@ -119,6 +119,9 @@ function AddClickEventListener() {
 
     if (currentScene.type === 'linear') {
       nextScene = GetSceneData(currentScene.next_scene);
+      if(nextScene == null){
+        return;
+      }
       PopulateScene();
       return;
     }
@@ -126,6 +129,9 @@ function AddClickEventListener() {
     for (let i = 0; i < playerChoiceElements.length; i++) {
       if (event.target.parentElement === playerChoiceElements[i]) {
         nextScene = GetSceneData(currentScene.player_choice[i].next_scene);
+        if(nextScene == null){
+          return;
+        }
         PopulateScene();
         return;
       }
