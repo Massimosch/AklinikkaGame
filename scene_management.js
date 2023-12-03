@@ -1,4 +1,3 @@
-import StartSceneData from './scene_data/StartSceneData.js';
 import SuomiData from './languages/suomi.js';
 //import EnglishData from "./languages/english.js";
 //import SwedishData from "./languages/swedish.js";
@@ -17,6 +16,22 @@ import SofinSomeTauko from './scene_data/SofinSometauko.js';
 import Kannabis from './scene_data/Kannabis.js';
 import TuomaksenKiusaaminen from './scene_data/TuomaksenKiusaaminen.js';
 
+const sceneDataFiles = [
+  PelinAlku,
+  LydianHuolet,
+  MironKotona,
+  MironTapaaminen,
+  OppituntiAlkamassa,
+  EnergiajuomaNuuskaRahapelit,
+  TuomaksenKiusaaminen,
+  RoopenSteroidit,
+  SofiaSaattamassa,
+  SofinKotona,
+  SofillaOnTietoa,
+  SofinSomeTauko,
+  Kannabis,
+];
+
 const mainGameContainer = document.querySelector('.game-flex-container');
 
 const infoboxElement = document.querySelector('.narratorBox');
@@ -34,81 +49,45 @@ const playerChoiceTextElements = document.querySelectorAll('.choiceBoxText');
 const topTextElement = document.querySelector('.top-text-container');
 const bottomTextElement = document.querySelector('.bottom-choice-container');
 
-// Pause menu
-/*const pauseMenuIcon = document.querySelector('.top-options-menu');
-const pauseMenu = document.querySelector('.pauseMenuBox');
-const continueButton = document.querySelector('.continue-button');
-const restartButton = document.querySelector('.restart-button');
-// pause language switch buttons
-const suomiButton = document.querySelector('.suomi-button');
-const englishButton = document.querySelector('.english-button');
-const swedishButton = document.querySelector('.swedish-button'); 
-*/ 
+// settings menu
+const pauseMenuElement = document.querySelector('.top-options-menu');
 
-
-// Testi eri branchien testaukseen
-/*  
-    PelinAlku.PelinAlku
-    SofillaOnTietoa.SofillaOnTietoaAlku
-    LydianHuolet.LydianHuolet1
-    EnergiajuomaNuuskaRahapelit.Juomaautomaatti1
-    TuomaksenKiusaaminen.TuomaksenKiusaaminen1
-    MironTapaaminen.Energiajuomat1
-    Kannabis.RoopenJointti1
-    MironKotona.MatkallaMirolle1
-    OppituntiAlkamassa.Oppitunti1
-    RoopenNuuskat.MitaTiedatVapesta
-    RoopenSteroidit.RoopenSteroidit1
-    SofiaSaattamassa.SofiSaattaa1
-    SofinKotona.SofinKotona
-    SofinSometauko.SofinSometauko1
-    TuomaksenKiusaaminen.TuomaksenKiusaaminen1
-    Jos tuolla on eri alkuja, kun eka scene, 
-    niin pitää muuttaa gameStartingScene muuttujaa siihen mihin haluaa
-
-  eli tässä alla oleva gameStartingScene pitää vaihtaa osotteeseen mihin haluaa
-  Vaihda StartSceneData.SofillaOnTietoaAlku johonkin noista yllä olevista tai omaan sceneen.
-  Ja currentDataFile siihen alkupätkään joka on se filu. Alta esimerkki
+/*
+  Alla olevassa voi vaihtaa currentScene = minkä haluaa, 
+  ja antaa sen scenen data filun currentDataFileen.
 */
-let gameStartingScene = PelinAlku.PelinAlku;
+function StartSetup(){
+  currentDataFile = PelinAlku;
+  nextScene = getSceneData("EnsimmainenScene");
+  language = SuomiData;
+  console.log(nextScene);
+  console.log(currentDataFile);
+}
+
+let currentDataFile;
 
 let currentBackground;
-let language = SuomiData;
+let language;
 let currentScene;
 let nextScene;
+
 let transitionDelayTime;
 let delayTimeInSeconds = 0.1;
 //let pauseMenuOpen = false;
 
+
 // game setup
-nextScene = gameStartingScene;
-addClickEventListener();
+StartSetup();
+AddClickEventListener();
 PopulateScene();
-/*continueButton.addEventListener('click', ContinueGame);
-restartButton.addEventListener('click', RestartGame);
-suomiButton.addEventListener('click', ChangeLanguage('suomi'));
-englishButton.addEventListener('click', ChangeLanguage('english'));
-swedishButton.addEventListener('click', ChangeLanguage('swedish'));*/
 
-// This is for switching the SceneData file from the SceneDataArray at addClickEventlistener
+// This is for switching the SceneData file
 function getSceneData(sceneName) {
-  const sceneDataArray = [
-    PelinAlku,
-    LydianHuolet,
-    MironKotona,
-    MironTapaaminen,
-    OppituntiAlkamassa,
-    EnergiajuomaNuuskaRahapelit,
-    TuomaksenKiusaaminen,
-    RoopenSteroidit,
-    SofiaSaattamassa,
-    SofinKotona,
-    SofillaOnTietoa,
-    SofinSomeTauko,
-    Kannabis,
-  ];
+  if (currentDataFile[sceneName]) {
+    return currentDataFile[sceneName];
+  }
 
-  for (const sceneData of sceneDataArray) {
+  for (const sceneData of sceneDataFiles) {
     if (sceneData[sceneName]) {
       return sceneData[sceneName];
     }
@@ -117,49 +96,13 @@ function getSceneData(sceneName) {
   return null;
 }
 
-/*
-function OpenPauseMenu() {
-  pauseMenuOpen = true;
-  pauseMenu.classList.remove('hidden');
-}
-function ContinueGame() {
-  pauseMenuOpen = false;
-  pauseMenu.classList.add('hidden');
-}
-function RestartGame() {
-  nextScene = gameStartingScene;
-  PopulateScene();
-  pauseMenuOpen = false;
-  pauseMenu.classList.add('hidden');
-}
-function ChangeLanguage(chosenLanguage) {
-  switch (chosenLanguage) {
-    case 'suomi':
-      language = SuomiData;
-      break;
-    case 'english':
-      //language = EnglishData;
-      break;
-    case 'swedish':
-      //language = SwedishData;
-      break;
-    default:
-      console.log('typo in language button events??');
-      break;
-  }}
-*/
-
-
 // click event listener
-function addClickEventListener() {
+function AddClickEventListener() {
   mainGameContainer.addEventListener('click', event => {
     if (ClickedTooFast() === true) {
       return;
     }
-    if (nextScene == null) {
-      console.error('Scene not found?: ' + nextScene);
-      return;
-    }
+
     // if pause menu is open and player clicks outside it into game screen, pause ends
     /*if (pauseMenuOpen === true) {
       ContinueGame();
