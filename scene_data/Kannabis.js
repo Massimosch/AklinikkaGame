@@ -1,48 +1,48 @@
 const Kannabis = {
-  RoopeJointti1: {
+  RoopenJointti1: {
     _comment: "",
     type: "options",
-    background: "Roskikset",
-    characters: ["HahmoTuomas"],
+    background: "RoopenKoti",
+    characters: ["HahmoRoope"],
     text_type: "speech",
     text_position: "speechLeft",
-    text: "tRoopeJointti1",
+    text: "tRoopenJointti1",
     player_choice: [
       {
-        text: "tRoopeJointti1Ei",
-        next_scene: "RoopeJointti2",
+        text: "tRoopenJointti1Ei",
+        next_scene: "RoopenJointti2",
       },
       {
-        text: "tRoopeJointti1Okei",
-        next_scene: "RoopeJointti3",
+        text: "tRoopenJointti1Okei",
+        next_scene: "RoopenJointti3",
       },
     ],
   },
-  RoopeJointti2: {
-    _comment: "Puuttuu nextScene",
+  RoopenJointti2: {
+    _comment: "",
     type: "linear",
-    background: "Kannabis",
+    background: "RoopenKoti",
     characters: [],
     text_type: "narrator",
     text_position: "",
-    text: "tRoopeJointti2",
-    next_scene: "",
+    text: "tRoopenJointti2",
+    next_scene: "Puistobileisiin",
   },
-  RoopeJointti3: {
+
+  RoopenJointti3: {
     _comment: "",
     type: "options",
     background: "Kannabis",
     characters: [""],
-    text_type: "speech",
-    text_position: "speechLeft",
-    text: "tRoopeJointti1",
+    text_type: "narrator",
+    text: "tRoopenJointti3",
     player_choice: [
       {
-        text: "tRoopeJointti3En",
+        text: "tRoopenJointti3En",
         next_scene: "Kannabis1",
       },
       {
-        text: "tRoopeJointti3Joo",
+        text: "tRoopenJointti3Joo",
         next_scene: "Kannabis1",
       },
     ],
@@ -50,10 +50,9 @@ const Kannabis = {
   Puistobileisiin: {
     _comment: "",
     type: "options",
-    background: "PuhelinViestit",
-    characters: ["HahmoRoope"],
-    text_type: "speech",
-    text_position: "speechLeft",
+    background: "RoopenKoti",
+    characters: [],
+    text_type: "narrator",
     text: "tPuistobileisiin",
     player_choice: [
       {
@@ -70,9 +69,8 @@ const Kannabis = {
     _comment: "",
     type: "options",
     background: "Kannabis",
-    characters: ["HahmoRoope"],
-    text_type: "speech",
-    text_position: "speechLeft",
+    characters: [""],
+    text_type: "narrator",
     text: "tKannabis1",
     player_choice: [
       {
@@ -118,7 +116,7 @@ const Kannabis = {
   Puistossa1: {
     _comment: "Oikea nextScene?",
     type: "linear",
-    background: "PuhelinViestit",
+    background: "Puistossa",
     characters: [""],
     text_type: "narrator",
     text_position: "",

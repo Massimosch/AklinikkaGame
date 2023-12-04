@@ -63,7 +63,7 @@ const TuomaksenKiusaaminen = {
     player_choice: [
       {
         text: "tTuomaksenTukeminenJoo",
-        next_scene: "TuomaksenHyvaPaatos",
+        next_scene: "TuomaksenTukeminenHyvaPaatos",
       },
       {
         text: "tTuomaksenTukeminenEi",
