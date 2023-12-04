@@ -33,7 +33,7 @@ const Kannabis = {
     _comment: '',
     type: 'options',
     background: 'Kannabis',
-    characters: [''],
+    characters: [],
     text_type: 'narrator',
     text: 'tRoopenJointti3',
     player_choice: [
@@ -69,7 +69,7 @@ const Kannabis = {
     _comment: '',
     type: 'options',
     background: 'Kannabis',
-    characters: [''],
+    characters: [],
     text_type: 'narrator',
     text: 'tKannabis1',
     player_choice: [
