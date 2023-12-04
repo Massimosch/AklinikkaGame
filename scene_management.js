@@ -1,3 +1,6 @@
+export {StartSetup};
+import {CheckIfClickedWhilePauseOpen, PauseMenuClicked} from './menu_module.js';
+
 import SuomiData from './languages/suomi.js';
 //import EnglishData from "./languages/english.js";
 //import SwedishData from "./languages/swedish.js";
@@ -58,6 +61,7 @@ const pauseMenuElement = document.querySelector('.top-options-menu');
 */
 function StartSetup(){
   nextScene = GetSceneData("EnsimmainenScene");
+  PopulateScene();
 }
 
 let currentDataFile = PelinAlku;
@@ -75,7 +79,6 @@ let delayTimeInSeconds = 0.1;
 // game setup
 StartSetup();
 AddClickEventListener();
-PopulateScene();
 
 // This is for switching the SceneData file
 function GetSceneData(sceneName) {
@@ -100,22 +103,19 @@ function AddClickEventListener() {
       return;
     }
 
+    // menu module click events
+    if(CheckIfClickedWhilePauseOpen() === true){
+      return;
+    }
+    if (event.target === pauseMenuElement) {
+      PauseMenuClicked();
+      return;
+    }
+
     if (nextScene == null) {
       console.error('Scene not found?: ' + nextScene);
       return;
     }
-
-    // if pause menu is open and player clicks outside it into game screen, pause ends
-    /*if (pauseMenuOpen === true) {
-      ContinueGame();
-      return;
-    }
-
-    if (event.target === pauseMenuIcon) {
-      pauseMenuOpen = true;
-      OpenPauseMenu();
-      return;
-    }*/
 
     if (currentScene.type === 'linear') {
       nextScene = GetSceneData(currentScene.next_scene);

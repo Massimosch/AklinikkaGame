@@ -1,3 +1,50 @@
+export {CheckIfClickedWhilePauseOpen, PauseMenuClicked};
+import {StartSetup} from './scene_management.js';
+
+const pauseMenu = document.querySelector('.pauseMenuBox');
+const continueButton = document.querySelector('.continue-button');
+const restartButton = document.querySelector('.restart-button');
+
+let pauseMenuOpen = false;
+
+// Pause menu behaviour
+function CheckIfClickedWhilePauseOpen() {
+  if (pauseMenuOpen === true) {
+    pauseMenuOpen = false;
+    pauseMenu.classList.add('hidden');
+    return true;
+  }
+  return false;
+}
+
+function PauseMenuClicked(){
+  // open pausemenu if closed or close if not?
+  if (pauseMenuOpen === true) {
+    pauseMenuOpen = false;
+    pauseMenu.classList.add('hidden');
+    return;
+  }
+  pauseMenuOpen = true;
+  pauseMenu.classList.remove('hidden');
+}
+
+// continue
+continueButton.addEventListener('click', function(){
+  pauseMenuOpen = false;
+  pauseMenu.classList.add('hidden');
+});
+
+// restart from start
+restartButton.addEventListener('click', function(){
+  StartSetup();
+  pauseMenuOpen = false;
+  pauseMenu.classList.add('hidden');
+});
+
+// Main menu behaviour
+
+
+// angelina's code
 document.addEventListener('DOMContentLoaded', function () {
   const mainGameContainer = document.querySelector('.game-flex-container');
   const startButton = document.getElementById("startBtnId");
@@ -18,17 +65,13 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   //Pause menu
-  const pauseMenuIcon = document.querySelector('.top-options-menu');
-  const pauseMenu = document.querySelector('.pauseMenuBox');
-  const continueButton = document.querySelector('.continue-button');
-  const restartButton = document.querySelector('.restart-button');
+
   // pause language switch buttons
   const suomiButton = document.querySelector('.suomi-button');
   const englishButton = document.querySelector('.english-button');
   const swedishButton = document.querySelector('.swedish-button');
 
-  continueButton.addEventListener('click', ContinueGame);
-  restartButton.addEventListener('click', RestartGame);
+
   /*suomiButton.addEventListener('click', ChangeLanguage('suomi'));
   englishButton.addEventListener('click', ChangeLanguage('english'));
   swedishButton.addEventListener('click', ChangeLanguage('swedish')); */
@@ -39,16 +82,7 @@ document.addEventListener('DOMContentLoaded', function () {
     pauseMenuOpen = true;
     pauseMenu.classList.remove('hidden');
   }
-  function ContinueGame() {
-    pauseMenuOpen = false;
-    pauseMenu.classList.add('hidden');
-  }
-  function RestartGame() {
-    nextScene = gameStartingScene;
-    PopulateScene();
-    pauseMenuOpen = false;
-    pauseMenu.classList.add('hidden');
-  }
+
 
   function addClickEventListener() {
     mainGameContainer.addEventListener('click', event => {
