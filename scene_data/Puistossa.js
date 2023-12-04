@@ -1,22 +1,4 @@
 const Puistossa = {
-  Puistobileisiin: {
-    _comment: '',
-    type: 'options',
-    background: 'RoopenKoti',
-    characters: [],
-    text_type: 'narrator',
-    text: 'tPuistobileisiin',
-    player_choice: [
-      {
-        text: 'tPuistobileisiinKotiin',
-        next_scene: 'Kotona1',
-      },
-      {
-        text: 'tPuistobileisiinJoo',
-        next_scene: 'Puistossa1',
-      },
-    ],
-  },
   Puistossa1: {
     _comment: 'Oikea nextScene?',
     type: 'linear',
