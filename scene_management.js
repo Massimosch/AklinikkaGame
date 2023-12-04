@@ -1,9 +1,9 @@
-export {StartSetup};
-import {CheckIfClickedWhilePauseOpen, PauseMenuClicked} from './menu_module.js';
+/*
+  Module handles scenes and player choices
+*/
 
-import SuomiData from './languages/suomi.js';
-//import EnglishData from "./languages/english.js";
-//import SwedishData from "./languages/swedish.js";
+export { StartSetup };
+import { CheckIfClickedWhilePauseOpen, PauseMenuClicked, Language } from './menu_module.js';
 
 import PelinAlku from './scene_data/PelinAlku.js';
 import LydianHuolet from './scene_data/LydianHuolet.js';
@@ -67,14 +67,12 @@ function StartSetup(){
 let currentDataFile = PelinAlku;
 
 let currentBackground;
-let language = SuomiData;
 let currentScene;
 let nextScene;
 
 let transitionDelayTime;
 let delayTimeInSeconds = 0.1;
 //let pauseMenuOpen = false;
-
 
 // game setup
 StartSetup();
@@ -210,7 +208,7 @@ function AnimateScene() {
 
 function WriteInfobox() {
   infoboxElement.classList.remove('hidden');
-  infoboxText.textContent = language[nextScene.text];
+  infoboxText.textContent = Language[nextScene.text];
   // bottomChoiceContainer.transfrom = "translateX(0%)";
   speechBubbleLeft.classList.add('hidden');
   speechBubbleRight.classList.add('hidden');
@@ -222,12 +220,12 @@ function WriteDialogue() {
     //bottomChoiceContainer.transfrom = "translateX(0%)";
     speechBubbleLeft.classList.remove('hidden');
     speechBubbleRight.classList.add('hidden');
-    speechBubbleLeft.textContent = language[nextScene.text];
+    speechBubbleLeft.textContent = Language[nextScene.text];
   } else {
     //bottomChoiceContainer.transfrom = "translateX(0%)";
     speechBubbleRight.classList.remove('hidden');
     speechBubbleLeft.classList.add('hidden');
-    speechBubbleRight.textContent = language[nextScene.text];
+    speechBubbleRight.textContent = Language[nextScene.text];
   }
 }
 
@@ -240,8 +238,8 @@ function PlayerChoiceSetup() {
     } else {
       playerChoiceElements[i].classList.remove('hidden');
       playerChoiceTextElements[i].textContent =
-        language[nextScene.player_choice[i].text];
-      if (language[nextScene.player_choice[i].text] == null) {
+        Language[nextScene.player_choice[i].text];
+      if (Language[nextScene.player_choice[i].text] == null) {
         console.error(
           'next scene text missing, typo here:? ' +
             nextScene.player_choice[i].text

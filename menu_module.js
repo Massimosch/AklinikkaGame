@@ -1,13 +1,18 @@
-export {CheckIfClickedWhilePauseOpen, PauseMenuClicked};
-import {StartSetup} from './scene_management.js';
+/*
+  Module handles language switching, pause and main menu
+*/
 
+let Language;
+export { CheckIfClickedWhilePauseOpen, PauseMenuClicked, Language };
+import { StartSetup } from './scene_management.js';
+
+// Pause menu behaviour
 const pauseMenu = document.querySelector('.pauseMenuBox');
 const continueButton = document.querySelector('.continue-button');
 const restartButton = document.querySelector('.restart-button');
 
 let pauseMenuOpen = false;
 
-// Pause menu behaviour
 function CheckIfClickedWhilePauseOpen() {
   if (pauseMenuOpen === true) {
     pauseMenuOpen = false;
@@ -17,7 +22,7 @@ function CheckIfClickedWhilePauseOpen() {
   return false;
 }
 
-function PauseMenuClicked(){
+function PauseMenuClicked() {
   // open pausemenu if closed or close if not?
   if (pauseMenuOpen === true) {
     pauseMenuOpen = false;
@@ -29,96 +34,59 @@ function PauseMenuClicked(){
 }
 
 // continue
-continueButton.addEventListener('click', function(){
+continueButton.addEventListener('click', function () {
   pauseMenuOpen = false;
   pauseMenu.classList.add('hidden');
 });
 
 // restart from start
-restartButton.addEventListener('click', function(){
+restartButton.addEventListener('click', function () {
   StartSetup();
   pauseMenuOpen = false;
   pauseMenu.classList.add('hidden');
 });
 
 // Main menu behaviour
+const mainGameContainer = document.querySelector('.game-flex-container');
+const startPageContainer = document.querySelector(".start-page");
+const startButtonElement = document.querySelector(".startbutton");
 
-
-// angelina's code
-document.addEventListener('DOMContentLoaded', function () {
-  const mainGameContainer = document.querySelector('.game-flex-container');
-  const startButton = document.getElementById("startBtnId");
-  const startPage = document.getElementById("startPageId");
-
-  if (startButton) {
-    startButton.addEventListener("click", event => {
-      console.log("start button clicked");
-      StartGame();
-    });
-  } else {
-    console.log('startButton is null');
-  }
-
-  function StartGame() {
-    mainGameContainer.style.display = "flex";
-    startPage.style.display = "none";
-  }
-
-  //Pause menu
-
-  // pause language switch buttons
-  const suomiButton = document.querySelector('.suomi-button');
-  const englishButton = document.querySelector('.english-button');
-  const swedishButton = document.querySelector('.swedish-button');
-
-
-  /*suomiButton.addEventListener('click', ChangeLanguage('suomi'));
-  englishButton.addEventListener('click', ChangeLanguage('english'));
-  swedishButton.addEventListener('click', ChangeLanguage('swedish')); */
-
-  let pauseMenuOpen = false;
-
-  function OpenPauseMenu() {
-    pauseMenuOpen = true;
-    pauseMenu.classList.remove('hidden');
-  }
-
-
-  function addClickEventListener() {
-    mainGameContainer.addEventListener('click', event => {
-      if (ClickedTooFast() === true) {
-        return;
-      }
-
-      // if pause menu is open and player clicks outside it into game screen, pause ends
-      if (pauseMenuOpen === true) {
-        ContinueGame();
-        return;
-      }
-
-      if (event.target === pauseMenuIcon) {
-        pauseMenuOpen = true;
-        OpenPauseMenu();
-        return;
-      }
-
-      function ChangeLanguage(chosenLanguage) {
-        switch (chosenLanguage) {
-          case 'suomi':
-            language = SuomiData;
-            break;
-          case 'english':
-            //language = EnglishData;
-            break;
-          case 'swedish':
-            //language = SwedishData;
-            break;
-          default:
-            console.log('typo in language button events??');
-            break;
-        }
-      }
-    });
-  }
+startButtonElement.addEventListener('click', function () {
+  mainGameContainer.classList.remove('hidden');
+  startPageContainer.classList.add('hidden');
+  StartSetup();
 });
 
+// language switch behaviour
+const suomiButton = document.querySelector('.suomi-button');
+const englishButton = document.querySelector('.english-button');
+const swedishButton = document.querySelector('.swedish-button');
+
+suomiButton.addEventListener('click', ChangeLanguage('suomi'));
+englishButton.addEventListener('click', ChangeLanguage('english'));
+swedishButton.addEventListener('click', ChangeLanguage('swedish'));
+
+import SuomiData from './languages/suomi.js';
+//import EnglishData from "./languages/english.js";
+//import SwedishData from "./languages/swedish.js";
+
+//ChangeLanguage('suomi');
+function ChangeLanguage(chosenLanguage) {
+  switch (chosenLanguage) {
+    case 'suomi':
+      Language = SuomiData;
+      // update UI text
+      break;
+    case 'english':
+      //language = EnglishData;
+      // update UI text
+      break;
+    case 'swedish':
+      //language = SwedishData;
+      // update UI text
+      break;
+    default:
+      console.log('typo in language button events??');
+      break;
+  }
+}
