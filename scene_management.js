@@ -37,8 +37,12 @@ const sceneDataFiles = [
 
 const mainGameContainer = document.querySelector('.game-flex-container');
 
-const infoboxElement = document.querySelector('.narratorBox');
-const infoboxText = document.querySelector('.narratorBoxText');
+const infoboxElement = document.querySelector('.infoBox');
+const infoboxText = document.querySelector('.infoBoxText');
+
+const narratorElement = document.querySelector('.narratorBox');
+const narratorText = document.querySelector('.narratorBoxText');
+
 
 const speechBubbleLeft = document.querySelector('.speechBubbleLeft');
 const speechBubbleRight = document.querySelector('.speechBubbleRight');
@@ -182,9 +186,13 @@ function PopulateScene() {
   if (nextScene.text_type === 'dialogue' || nextScene.text_type === 'speech') {
     WriteDialogue();
   }
-  if (nextScene.text_type === 'infobox' || nextScene.text_type === 'narrator') {
+  if (nextScene.text_type === 'infobox' || nextScene.text_type === 'Infobox') {
     WriteInfobox();
   }
+  if (nextScene.text_type === 'narrator') {
+    WriteNarrator();
+  }
+
   PlayerChoiceSetup();
 
   ResetAnimations();
@@ -211,9 +219,21 @@ function WriteInfobox() {
   // bottomChoiceContainer.transfrom = "translateX(0%)";
   speechBubbleLeft.classList.add('hidden');
   speechBubbleRight.classList.add('hidden');
+  narratorElement.classList.add('hidden');
 }
+
+function WriteNarrator() {
+  narratorElement.classList.remove('hidden');
+  narratorText.textContent = Language[nextScene.text];
+  // bottomChoiceContainer.transfrom = "translateX(0%)";
+  speechBubbleLeft.classList.add('hidden');
+  speechBubbleRight.classList.add('hidden');
+  infoboxElement.classList.add('hidden');
+}
+
 function WriteDialogue() {
   infoboxElement.classList.add('hidden');
+  narratorElement.classList.add('hidden');
 
   if (nextScene.text_position === 'speechLeft') {
     //bottomChoiceContainer.transfrom = "translateX(0%)";
