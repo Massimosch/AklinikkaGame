@@ -57,7 +57,6 @@ const pauseMenuElement = document.querySelector('.top-options-menu');
 
 /*
   Alla olevassa voi vaihtaa currentScene = minkä haluaa, 
-  ja antaa sen scenen data filun currentDataFileen.
 */
 function StartSetup(){
   nextScene = GetSceneData("EnsimmainenScene");
