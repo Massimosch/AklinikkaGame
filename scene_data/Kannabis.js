@@ -33,7 +33,7 @@ const Kannabis = {
     _comment: '',
     type: 'options',
     background: 'Kannabis',
-    characters: [''],
+    characters: [],
     text_type: 'narrator',
     text: 'tRoopenJointti3',
     player_choice: [
@@ -47,11 +47,29 @@ const Kannabis = {
       },
     ],
   },
+  Puistobileisiin: {
+    _comment: '',
+    type: 'options',
+    background: 'RoopenKoti',
+    characters: [],
+    text_type: 'narrator',
+    text: 'tPuistobileisiin',
+    player_choice: [
+      {
+        text: 'tPuistobileisiinKotiin',
+        next_scene: 'Kotona1',
+      },
+      {
+        text: 'tPuistobileisiinJoo',
+        next_scene: 'Puistossa1',
+      },
+    ],
+  },
   Kannabis1: {
     _comment: '',
     type: 'options',
     background: 'Kannabis',
-    characters: [''],
+    characters: [],
     text_type: 'narrator',
     text: 'tKannabis1',
     player_choice: [
