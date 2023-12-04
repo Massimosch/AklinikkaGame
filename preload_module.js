@@ -41,5 +41,5 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   };
 
-  loadImages(firstScenes); // start by loading the first batch of images
+  //loadImages(firstScenes); // start by loading the first batch of images
 });
