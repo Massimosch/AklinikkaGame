@@ -6,16 +6,6 @@ const PelinAlku = {
     characters: [],
     text_type: "narrator",
     text: "tPelinAlku",
-    next_scene: "PelinAlkuHahmonMuokkaus"
-  },
-
-  PelinAlkuHahmonMuokkaus: {
-    _comment: "",
-    type: "linear",
-    background: "KoulunPiha",
-    characters: [],
-    text_type: "narrator",
-    text: "tPelinAlkuHahmonMuokkaus",
     next_scene: "PelinAlkuTutorial"
   },
 
