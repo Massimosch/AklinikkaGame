@@ -80,7 +80,11 @@ flex: 1;
 .top-options-menu {
   background-image: url("images/UI/MenuIcon.svg");
   align-self: flex-end;
-  padding: 3%;
+  height: 9vw;
+  width: 9vw;
+  max-width: 60px;
+  flex: 0, 0, auto;
+  /*padding: 3%;*/
   margin: 1%;
   z-index: 11;
   background-repeat: no-repeat;
