@@ -112,7 +112,7 @@ function AddClickEventListener() {
       PauseMenuClicked();
       return;
     }
-    if (event.target === href) {
+    if (event.target.tagName === 'A') {
       return;
     }
 
