@@ -44,7 +44,7 @@ const OppituntiAlkamassa = {
     type: "linear",
     background: "Luokkahuone",
     characters: [],
-    text_type: "narrator",
+    text_type: "infobox",
     text: "tAhdistusInfobox",
     next_scene: "Oppitunti5",
   },
