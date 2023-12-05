@@ -199,6 +199,7 @@
    bottom: -16px;
    right: 7%;
  }
+
  .infoBox {
   display: grid;
   grid-template-rows: auto 1fr; 
@@ -226,11 +227,10 @@
   display: grid;
   position: absolute;
   z-index: 100;
-  height: 90vh;
+  height: 95vh;
   width: 80vw;
   max-width: 864px;
   max-height: 1728px;
-
   grid-template-rows: auto 1fr; 
   border: 1px solid #000;
   border-radius: 10px 10px 0px 0px;
@@ -240,12 +240,11 @@
 
 .pauseMenuBox .details {
   height: 40px;
+  width: 80vw;
+  max-width: 864px;
   background-color: #A9A7FF;
   display: flex;
   justify-content: space-between; 
-  text-align: center; 
-  font-family: JetBrains Mono; 
-  font-size: 1.5rem; 
 }
 
 .pauseMenuBox .details .shine {
@@ -256,7 +255,6 @@
 .details .pauseicon {
   width: 8px;
   height: 20px;
-  border: 1px solid #000;
   background-color: #C1BFFF;
   margin-right: 2px; 
 }
@@ -272,7 +270,7 @@
     justify-content: center;
     height: 100%;
     width: 100%;
-    row-gap: 20px;
+    row-gap: 2vh;
     flex-grow: 1;
     z-index: 10;
 
