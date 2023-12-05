@@ -112,6 +112,9 @@ function AddClickEventListener() {
       PauseMenuClicked();
       return;
     }
+    if (event.target === href) {
+      return;
+    }
 
     if (nextScene == null) {
       console.error('Scene not found?: ' + nextScene);
@@ -215,7 +218,7 @@ function AnimateScene() {
 
 function WriteInfobox() {
   infoboxElement.classList.remove('hidden');
-  infoboxText.textContent = Language[nextScene.text];
+  infoboxText.innerHTML = Language[nextScene.text];
   // bottomChoiceContainer.transfrom = "translateX(0%)";
   speechBubbleLeft.classList.add('hidden');
   speechBubbleRight.classList.add('hidden');
@@ -224,7 +227,7 @@ function WriteInfobox() {
 
 function WriteNarrator() {
   narratorElement.classList.remove('hidden');
-  narratorText.textContent = Language[nextScene.text];
+  narratorText.innerHTML = Language[nextScene.text];
   // bottomChoiceContainer.transfrom = "translateX(0%)";
   speechBubbleLeft.classList.add('hidden');
   speechBubbleRight.classList.add('hidden');
@@ -239,12 +242,12 @@ function WriteDialogue() {
     //bottomChoiceContainer.transfrom = "translateX(0%)";
     speechBubbleLeft.classList.remove('hidden');
     speechBubbleRight.classList.add('hidden');
-    speechBubbleLeft.textContent = Language[nextScene.text];
+    speechBubbleLeft.innerHTML = Language[nextScene.text];
   } else {
     //bottomChoiceContainer.transfrom = "translateX(0%)";
     speechBubbleRight.classList.remove('hidden');
     speechBubbleLeft.classList.add('hidden');
-    speechBubbleRight.textContent = Language[nextScene.text];
+    speechBubbleRight.innerHTML = Language[nextScene.text];
   }
 }
 
@@ -256,7 +259,7 @@ function PlayerChoiceSetup() {
       playerChoiceElements[i].classList.add('hidden');
     } else {
       playerChoiceElements[i].classList.remove('hidden');
-      playerChoiceTextElements[i].textContent =
+      playerChoiceTextElements[i].innerHTML =
         Language[nextScene.player_choice[i].text];
       if (Language[nextScene.player_choice[i].text] == null) {
         console.error(
