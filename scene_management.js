@@ -60,7 +60,10 @@ const bottomTextElement = document.querySelector('.bottom-choice-container');
 const pauseMenuElement = document.querySelector('.top-options-menu');
 
 /*
-  Alla olevassa voi vaihtaa currentScene = minkä haluaa, 
+  Alla olevassa voi vaihtaa currentScene = minkä haluaa
+  Rivillä nextScene = GetSceneData("EnsimmainenScene");
+  Vaihda EnsimmainenScene siihen SceneID:en josta haluat aloittaa pelin. 
+  Peli alkaa Start Menusta, klikkaa "Aloita peli" ja pääset valitsemaasi aloitussceneen
 */
 function StartSetup(){
   nextScene = GetSceneData("EnsimmainenScene");
