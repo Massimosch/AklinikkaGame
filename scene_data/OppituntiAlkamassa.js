@@ -75,26 +75,13 @@ const OppituntiAlkamassa = {
 
   Oppitunti6: {
     _comment: "Pirkka vakava",
-    type: "options",
+    type: "linear",
     background: "Luokkahuone",
     characters: ["HahmoOpettajaPirkka"],
     text_type: "speech",
     text_position: "speechLeft",
     text: "tOppitunti6",
-    player_choice: [
-      {
-        text: "tOppitunti6IfA",
-        next_scene: "Oppitunti7",
-      },
-      {
-        text: "tOppitunti6IfB",
-        next_scene: "Oppitunti7",
-      },
-      {
-        text: "tOppitunti6IfC",
-        next_scene: "Oppitunti7",
-      },
-    ],
+    next_scene: "Oppitunti7",
   },
 
   Oppitunti7: {
