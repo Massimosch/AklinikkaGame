@@ -2,8 +2,8 @@ const TuomaksenKiusaaminen = {
   TuomaksenKiusaaminen1: {
     _comment: "",
     type: "linear",
-    background: "Luokkahuone",
-    characters: ["HahmoTuomas"],
+    background: "LuokanOvi",
+    characters: ["HahmoTuomas", "HahmoKiusaajaPoika"],
     text_type: "speech",
     text_position: "speechLeft",
     text: "tTuomaksenKiusaaminen1",
@@ -12,8 +12,8 @@ const TuomaksenKiusaaminen = {
   TuomaksenKiusaaminen2: {
     _comment: "",
     type: "options",
-    background: "Luokkahuone",
-    characters: ["HahmoTuomas"],
+    background: "LuokanOvi",
+    characters: ["HahmoTuomas", "HahmoKiusaajaPoika"],
     text_type: "speech",
     text_position: "speechLeft",
     text: "tTuomaksenKiusaaminen2",
@@ -35,7 +35,7 @@ const TuomaksenKiusaaminen = {
   OpettajaApuun1: {
     _comment: "",
     type: "linear",
-    background: "Luokkahuone",
+    background: "LuokanOvi",
     characters: ["HahmoTuomas", "HahmoOpe"],
     text_type: "speech",
     text_position: "speechLeft",
@@ -45,7 +45,7 @@ const TuomaksenKiusaaminen = {
   OpettajaApuun2: {
     _comment: "",
     type: "linear",
-    background: "Luokkahuone",
+    background: "LuokanOvi",
     characters: ["HahmoTuomas", "HahmoOpe"],
     text_type: "speech",
     text_position: "speechLeft",
@@ -55,7 +55,7 @@ const TuomaksenKiusaaminen = {
   TuomaksenTukeminen: {
     _comment: "",
     type: "options",
-    background: "Luokkahuone",
+    background: "LuokanOvi",
     characters: ["HahmoTuomas"],
     text_type: "speech",
     text_position: "speechLeft",
@@ -74,8 +74,8 @@ const TuomaksenKiusaaminen = {
   TuomaksenTukeminenHyvaPaatos: {
     _comment: "",
     type: "linear",
-    background: "Luokkahuone",
-    characters: [""],
+    background: "LuokanOvi",
+    characters: [],
     text_type: "speech",
     text_position: "speechLeft",
     text: "tTuomaksenTukeminenHyvaPaatos",
@@ -84,8 +84,8 @@ const TuomaksenKiusaaminen = {
   TuomaksenTukeminenTiesitko: {
     _comment: "",
     type: "linear",
-    background: "Luokkahuone",
-    characters: [""],
+    background: "LuokanOvi",
+    characters: [],
     text_type: "speech",
     text_position: "speechLeft",
     text: "tTuomaksenTukeminenTiesitko",
