@@ -6,7 +6,7 @@
 }
 
 body {
-  display:flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -14,90 +14,103 @@ body {
   height: 100vh;
   background-color: rgb(0, 0, 0);
 }
+
 /*
-  startpage...
-  main container
-    logo
-    bottom container
-      buttons
-      character
-    footer
+  main menu divs...
+  main-menu-container
+    main-menu-top-container (logo)
+    main-menu-bottom-stuff-container
+      main-menu-character-container (absolute (on background))
+        main-menu-character
+      main-menu-buttons-container
+        startmenubuttons...
+    main-menu-footer
 */
-.start-page {
+.main-menu-container {
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  justify-content: flex-start safe;
+  align-items: stretch;
   flex-direction: column;
-  background-image: url("images/backgrounds/KoulunPiha.png");
+  height: 100vh;
+  width: 100vw;
+  max-width: 1080px;
+  background-image: url("./images/backgrounds/Puisto.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   background-position-y: center;
-  width: 100vw;
-  height: 100vh;
-  max-width: 1080px;
 }
 
-.startpage-container{
-  position: absolute;
+.main-menu-top-container {
+  height: 20vh;
+  width: 100%;
   display: flex;
-  flex-direction: row;
-  align-items: center;
   justify-content: center;
-  width: 100vw;
-  max-width: 1080px;
-  max-height: 70vh;
-  z-index: 10;
-  padding-bottom: 3vh;
+  align-items: center;
+  flex: 0 1 auto;
+  background-image: url("./images/UI/Logo_Color.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  z-index: 2;
 }
-.main-menu-bottom-stuff-container{
+
+.main-menu-bottom-stuff-container {
+  flex: 1 1 auto;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 100%;
-  z-index: 10;
-  padding-bottom: 3vh;
+  z-index: 0;
+  position: relative;
 }
-.main-menu-character-container{
+
+.main-menu-character-container {
   position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -2;
   display: flex;
-  flex-direction: row;
   align-items: stretch;
-  justify-content:space-between;
-  padding-left: 3vw;
-  padding-right: 5vw;
-  width: 100%;
-  height: 100%;
-  max-width: 1080px;
-  z-index: 10;
-  padding-top: 15vh;
-  padding-bottom: 8vh;
+  justify-content: space-between;
 }
 
-.startpagecharacter{
-  max-height: 80vh;
-  width: auto;
-  z-index: 1;
+.main-menu-character {
+  flex: 1 1 auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 
-.startmenubuttons{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    row-gap: 10px;
-    flex-grow: 1;
-    z-index: 10;
-} 
+.main-menu-char1 {
+  background-image: url("./images/characters/HahmoLydia.png");
+}
 
-.startpage-footer{
-  position: absolute;
+.main-menu-char2 {
+  background-image: url("./images/characters/HahmoKuraattoriAnu.png");
+}
+
+.main-menu-footer {
+  align-self: flex-end;
   text-align: center;
   bottom: 1vh;
   width: 100%;
-  max-width: 1080px;
   z-index: 10;
   padding-bottom: 1vh;
+}
+.main-menu-buttons-container{
+  flex: 0 1 auto;
+}
+.startmenubuttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 10px;
+  flex-grow: 1;
+  z-index: 10;
 }
 
 .game-flex-container {
@@ -110,14 +123,13 @@ body {
   justify-content: flex-start safe;
   flex-direction: column;
   z-index: 0;
-  background-image: url("images/backgrounds/KoulunPiha.png");
+  background-image: url("./images/backgrounds/KoulunPiha.png");
   background-repeat: no-repeat;
   background-size: cover, contain;
 }
 
-
 .top-options-menu {
-  background-image: url("images/UI/MenuIcon.svg");
+  background-image: url("./images/UI/MenuIcon.svg");
   align-self: flex-end;
   height: 9vw;
   width: 9vw;
@@ -164,16 +176,7 @@ body {
   width: 55px;
   flex-shrink: 0;
 }
-.main-menu-top-logo-container{
-  
-  width: 100vw;
-  top: 0%;
-  max-width: 1080px;
-  max-height: 70vh;
-  z-index: 10;
-  padding-bottom: 3vh;
 
-}
 .top-text-container {
   display: flex;
   flex-direction: column;
@@ -206,13 +209,12 @@ body {
   padding-bottom: 10vh;
   /*max-width: 500px;*/
   flex: 1 1 0px;
-  background-image: url("images/characters/HahmoSofi.png");
+  background-image: url("./images/characters/HahmoSofi.png");
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: contain;
   z-index: 1;
 }
-
 
 .bottom-choice-container {
   margin-top: auto;
@@ -224,8 +226,6 @@ body {
   z-index: 10;
   padding-bottom: 3vh;
 }
-
-
 
 .fade-in-animation {
   animation-name: fade-in;
