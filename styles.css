@@ -17,6 +17,12 @@ body {
 
 .start-page {
   background-image: url("images/backgrounds/KoulunPiha.png");
+  background-repeat: no-repeat;
+  background-size: cover, contain;
+  background-position: center;
+  background-position-y: center;
+  width: 100vw;
+  height: 100vh;
 }
 
 .startpage-container{
@@ -51,14 +57,13 @@ flex: 1;
 } 
 
 .startpage-footer{
-  margin-top: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  position: absolute;
+  text-align: center;
+  bottom: 1vh;
   width: 100%;
   max-width: 1080px;
   z-index: 10;
-  padding-bottom: 3vh;
+  padding-bottom: 1vh;
 }
 
 .game-flex-container {
