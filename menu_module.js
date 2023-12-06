@@ -48,12 +48,12 @@ restartButton.addEventListener('click', function () {
 
 // Main menu behaviour
 const mainGameContainer = document.querySelector('.game-flex-container');
-const startPageContainer = document.querySelector(".start-page");
+const mainMenuContainer = document.querySelector(".main-menu-container");
 const startButtonElement = document.querySelector(".startbutton");
 
 startButtonElement.addEventListener('click', function () {
   mainGameContainer.classList.remove('hidden');
-  startPageContainer.classList.add('hidden');
+  mainMenuContainer.classList.add('hidden');
   StartSetup();
 });
 
