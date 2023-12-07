@@ -54,7 +54,7 @@ const playerChoiceTextElements = document.querySelectorAll('.choiceBoxText');
 
 // animation containers
 const topTextElement = document.querySelector('.top-text-container');
-const bottomTextElement = document.querySelector('.bottom-choice-container');
+const bottomPlayerChoiceElement = document.querySelector('.bottom-choice-container');
 
 // settings menu
 const pauseMenuElement = document.querySelector('.top-options-menu');
@@ -75,10 +75,13 @@ let currentDataFile = PelinAlku;
 let currentBackground;
 let currentScene;
 let nextScene;
+let waitingForPlayerChoiceButtons = false;
+let timerForPlayerChoices;
+let playerChoiceDelayTime = 400; //milliseconds
 
 let transitionDelayTime;
 let delayTimeInSeconds = 0.1;
-//let pauseMenuOpen = false;
+
 
 // game setup
 StartSetup();
@@ -119,6 +122,11 @@ function AddClickEventListener() {
       return;
     }
 
+    if (waitingForPlayerChoiceButtons === true) {
+      StopFadeInAnimation();
+      return;
+    }
+
     if (nextScene == null) {
       console.error('Scene not found?: ' + nextScene);
       return;
@@ -146,6 +154,15 @@ function AddClickEventListener() {
   });
 }
 
+function StopFadeInAnimation(){
+  waitingForPlayerChoiceButtons = false;
+  clearTimeout(timerForPlayerChoices);
+  PlayerChoiceSetup();
+  bottomPlayerChoiceElement.classList.remove('fade-in-animation-long');
+  bottomPlayerChoiceElement.style.animation = 'none';
+  void topTextElement.offsetWidth;
+  bottomPlayerChoiceElement.style.animation = '';
+}
 function ClickedTooFast() {
   // double click speed timer here to avoid accidental progress?
   const currentTimeInSeconds = new Date().getTime() / 1000;
@@ -198,8 +215,14 @@ function PopulateScene() {
   if (nextScene.text_type === 'narrator') {
     WriteNarrator();
   }
-
-  PlayerChoiceSetup();
+  // hide player choices by default for delay
+  for (let i = 0; i < playerChoiceElements.length; i++) {
+    playerChoiceElements[i].classList.add('hidden');
+  }
+  if (nextScene.player_choice !== undefined) {
+    timerForPlayerChoices = setTimeout(PlayerChoiceSetup, playerChoiceDelayTime);
+    waitingForPlayerChoiceButtons = true; 
+  }
 
   ResetAnimations();
   AnimateScene();
@@ -209,14 +232,13 @@ function PopulateScene() {
 
 function ResetAnimations() {
   topTextElement.classList.remove('fade-in-animation');
-  bottomTextElement.classList.remove('fade-in-animation');
+  bottomPlayerChoiceElement.classList.remove('fade-in-animation-long');
   // "in order to know what the offsetWidth is, the browser has to abandon
   // its plan of batching the changes and perform the reflow of the page right now"
   void topTextElement.offsetWidth;
 }
 function AnimateScene() {
   topTextElement.classList.add('fade-in-animation');
-  bottomTextElement.classList.add('fade-in-animation');
 }
 
 function WriteInfobox() {
@@ -256,6 +278,8 @@ function WriteDialogue() {
 
 // player choice box setup
 function PlayerChoiceSetup() {
+  bottomPlayerChoiceElement.classList.add('fade-in-animation-long');
+  
   for (let i = 0; i < playerChoiceElements.length; i++) {
     // hide null choices
     if (nextScene.type === 'linear' || i >= nextScene.player_choice.length) {
@@ -273,3 +297,6 @@ function PlayerChoiceSetup() {
     }
   }
 }
+bottomPlayerChoiceElement.addEventListener('animationend', () => {
+    waitingForPlayerChoiceButtons = false;
+});

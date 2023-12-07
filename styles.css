@@ -226,7 +226,10 @@ body {
   z-index: 10;
   padding-bottom: 3vh;
 }
-
+.fade-in-animation-long {
+  animation-name: fade-in;
+  animation-duration: 1.1s;
+}
 .fade-in-animation {
   animation-name: fade-in;
   animation-duration: 0.4s;
