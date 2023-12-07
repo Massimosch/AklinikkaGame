@@ -21,7 +21,7 @@ const Kannabis = {
   RoopenJointti2: {
     _comment: '',
     type: 'linear',
-    background: 'RoopenKoti',
+    background: 'Kannabis',
     characters: [],
     text_type: 'narrator',
     text_position: '',
