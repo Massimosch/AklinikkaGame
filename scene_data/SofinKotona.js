@@ -185,7 +185,7 @@ const SofinKotona = {
   RandomGroomer2Lahetan: {
     _comment: '',
     type: 'linear',
-    background: '',
+    background: 'PuhelinSnappi',
     characters: [],
     text_type: 'speech',
     text_position: 'speechLeft',
@@ -195,7 +195,7 @@ const SofinKotona = {
   RandomGroomer2SuaVartenSomessa: {
     _comment: '',
     type: 'linear',
-    background: '',
+    background: 'PuhelinSnappi',
     characters: [],
     text_type: 'speech',
     text_position: 'speechLeft',
@@ -205,7 +205,7 @@ const SofinKotona = {
   RandomGroomer2EnVastaa: {
     _comment: '',
     type: 'linear',
-    background: '',
+    background: 'PuhelinSnappi',
     characters: [],
     text_type: 'speech',
     text_position: 'speechLeft',
