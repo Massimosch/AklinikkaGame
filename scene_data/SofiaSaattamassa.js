@@ -2,7 +2,7 @@ const SofiaSaattamassa = {
   SofiSaattaa1: {
     _comment: '',
     type: 'options',
-    background: 'Katu',
+    background: 'Risteys',
     characters: [],
     text_type: 'narrator',
     text_position: '',
@@ -21,7 +21,7 @@ const SofiaSaattamassa = {
   SofiSaattaa2Hyva: {
     _comment: '',
     type: 'linear',
-    background: 'Katu',
+    background: 'Risteys',
     characters: [],
     text_type: 'narrator',
     text_position: '',
@@ -31,7 +31,7 @@ const SofiaSaattamassa = {
   SofiSaattaa2Huono: {
     _comment: '',
     type: 'linear',
-    background: 'Katu',
+    background: 'Risteys',
     characters: [],
     text_type: 'narrator',
     text_position: '',
@@ -41,7 +41,7 @@ const SofiaSaattamassa = {
   SofiSaattaa3: {
     _comment: '',
     type: 'linear',
-    background: 'Katu',
+    background: 'Risteys',
     characters: [],
     text_type: 'narrator',
     text_position: '',
@@ -51,7 +51,7 @@ const SofiaSaattamassa = {
   SofiSaattaa4: {
     _comment: '',
     type: 'linear',
-    background: 'Katu',
+    background: 'Risteys',
     characters: [],
     text_type: 'narrator',
     text_position: '',
@@ -62,7 +62,7 @@ const SofiaSaattamassa = {
     _comment: '',
     type: 'linear',
     background: 'Kannabis',
-    characters: [''],
+    characters: [],
     text_type: 'speech',
     text_position: 'speechLeft',
     text: 'tVanhemmatKannabis1',
@@ -71,7 +71,7 @@ const SofiaSaattamassa = {
   VanhemmatKannabis2: {
     _comment: '',
     type: 'linear',
-    background: 'Kannabis',
+    background: 'Risteys',
     characters: [],
     text_type: 'narrator',
     text_position: '',
@@ -124,7 +124,7 @@ const SofiaSaattamassa = {
   SofiaSaattamassa1: {
     _comment: '',
     type: 'options',
-    background: 'Katu',
+    background: 'Risteys',
     characters: [],
     text_type: 'narrator',
     text_position: '',
@@ -143,7 +143,7 @@ const SofiaSaattamassa = {
   SofiaSaattamassa2Hyva: {
     _comment: '',
     type: 'linear',
-    background: 'Katu',
+    background: 'Risteys',
     characters: [],
     text_type: 'narrator',
     text_position: '',
@@ -163,7 +163,7 @@ const SofiaSaattamassa = {
   SofiaSaattamassa4Sakot: {
     _comment: '',
     type: 'linear',
-    background: '',
+    background: 'Risteys',
     characters: [],
     text_type: 'narrator',
     text_position: '',
@@ -173,7 +173,7 @@ const SofiaSaattamassa = {
   SofiaSaattamassa5: {
     _comment: '',
     type: 'linear',
-    background: '',
+    background: 'Risteys',
     characters: [],
     text_type: 'narrator',
     text_position: '',
