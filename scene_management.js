@@ -5,34 +5,35 @@
 export { StartSetup };
 import { CheckIfClickedWhilePauseOpen, PauseMenuClicked, Language } from './menu_module.js';
 
-import PelinAlku from './scene_data/PelinAlku.js';
+import EnergiajuomaNuuskaRahapelit from './scene_data/EnergiajuomaNuuskaRahapelit.js';
+import Kotimatka from './scene_data/Kotimatka.js';
 import LydianHuolet from './scene_data/LydianHuolet.js';
 import MironKotona from './scene_data/MironKotona.js';
 import MironTapaaminen from './scene_data/MironTapaaminen.js';
-import EnergiajuomaNuuskaRahapelit from './scene_data/EnergiajuomaNuuskaRahapelit.js';
 import OppituntiAlkamassa from './scene_data/OppituntiAlkamassa.js';
-import RoopenBileet from './scene_data/RoopenBileet.js';
-import Kotimatka from './scene_data/Kotimatka.js';
+import PelinAlku from './scene_data/PelinAlku.js';
 import PelinLoppu from './scene_data/PelinLoppu.js';
+import Puistossa from './scene_data/Puistossa.js';
+import RoopenBileet from './scene_data/RoopenBileet.js';
 import SofillaOnTietoa from './scene_data/SofillaOnTietoa.js';
 import SofinSomeTauko from './scene_data/SofinSometauko.js';
 import TuomaksenKiusaaminen from './scene_data/TuomaksenKiusaaminen.js';
-import Puistossa from './scene_data/Puistossa.js';
 
+// ordered by scene appearance
 const sceneDataFiles = [
   PelinAlku,
-  LydianHuolet,
-  MironKotona,
-  MironTapaaminen,
-  OppituntiAlkamassa,
+  SofillaOnTietoa,
   EnergiajuomaNuuskaRahapelit,
+  LydianHuolet,
   TuomaksenKiusaaminen,
+  MironTapaaminen,
+  SofinSomeTauko,
+  OppituntiAlkamassa,
+  MironKotona,
   RoopenBileet,
+  Puistossa,
   Kotimatka,
   PelinLoppu,
-  SofillaOnTietoa,
-  SofinSomeTauko,
-  Puistossa,
 ];
 
 const mainGameContainer = document.querySelector('.game-flex-container');
