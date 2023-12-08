@@ -123,7 +123,7 @@ const RoopenNuuskat = {
     type: "linear",
     background: "Nuuska",
     characters: [],
-    text_type: "speech",
+    text_type: "narrator",
     text_position: "speechLeft",
     text: "tRoopenNuuskat4",
     next_scene: "RoopenRahapelit",
