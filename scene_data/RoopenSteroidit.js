@@ -122,7 +122,7 @@ const RoopenSteroidit = {
   RoopenPillerit3EiTotta: {
     _comment: 'Puuttuu nextScene',
     type: 'linear',
-    background: 'Pillerit', 
+    background: 'Pillerit',  
     characters: [''],
     text_type: 'narrator',
     text: 'tRoopenPillerit3EiTotta',

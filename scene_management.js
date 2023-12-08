@@ -12,8 +12,8 @@ import MironTapaaminen from './scene_data/MironTapaaminen.js';
 import EnergiajuomaNuuskaRahapelit from './scene_data/EnergiajuomaNuuskaRahapelit.js';
 import OppituntiAlkamassa from './scene_data/OppituntiAlkamassa.js';
 import RoopenSteroidit from './scene_data/RoopenSteroidit.js';
-import SofiaSaattamassa from './scene_data/SofiaSaattamassa.js';
-import SofinKotona from './scene_data/SofinKotona.js';
+import Kotimatka from './scene_data/Kotimatka.js';
+import PelinLoppu from './scene_data/PelinLoppu.js';
 import SofillaOnTietoa from './scene_data/SofillaOnTietoa.js';
 import SofinSomeTauko from './scene_data/SofinSometauko.js';
 import Kannabis from './scene_data/Kannabis.js';
@@ -28,8 +28,8 @@ const sceneDataFiles = [
   EnergiajuomaNuuskaRahapelit,
   TuomaksenKiusaaminen,
   RoopenSteroidit,
-  SofiaSaattamassa,
-  SofinKotona,
+  Kotimatka,
+  PelinLoppu,
   SofillaOnTietoa,
   SofinSomeTauko,
   Kannabis,
