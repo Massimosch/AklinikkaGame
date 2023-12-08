@@ -28,4 +28,4 @@ const PelinAlku = {
     ]
   }
 }
-export default PelinAlku
+export default PelinAlku;
