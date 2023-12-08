@@ -24,7 +24,7 @@ const MironTapaaminen = {
         next_scene: "MiroTapaaminen",
       },
       {
-        text: "tEnergiaJuomat2Onko",
+        text: "tEnergiajuomat2Onko",
         next_scene: "EnergiajuomatInfobox",
       },
     ],
@@ -55,7 +55,7 @@ const MironTapaaminen = {
         next_scene: "MiroTapaaminen",
       },
       {
-        text: "tEnergiaJuomat2Joo",
+        text: "tEnergiajuomat2Joo",
         next_scene: "MiroTapaaminen",
       },
     ],
