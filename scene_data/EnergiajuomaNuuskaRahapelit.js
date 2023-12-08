@@ -103,7 +103,7 @@ const RoopenNuuskat = {
     type: "options",
     background: "Nuuska",
     characters: [],
-    text_type: "speech",
+    text_type: "narrator",
     text_position: "speechLeft",
     text: "tRoopenNuuskat3",
     player_choice: [
