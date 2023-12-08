@@ -41,7 +41,7 @@ const Kotimatka = {
   SofiSaattaa3: {
     _comment: '',
     type: 'linear',
-    background: 'Risteys',
+    background: 'Onnettomuus',
     characters: [],
     text_type: 'narrator',
     text_position: '',
@@ -64,7 +64,6 @@ const Kotimatka = {
     background: 'Kannabis',
     characters: [],
     text_type: 'narrator',
-    text_position: 'speechLeft',
     text: 'tVanhemmatKannabis1',
     next_scene: 'VanhemmatKannabis2',
   },
@@ -74,7 +73,7 @@ const Kotimatka = {
     background: 'Risteys',
     characters: ["HahmoSofiVakava"],
     text_type: 'speech',
-    text_position: '',
+    text_position: 'speechLeft',
     text: 'tVanhemmatKannabis2',
     next_scene: 'VanhemmatKannabis3',
   },
@@ -183,7 +182,7 @@ const Kotimatka = {
   SofinKotona: {
     _comment: '',
     type: 'linear',
-    background: 'SofinOvi',
+    background: 'SofinKoti',
     characters: ["HahmoSofinAiti"],
     text_type: 'narrator',
     text_position: 'speechLeft',
@@ -193,8 +192,8 @@ const Kotimatka = {
   SofinKotona2: {
     _comment: '',
     type: 'linear',
-    background: '',
-    characters: ["HahmoSofinAiti", "HahmoSofiVakava"],
+    background: 'SofinKoti',
+    characters: ["HahmoSofinAiti", "HahmoSofiHuolestunut"],
     text_type: 'narrator',
     text_position: 'speechLeft',
     text: 'tSofinKotona2',
@@ -203,7 +202,7 @@ const Kotimatka = {
   SofinKotona3: {
     _comment: '',
     type: 'options',
-    background: 'SofinOvi',
+    background: 'SofinKoti',
     characters: [],
     text_type: 'narrator',
     text_position: 'speechLeft',
@@ -214,11 +213,11 @@ const Kotimatka = {
         next_scene: 'SofinKotona4Vaikeaa',
       },
       {
-        text: 'tSofinKotona3Eikiinnosta',
+        text: 'tSofinKotona3EiKiinnosta',
         next_scene: 'SofinKotona4Vaikeaa',
       },
       {
-        text: 'tSofinkotona4Keskustelu',
+        text: 'tSofinKotona3Keskustelu',
         next_scene: 'SofinKotona4HyvatValit',
       },
     ],
