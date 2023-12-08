@@ -52,7 +52,7 @@ const Puistossa = {
     _comment: '',
     type: 'linear',
     background: 'Puisto',
-    characters: ['HahmoMiroNormaali'],
+    characters: ['HahmoMiro'],
     text_type: 'speech',
     text_position: 'speechLeft',
     text: 'tPuistossa5',
@@ -62,9 +62,8 @@ const Puistossa = {
     _comment: '',
     type: 'options',
     background: 'Puisto',
-    characters: [],
+    characters: ['HahmoMiro'],
     text_type: 'narrator',
-    text_position: '',
     text: 'tPuistossa6',
     player_choice: [
       {
@@ -81,7 +80,7 @@ const Puistossa = {
     _comment: '',
     type: 'linear',
     background: 'Puisto',
-    characters: ["HahmoSofiKannissa"],
+    characters: ["HahmoSofiHuolestunut"],
     text_type: 'narrator',
     text_position: '',
     text: 'tPuistossa7',

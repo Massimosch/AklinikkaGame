@@ -194,7 +194,7 @@ const Suomi = {
   "tHuonoOlo1" : "Poltatte jointtia ja hetken päästä sulle tulee ihan hirvee olo. Sun sydän tykyttää ja sua pyörryttää.",
   "tHuonoOlo2" : "Tekstaat Sofille ja pyydät, että se auttais sut kotiin. Sofi tulee saattamaan sua.",
   "tPuistossa1" : "Suuntaatte yhdessä puistoon.",
-  "tPuistossa2" : "Pari Miron kaveria tarjoavat teille bisseä. Sofi ottaa oluttölkin.",
+  "tPuistossa2" : "Pari Miron kaveria tarjoavat teille bisseä. Sofi ottaa olutpullon.",
   "tPuistossa2Mita" : "Sofi, mitä sä teet? Ethän sä juo alkoholia!",
   "tPuistossa2Otan" : "Aha, ok, kai mäkin sit otan yhen.",
   "tPuistossa3" : "Sofi vaikuttaa nolostuneelta mutta päättää kuitenkin juoda.",

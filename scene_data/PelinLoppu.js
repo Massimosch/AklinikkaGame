@@ -86,7 +86,7 @@ const PelinLoppu = {
         next_scene: 'RandomGroomer1',
       },
       {
-        text: 'tTKotona2Salaattia',
+        text: 'tKotona2Salaattia',
         next_scene: 'RandomGroomer1',
       },
     ],
@@ -184,7 +184,7 @@ const PelinLoppu = {
   Loppu: {
     _comment: 'Peli loppuu, ei next sceneä',
     type: 'linear',
-    background: '',
+    background: 'OmaHuone',
     characters: [],
     text_type: 'narrator',
     text_position: 'speechLeft',
