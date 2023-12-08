@@ -62,7 +62,7 @@ const PelinLoppu = {
     characters: [],
     text_type: 'narrator',
     text: 'tTekstari3OmaKommentti',
-    next_scene: 'Kotona2',
+    next_scene: 'Kotona3',
   },
   Kotona1: {
     _comment: '',
