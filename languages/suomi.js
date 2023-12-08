@@ -165,7 +165,7 @@ const Suomi = {
   "tRoopenSteroidit3Mita" : "No mitä?",
   "tSteroiditInfobox1" : "Sterodien käytöstä voi seurata <br>-sydän- ja verenkiertoelimistöön liittyviä sairauksia<br>- maksan ja munuaisten vajaatoimintaa, maksasyöpä<br>- iho-ongelmia: akne, kaljuuntuminen, arpijuovat<br>- mielenterveysongelmia: aggressiivisuus, ärtyneisyys, masentuneisuus, väsymys, tyytymättömyys omaan kehoon, riippuvuus, vakavat mielialahäiriöt",
   "tSteroiditInfobox2" : "Miehillä testosteronin vähentymistä, seksuaalisia toimintahäiriöitä (sperman tuotannon heikkeneminen, kivesten surkastuminen, hedelmättömyys, impotenssi), rintojen kasvua.<br>Naisilla kehon ja kasvojen karvoituksen lisääntymistä, äänen muutoksia,  kuukautishäiriöitä, klitoriksen suurentuminen, kohdun surkastuminen ja hedelmättömyys.<br>Lisätietoa dopingaineista löydät osoitteesta dopinglinkki.fi",
-  "tRoopenSteroidit4" : "HUOM Tästä puuttuu repliikki! ",
+  "tRoopenSteroidit4" : "Onko susta steroidien käyttäminen kannattavaa?",
   "tRoopenSteroidit4Okei" : "Okei, niiden käyttäminen ei todellakaan kannata.",
   "tRoopenSteroidit4IhaSama" : "Iha sama.",
   "tRoopenPillerit1" : "Roopen kaveri tulee tyytyväisen näköisenä ovelta. Se oli tilannut netistä jotain uusia pillereitä, joista menee kuulemma pää sekasin.",
