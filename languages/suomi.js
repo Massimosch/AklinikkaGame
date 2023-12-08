@@ -85,7 +85,7 @@ const Suomi = {
   "tEnergiajuomat2" : "Sun pitäis lopettaa toi energiajuomien lipittäminen, ne ei oo yhtään terveellisiä.",
   "tEnergiajuomat2EVVK" : "EVVK",
   "tEnergiajuomat2Onko" : "Onks ne muka oikeesti niin haitallisia?",
-  "tEngergiajuomatInfobox" : "Energiajuomilla voi olla useita ikäviä vaikutuksia, kuten sydämentykytystä, päänsärkyä ja univaikeuksia. Lisäksi ne ovat huonoksi hampaille ja niihin voi jäädä koukkuun.",
+  "tEnergiajuomatInfobox" : "Energiajuomilla voi olla useita ikäviä vaikutuksia, kuten sydämentykytystä, päänsärkyä ja univaikeuksia. Lisäksi ne ovat huonoksi hampaille ja niihin voi jäädä koukkuun.",
   "tEnergiajuomat3" : "Haluutko yhä energiajuomaa?",
   "tEnergiajuomat3En" : "En",
   "tEnergiajuomat3Joo" : "Joo",
