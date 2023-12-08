@@ -3,8 +3,13 @@
 */
 
 export { StartSetup };
-import { CheckIfClickedWhilePauseOpen, PauseMenuClicked, Language } from './menu_module.js';
+import {
+  CheckIfClickedWhilePauseOpen,
+  PauseMenuClicked,
+  Language,
+} from './menu_module.js';
 
+import SaveGameState from './save_game.js';
 import PelinAlku from './scene_data/PelinAlku.js';
 import LydianHuolet from './scene_data/LydianHuolet.js';
 import MironKotona from './scene_data/MironKotona.js';
@@ -20,6 +25,7 @@ import Kannabis from './scene_data/Kannabis.js';
 import TuomaksenKiusaaminen from './scene_data/TuomaksenKiusaaminen.js';
 
 const sceneDataFiles = [
+  // SaveGameState,
   PelinAlku,
   LydianHuolet,
   MironKotona,
@@ -43,7 +49,6 @@ const infoboxText = document.querySelector('.infoBoxText');
 const narratorElement = document.querySelector('.narratorBox');
 const narratorText = document.querySelector('.narratorBoxText');
 
-
 const speechBubbleLeft = document.querySelector('.speechBubbleLeft');
 const speechBubbleRight = document.querySelector('.speechBubbleRight');
 
@@ -54,10 +59,14 @@ const playerChoiceTextElements = document.querySelectorAll('.choiceBoxText');
 
 // animation containers
 const topTextElement = document.querySelector('.top-text-container');
-const bottomPlayerChoiceElement = document.querySelector('.bottom-choice-container');
+const bottomPlayerChoiceElement = document.querySelector(
+  '.bottom-choice-container'
+);
 
 // settings menu
 const pauseMenuElement = document.querySelector('.top-options-menu');
+const saveGame = new SaveGameState();
+//const currentSave = scenes[saveGame.savedData.currentSavedData];
 
 /*
   Alla olevassa voi vaihtaa currentScene = minkä haluaa
@@ -65,8 +74,8 @@ const pauseMenuElement = document.querySelector('.top-options-menu');
   Vaihda EnsimmainenScene siihen SceneID:en josta haluat aloittaa pelin. 
   Peli alkaa Start Menusta, klikkaa "Aloita peli" ja pääset valitsemaasi aloitussceneen
 */
-function StartSetup(){
-  nextScene = GetSceneData("EnsimmainenScene");
+function StartSetup() {
+  nextScene = GetSceneData(saveGame.savedData.currentSavedData);
   PopulateScene();
 }
 
@@ -82,26 +91,39 @@ let playerChoiceDelayTime = 400; //milliseconds
 let transitionDelayTime;
 let delayTimeInSeconds = 0.1;
 
-
 // game setup
 StartSetup();
 AddClickEventListener();
 
-// This is for switching the SceneData file
 function GetSceneData(sceneName) {
   if (currentDataFile[sceneName]) {
     return currentDataFile[sceneName];
   }
 
   for (const sceneData of sceneDataFiles) {
-    if (sceneData[sceneName]) {
+    const sceneId = Object.keys(sceneData)[0];
+    if (sceneData[sceneId]) {
       currentDataFile = sceneData;
-      return sceneData[sceneName];
+      return sceneData[sceneId];
     }
   }
-  console.error('Scene not found: ' + sceneName);
-  return null;
 }
+
+// This is for switching the SceneData file
+// function GetSceneData(sceneName) {
+//   if (currentDataFile[sceneName]) {
+//     return currentDataFile[sceneName];
+//   }
+
+//   for (const sceneData of sceneDataFiles) {
+//     if (sceneData[sceneName]) {
+//       currentDataFile = sceneData;
+//       return sceneData[sceneName];
+//     }
+//   }
+//   console.error('Scene not found: ' + sceneName);
+//   return null;
+// }
 
 // click event listener
 function AddClickEventListener() {
@@ -111,7 +133,7 @@ function AddClickEventListener() {
     }
 
     // menu module click events
-    if(CheckIfClickedWhilePauseOpen() === true){
+    if (CheckIfClickedWhilePauseOpen() === true) {
       return;
     }
     if (event.target === pauseMenuElement) {
@@ -134,7 +156,7 @@ function AddClickEventListener() {
 
     if (currentScene.type === 'linear') {
       nextScene = GetSceneData(currentScene.next_scene);
-      if(nextScene == null){
+      if (nextScene == null) {
         return;
       }
       PopulateScene();
@@ -144,7 +166,7 @@ function AddClickEventListener() {
     for (let i = 0; i < playerChoiceElements.length; i++) {
       if (event.target.parentElement === playerChoiceElements[i]) {
         nextScene = GetSceneData(currentScene.player_choice[i].next_scene);
-        if(nextScene == null){
+        if (nextScene == null) {
           return;
         }
         PopulateScene();
@@ -154,7 +176,7 @@ function AddClickEventListener() {
   });
 }
 
-function StopFadeInAnimation(){
+function StopFadeInAnimation() {
   waitingForPlayerChoiceButtons = false;
   clearTimeout(timerForPlayerChoices);
   PlayerChoiceSetup();
@@ -176,6 +198,10 @@ function ClickedTooFast() {
 }
 
 function PopulateScene() {
+  //Save game here?`
+  saveGame.savedData.currentSavedData = nextScene.sceneId; //save current scene
+  saveGame.saveGame();
+
   // background image change
   if (
     nextScene.background !== null &&
@@ -220,8 +246,11 @@ function PopulateScene() {
     playerChoiceElements[i].classList.add('hidden');
   }
   if (nextScene.player_choice !== undefined) {
-    timerForPlayerChoices = setTimeout(PlayerChoiceSetup, playerChoiceDelayTime);
-    waitingForPlayerChoiceButtons = true; 
+    timerForPlayerChoices = setTimeout(
+      PlayerChoiceSetup,
+      playerChoiceDelayTime
+    );
+    waitingForPlayerChoiceButtons = true;
   }
 
   ResetAnimations();
@@ -279,7 +308,7 @@ function WriteDialogue() {
 // player choice box setup
 function PlayerChoiceSetup() {
   bottomPlayerChoiceElement.classList.add('fade-in-animation-long');
-  
+
   for (let i = 0; i < playerChoiceElements.length; i++) {
     // hide null choices
     if (nextScene.type === 'linear' || i >= nextScene.player_choice.length) {
@@ -298,5 +327,5 @@ function PlayerChoiceSetup() {
   }
 }
 bottomPlayerChoiceElement.addEventListener('animationend', () => {
-    waitingForPlayerChoiceButtons = false;
+  waitingForPlayerChoiceButtons = false;
 });
