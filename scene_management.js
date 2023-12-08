@@ -17,6 +17,7 @@ import PelinLoppu from './scene_data/PelinLoppu.js';
 import SofillaOnTietoa from './scene_data/SofillaOnTietoa.js';
 import SofinSomeTauko from './scene_data/SofinSometauko.js';
 import TuomaksenKiusaaminen from './scene_data/TuomaksenKiusaaminen.js';
+import Puistossa from './scene_data/Puistossa.js';
 
 const sceneDataFiles = [
   PelinAlku,
@@ -31,6 +32,7 @@ const sceneDataFiles = [
   PelinLoppu,
   SofillaOnTietoa,
   SofinSomeTauko,
+  Puistossa,
 ];
 
 const mainGameContainer = document.querySelector('.game-flex-container');
