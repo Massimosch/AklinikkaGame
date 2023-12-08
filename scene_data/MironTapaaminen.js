@@ -5,7 +5,6 @@ const MironTapaaminen = {
     background: "JuomaAutomaatti",
     characters: [],
     text_type: "narrator",
-    text_position: "speechLeft",
     text: "tEnergiajuomat1",
     next_scene: "Energiajuomat2",
   },
@@ -46,22 +45,40 @@ const MironTapaaminen = {
     type: "options",
     background: "JuomaAutomaatti",
     characters: [],
-    text_type: "speech",
-    text_position: "speechLeft",
+    text_type: "narrator",
     text: "tEnergiajuomat3",
     player_choice: [
       {
-        text: "tEnergiajuomat2En",
+        text: "tEnergiajuomat3En",
         next_scene: "MiroTapaaminen",
       },
       {
-        text: "tEnergiajuomat2Joo",
+        text: "tEnergiajuomat3Joo",
         next_scene: "MiroTapaaminen",
       },
     ],
   },
 
   MiroTapaaminen: {
+    _comment: "",
+    type: "options",
+    background: "Kaytava",
+    characters: ["HahmoMiroVasynyt"],
+    text_type: "speech",
+    text_position: "speechLeft",
+    text: "tMiroTapaaminen",
+    player_choice: [
+      {
+        text: "tHuonoPaiva",
+        next_scene: "SofinSometauko1",
+      },
+      {
+        text: "tMitenMenee",
+        next_scene: "MiroLintsaaminen",
+      },
+    ],
+  },
+  MiroLintsaaminen: {
     _comment: "",
     type: "options",
     background: "Kaytava",
@@ -80,7 +97,6 @@ const MironTapaaminen = {
       },
     ],
   },
-
   MironTilanne1: {
     _comment: "",
     type: "linear",
@@ -92,14 +108,14 @@ const MironTapaaminen = {
     next_scene: "MironTilanne2",
   },
 
-  MiroTilanne2: {
+  MironTilanne2: {
     _comment: "",
     type: "options",
     background: "Kaytava",
     characters: ["HahmoMiroAhdistunut"],
     text_type: "narrator",
     text_position: "speechLeft",
-    text: "tMiroTilanne2",
+    text: "tMironTilanne2",
     player_choice: [
       {
         text: "tMironTilanne2Sekasin",

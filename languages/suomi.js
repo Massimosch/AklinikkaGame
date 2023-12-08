@@ -89,7 +89,7 @@ const Suomi = {
   "tEnergiajuomat3" : "Haluutko yhä energiajuomaa?",
   "tEnergiajuomat3En" : "En",
   "tEnergiajuomat3Joo" : "Joo",
-  "tMiroTapaaminen" : "Huomaat Miron kävelevän ohi pää painuksissa.",
+  "tMiroTapaaminen" : "Huomaat Miron kävelevän ohi väsyneen näköisenä.",
   "tHuonoPaiva" : "Kaikilla on näköjään huono päivä tänään... Paras jättää se rauhaan.",
   "tMitenMenee" : "Miten menee?",
   "tMiroLintsaaminen" : "Nukuin pommiin. Oon niin väsynyt, että tekisi mieli skipata loppupäivä.",
