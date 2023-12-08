@@ -111,7 +111,7 @@ const MironKotona = {
   JuominenInfobox: {
     _comment: '',
     type: 'linear',
-    background: '',
+    background: 'Puisto',
     characters: [],
     text_type: 'speech',
     text_position: 'speechLeft',
@@ -121,7 +121,7 @@ const MironKotona = {
   LasinenInfobox: {
     _comment: '',
     type: 'linear',
-    background: '',
+    background: 'Puisto',
     characters: [],
     text_type: 'speech',
     text_position: 'speechLeft',
@@ -154,7 +154,7 @@ const MironKotona = {
   SekasinInfobox: {
     _comment: '',
     type: 'linear',
-    background: '',
+    background: 'Puisto',
     characters: [],
     text_type: 'speech',
     text_position: 'speechLeft',
