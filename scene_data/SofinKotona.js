@@ -77,7 +77,7 @@ const SofinKotona = {
     type: 'linear',
     background: 'PuhelinKirjoitaViesti',
     characters: [],
-    text_type: 'speech',
+    text_type: 'narrator',
     text_position: 'speechLeft',
     text: 'tTekstari2MikaFiilis',
     next_scene: 'Tekstari3OmaKommentti',
@@ -87,13 +87,13 @@ const SofinKotona = {
     type: 'options',
     background: 'OmaHuone',
     characters: [],
-    text_type: 'speech',
+    text_type: 'narrator',
     text_position: 'speechLeft',
     text: 'tTekstari2Sofi',
     player_choice: [
       {
         text: 'tTekstari3EiVastata',
-        next_scene: 'Kotona2',
+        next_scene: 'Kotona3',
       },
       {
         text: 'tTekstari3Vastaa',
@@ -112,7 +112,7 @@ const SofinKotona = {
     player_choice: [
       {
         text: 'tTekstari3EiVastata',
-        next_scene: 'Kotona2',
+        next_scene: 'Kotona3',
       },
       {
         text: 'tTekstari3Vastaa',
@@ -258,8 +258,8 @@ const SofinKotona = {
     _comment: 'Peli loppuu, ei next sceneä',
     type: 'linear',
     background: '',
-    characters: [''],
-    text_type: 'speech',
+    characters: [],
+    text_type: 'narrator',
     text_position: 'speechLeft',
     text: 'tLoppu',
     next_scene: '',
