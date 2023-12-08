@@ -33,9 +33,9 @@ const MironTapaaminen = {
   EnergiajuomatInfobox: {
     _comment: "",
     type: "linear",
-    background: "",
+    background: "Energiajuoma",
     characters: [],
-    text_type: "speech",
+    text_type: "narrator",
     text_position: "speechLeft",
     text: "tEnergiajuomatInfobox",
     next_scene: "Energiajuomat3",
