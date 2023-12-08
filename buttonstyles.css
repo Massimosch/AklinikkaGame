@@ -22,7 +22,7 @@
       display: block;
       height: 65px;
       width: 80px;
-    margin-right: -8px;
+      margin-right: -8px;
     }
   
     .startbutton:active {
@@ -33,7 +33,7 @@
     background-color: #FFF8EE;
     border-radius: 11px;
     border: 2px solid #000; 
-    width: 350px; /* Tätä leveysasiaa pitää vielä miettiä */
+    width: 60vw; /* PauseMenu width: 80vw */
     color: #000;
     padding: 25px;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); 
@@ -44,7 +44,9 @@
     line-height: normal; 
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 17px;
+    max-width: 790px;
   }
   
   .backicon {
@@ -71,7 +73,8 @@
     background-color: #FFECE8;
     border-radius: 11px;
     border: 2px solid #000; 
-    width: 190px; /* Tätä leveysasiaa pitää vielä miettiä, onko staattinen leveys hyvä? */
+    width: 45vw; /* Pausemenubutton width: 60vw; */
+    max-width: 220px;
     color: #000;
     padding: 10px;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); 
@@ -82,7 +85,7 @@
     line-height: normal; 
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     text-transform: uppercase;
     gap: 10px;
   }
