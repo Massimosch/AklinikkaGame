@@ -26,7 +26,6 @@ const PelinLoppu = {
     background: 'OmaHuone',
     characters: [],
     text_type: 'narrator',
-    text_position: 'speechLeft',
     text: 'tTekstari2Sofi',
     player_choice: [
       {
@@ -73,8 +72,7 @@ const PelinLoppu = {
     type: 'linear',
     background: 'PuhelinKirjoitaViesti',
     characters: [],
-    text_type: 'speech',
-    text_position: 'speechLeft',
+    text_type: 'narrator',
     text: 'tKotona1',
     next_scene: 'Kotona2',
   },
@@ -83,8 +81,7 @@ const PelinLoppu = {
     type: 'options',
     background: 'Keittio',
     characters: [],
-    text_type: 'speech',
-    text_position: 'speechLeft',
+    text_type: 'narrator',
     text: 'tKotona2',
     player_choice: [
       {
