@@ -11,12 +11,11 @@ import MironKotona from './scene_data/MironKotona.js';
 import MironTapaaminen from './scene_data/MironTapaaminen.js';
 import EnergiajuomaNuuskaRahapelit from './scene_data/EnergiajuomaNuuskaRahapelit.js';
 import OppituntiAlkamassa from './scene_data/OppituntiAlkamassa.js';
-import RoopenSteroidit from './scene_data/RoopenSteroidit.js';
+import RoopenBileet from './scene_data/RoopenBileet.js';
 import Kotimatka from './scene_data/Kotimatka.js';
 import PelinLoppu from './scene_data/PelinLoppu.js';
 import SofillaOnTietoa from './scene_data/SofillaOnTietoa.js';
 import SofinSomeTauko from './scene_data/SofinSometauko.js';
-import Kannabis from './scene_data/Kannabis.js';
 import TuomaksenKiusaaminen from './scene_data/TuomaksenKiusaaminen.js';
 
 const sceneDataFiles = [
@@ -27,12 +26,11 @@ const sceneDataFiles = [
   OppituntiAlkamassa,
   EnergiajuomaNuuskaRahapelit,
   TuomaksenKiusaaminen,
-  RoopenSteroidit,
+  RoopenBileet,
   Kotimatka,
   PelinLoppu,
   SofillaOnTietoa,
   SofinSomeTauko,
-  Kannabis,
 ];
 
 const mainGameContainer = document.querySelector('.game-flex-container');
