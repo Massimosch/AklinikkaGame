@@ -64,8 +64,7 @@ const MironTapaaminen = {
     type: "options",
     background: "Kaytava",
     characters: ["HahmoMiroVasynyt"],
-    text_type: "speech",
-    text_position: "speechLeft",
+    text_type: "narrator",
     text: "tMiroTapaaminen",
     player_choice: [
       {
@@ -89,7 +88,7 @@ const MironTapaaminen = {
     player_choice: [
       {
         text: "tMiroLintsaaminenJoo",
-        next_scene: "MatkallaMirolle",
+        next_scene: "MatkallaMirolle1",
       },
       {
         text: "tMiroLintsaaminenEi",

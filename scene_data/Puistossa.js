@@ -133,7 +133,7 @@ const Puistossa = {
     text_type: 'speech',
     text_position: 'speechLeft',
     text: 'tPuistossa11',
-    next_scene: 'SofiSaattaa1',
+    next_scene: 'SofiaSaattamassa1',
   },
 };
 export default Puistossa;
