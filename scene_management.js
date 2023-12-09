@@ -245,6 +245,7 @@ function AnimateScene() {
 function WriteInfobox() {
   infoboxElement.classList.remove('hidden');
   infoboxText.innerHTML = Language[nextScene.text];
+  infoboxElement.style.fontSize = GetFontSizeBasedOnStringLength(Language[nextScene.text]);
   // bottomChoiceContainer.transfrom = "translateX(0%)";
   speechBubbleLeft.classList.add('hidden');
   speechBubbleRight.classList.add('hidden');
@@ -254,6 +255,7 @@ function WriteInfobox() {
 function WriteNarrator() {
   narratorElement.classList.remove('hidden');
   narratorText.innerHTML = Language[nextScene.text];
+  narratorElement.style.fontSize = GetFontSizeBasedOnStringLength(Language[nextScene.text]);
   // bottomChoiceContainer.transfrom = "translateX(0%)";
   speechBubbleLeft.classList.add('hidden');
   speechBubbleRight.classList.add('hidden');
@@ -301,3 +303,16 @@ function PlayerChoiceSetup() {
 bottomPlayerChoiceElement.addEventListener('animationend', () => {
     waitingForPlayerChoiceButtons = false;
 });
+
+function GetFontSizeBasedOnStringLength(string) {
+  const smallFontSize = '1.16rem'
+  const mediumFontSize = '1.3rem'
+  const largeFontSize = '1.5rem'
+  if (string.length > 240) {
+    return smallFontSize;
+  }
+  else if (string.length > 150) {
+    return mediumFontSize;
+  }
+  return largeFontSize;
+}

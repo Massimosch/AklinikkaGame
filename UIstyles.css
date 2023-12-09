@@ -99,7 +99,14 @@
   grid-row: 2;
   position: relative;
 }
-
+.main-content-no-fontsize {
+  padding: 10px 16px 16px;
+  color: #000000;
+  font-family: 'Jura', sans-serif;
+  text-align: left;
+  grid-row: 2;
+  position: relative;
+}
 
 .choiceBox {
   display: grid;
