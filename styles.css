@@ -249,3 +249,9 @@ body {
 .hidden {
   display: none;
 }
+
+@media (max-width: 767.98px) {
+  .bottom-choice-container {
+    padding-bottom: 11vh;
+  }
+}
