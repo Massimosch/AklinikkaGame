@@ -89,7 +89,7 @@ const MironTapaaminen = {
     player_choice: [
       {
         text: "tMiroLintsaaminenJoo",
-        next_scene: "MatkallaMirolle",
+        next_scene: "MatkallaMirolle1",
       },
       {
         text: "tMiroLintsaaminenEi",
