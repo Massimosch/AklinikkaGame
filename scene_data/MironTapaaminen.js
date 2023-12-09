@@ -64,8 +64,7 @@ const MironTapaaminen = {
     type: "options",
     background: "Kaytava",
     characters: ["HahmoMiroVasynyt"],
-    text_type: "speech",
-    text_position: "speechLeft",
+    text_type: "narrator",
     text: "tMiroTapaaminen",
     player_choice: [
       {
