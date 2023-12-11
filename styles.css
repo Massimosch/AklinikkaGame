@@ -246,7 +246,34 @@ body {
     opacity: 1;
   }
 }
+.slide-character-from-left-animation {
+  animation-name: slide-character-from-left;
+  animation-timing-function: ease-out;
+  animation-duration: 0.8s;
+}
+.slide-character-from-right-animation {
+  animation-name: slide-character-from-right;
+  animation-timing-function: ease-out;
+  animation-duration: 0.8s;
+}
+@keyframes slide-character-from-left {
+  from {
+    transform: translate(-100vw, 0);
+  }
 
+  to {
+    transform: translate(0, 0);
+  }
+}
+@keyframes slide-character-from-right {
+  from {
+    transform: translate(100vw, 0);
+  }
+
+  to {
+    transform: translate(0, 0);
+  }
+}
 .hidden {
   display: none;
 }
