@@ -16,7 +16,7 @@ const LydianHuolet = {
     background: "Roskikset",
     characters: ["HahmoSofi", "HahmoLydia"],
     text_type: "speech",
-    text_position: "speechLeft",
+    text_position: "speechRight",
     text: "tLydianHuolet2",
     next_scene: "LydianHuolet3"
   },
