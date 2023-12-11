@@ -5,34 +5,35 @@
 export { StartSetup };
 import { CheckIfClickedWhilePauseOpen, PauseMenuClicked, Language } from './menu_module.js';
 
-import PelinAlku from './scene_data/PelinAlku.js';
+import EnergiajuomaNuuskaRahapelit from './scene_data/EnergiajuomaNuuskaRahapelit.js';
+import Kotimatka from './scene_data/Kotimatka.js';
 import LydianHuolet from './scene_data/LydianHuolet.js';
 import MironKotona from './scene_data/MironKotona.js';
 import MironTapaaminen from './scene_data/MironTapaaminen.js';
-import EnergiajuomaNuuskaRahapelit from './scene_data/EnergiajuomaNuuskaRahapelit.js';
 import OppituntiAlkamassa from './scene_data/OppituntiAlkamassa.js';
-import RoopenSteroidit from './scene_data/RoopenSteroidit.js';
-import SofiaSaattamassa from './scene_data/SofiaSaattamassa.js';
-import SofinKotona from './scene_data/SofinKotona.js';
+import PelinAlku from './scene_data/PelinAlku.js';
+import PelinLoppu from './scene_data/PelinLoppu.js';
+import Puistossa from './scene_data/Puistossa.js';
+import RoopenBileet from './scene_data/RoopenBileet.js';
 import SofillaOnTietoa from './scene_data/SofillaOnTietoa.js';
 import SofinSomeTauko from './scene_data/SofinSometauko.js';
-import Kannabis from './scene_data/Kannabis.js';
 import TuomaksenKiusaaminen from './scene_data/TuomaksenKiusaaminen.js';
 
+// ordered by scene appearance
 const sceneDataFiles = [
   PelinAlku,
-  LydianHuolet,
-  MironKotona,
-  MironTapaaminen,
-  OppituntiAlkamassa,
-  EnergiajuomaNuuskaRahapelit,
-  TuomaksenKiusaaminen,
-  RoopenSteroidit,
-  SofiaSaattamassa,
-  SofinKotona,
   SofillaOnTietoa,
+  EnergiajuomaNuuskaRahapelit,
+  LydianHuolet,
+  TuomaksenKiusaaminen,
+  MironTapaaminen,
   SofinSomeTauko,
-  Kannabis,
+  OppituntiAlkamassa,
+  MironKotona,
+  RoopenBileet,
+  Puistossa,
+  Kotimatka,
+  PelinLoppu,
 ];
 
 const mainGameContainer = document.querySelector('.game-flex-container');
@@ -244,6 +245,7 @@ function AnimateScene() {
 function WriteInfobox() {
   infoboxElement.classList.remove('hidden');
   infoboxText.innerHTML = Language[nextScene.text];
+  infoboxElement.style.fontSize = GetFontSizeBasedOnStringLength(Language[nextScene.text]);
   // bottomChoiceContainer.transfrom = "translateX(0%)";
   speechBubbleLeft.classList.add('hidden');
   speechBubbleRight.classList.add('hidden');
@@ -253,6 +255,7 @@ function WriteInfobox() {
 function WriteNarrator() {
   narratorElement.classList.remove('hidden');
   narratorText.innerHTML = Language[nextScene.text];
+  narratorElement.style.fontSize = GetFontSizeBasedOnStringLength(Language[nextScene.text]);
   // bottomChoiceContainer.transfrom = "translateX(0%)";
   speechBubbleLeft.classList.add('hidden');
   speechBubbleRight.classList.add('hidden');
@@ -300,3 +303,16 @@ function PlayerChoiceSetup() {
 bottomPlayerChoiceElement.addEventListener('animationend', () => {
     waitingForPlayerChoiceButtons = false;
 });
+
+function GetFontSizeBasedOnStringLength(string) {
+  const smallFontSize = '1.16rem'
+  const mediumFontSize = '1.3rem'
+  const largeFontSize = '1.5rem'
+  if (string.length > 240) {
+    return smallFontSize;
+  }
+  else if (string.length > 150) {
+    return mediumFontSize;
+  }
+  return largeFontSize;
+}

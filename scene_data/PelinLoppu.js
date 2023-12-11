@@ -1,74 +1,11 @@
-const SofinKotona = {
-  SofinKotona: {
-    _comment: '',
-    type: 'linear',
-    background: 'SofinOvi',
-    characters: ["HahmoSofinAiti"],
-    text_type: 'narrator',
-    text_position: 'speechLeft',
-    text: 'tSofinKotona',
-    next_scene: 'SofinKotona2',
-  },
-  SofinKotona2: {
-    _comment: '',
-    type: 'linear',
-    background: '',
-    characters: ["HahmoSofinAiti", "HahmoSofiVakava"],
-    text_type: 'narrator',
-    text_position: 'speechLeft',
-    text: 'tSofinKotona2',
-    next_scene: 'SofinKotona3',
-  },
-  SofinKotona3: {
-    _comment: '',
-    type: 'options',
-    background: 'SofinOvi',
-    characters: [],
-    text_type: 'narrator',
-    text_position: 'speechLeft',
-    text: 'tSofinKotona3',
-    player_choice: [
-      {
-        text: 'tSofinKotona3Suuttuis',
-        next_scene: 'SofinKotona4Vaikeaa',
-      },
-      {
-        text: 'tSofinKotona3Eikiinnosta',
-        next_scene: 'SofinKotona4Vaikeaa',
-      },
-      {
-        text: 'tSofinkotona4Keskustelu',
-        next_scene: 'SofinKotona4HyvatValit',
-      },
-    ],
-  },
-  SofinKotona4Vaikeaa: {
-    _comment: 'Puuttuu nextScene',
-    type: 'linear',
-    background: 'Vanhemmat',
-    characters: [],
-    text_type: 'narrator',
-    text_position: 'speechLeft',
-    text: 'tSofinKotona4Vaikeaa',
-    next_scene: 'Tekstari1',
-  },
-  SofinKotona4HyvatValit: {
-    _comment: 'Puuttuu nextScene',
-    type: 'linear',
-    background: 'Vanhemmat',
-    characters: [],
-    text_type: 'speech',
-    text_position: 'speechLeft',
-    text: 'tSofinKotona4HyvatValit',
-    next_scene: 'Tekstari1',
-  },
+const PelinLoppu = {
+
   Tekstari1: {
     _comment: 'Puuttuu nextScene',
     type: 'linear',
     background: 'OmaHuone',
     characters: [],
-    text_type: 'speech',
-    text_position: 'speechLeft',
+    text_type: 'narrator',
     text: 'tTekstari1',
     next_scene: 'Tekstari2Sofi',
   },
@@ -77,7 +14,7 @@ const SofinKotona = {
     type: 'linear',
     background: 'PuhelinKirjoitaViesti',
     characters: [],
-    text_type: 'speech',
+    text_type: 'narrator',
     text_position: 'speechLeft',
     text: 'tTekstari2MikaFiilis',
     next_scene: 'Tekstari3OmaKommentti',
@@ -87,13 +24,12 @@ const SofinKotona = {
     type: 'options',
     background: 'OmaHuone',
     characters: [],
-    text_type: 'speech',
-    text_position: 'speechLeft',
+    text_type: 'narrator',
     text: 'tTekstari2Sofi',
     player_choice: [
       {
         text: 'tTekstari3EiVastata',
-        next_scene: 'Kotona2',
+        next_scene: 'Kotona3',
       },
       {
         text: 'tTekstari3Vastaa',
@@ -106,13 +42,12 @@ const SofinKotona = {
     type: 'options',
     background: 'OmaHuone',
     characters: [],
-    text_type: 'speech',
-    text_position: 'speechLeft',
+    text_type: 'narrator',
     text: 'tTekstari2Tuomas',
     player_choice: [
       {
         text: 'tTekstari3EiVastata',
-        next_scene: 'Kotona2',
+        next_scene: 'Kotona3',
       },
       {
         text: 'tTekstari3Vastaa',
@@ -125,18 +60,16 @@ const SofinKotona = {
     type: 'linear',
     background: 'PuhelinKirjoitaViesti',
     characters: [],
-    text_type: 'speech',
-    text_position: 'speechLeft',
+    text_type: 'narrator',
     text: 'tTekstari3OmaKommentti',
-    next_scene: 'Kotona2',
+    next_scene: 'Kotona3',
   },
   Kotona1: {
     _comment: '',
     type: 'linear',
     background: 'PuhelinKirjoitaViesti',
     characters: [],
-    text_type: 'speech',
-    text_position: 'speechLeft',
+    text_type: 'narrator',
     text: 'tKotona1',
     next_scene: 'Kotona2',
   },
@@ -145,8 +78,7 @@ const SofinKotona = {
     type: 'options',
     background: 'Keittio',
     characters: [],
-    text_type: 'speech',
-    text_position: 'speechLeft',
+    text_type: 'narrator',
     text: 'tKotona2',
     player_choice: [
       {
@@ -154,7 +86,7 @@ const SofinKotona = {
         next_scene: 'RandomGroomer1',
       },
       {
-        text: 'tTKotona2Salaattia',
+        text: 'tKotona2Salaattia',
         next_scene: 'RandomGroomer1',
       },
     ],
@@ -165,7 +97,6 @@ const SofinKotona = {
     background: 'PuhelinSnappi',
     characters: [],
     text_type: 'narrator',
-    text_position: 'speechLeft',
     text: 'tRandomGroomer1',
     player_choice: [
       {
@@ -187,8 +118,7 @@ const SofinKotona = {
     type: 'linear',
     background: 'PuhelinSnappi',
     characters: [],
-    text_type: 'speech',
-    text_position: 'speechLeft',
+    text_type: 'narrator',
     text: 'tRandomGroomer2Lahetan',
     next_scene: 'Kotona4',
   },
@@ -197,8 +127,7 @@ const SofinKotona = {
     type: 'linear',
     background: 'PuhelinSnappi',
     characters: [],
-    text_type: 'speech',
-    text_position: 'speechLeft',
+    text_type: 'narrator',
     text: 'tRandomGroomer2SuaVartenSomessa',
     next_scene: 'Kotona4',
   },
@@ -207,8 +136,7 @@ const SofinKotona = {
     type: 'linear',
     background: 'PuhelinSnappi',
     characters: [],
-    text_type: 'speech',
-    text_position: 'speechLeft',
+    text_type: 'narrator',
     text: 'tRandomGroomer2EnVastaa',
     next_scene: 'Kotona4',
   },
@@ -217,8 +145,7 @@ const SofinKotona = {
     type: 'options',
     background: 'Keittio',
     characters: [],
-    text_type: 'speech',
-    text_position: 'speechLeft',
+    text_type: 'narrator',
     text: 'tKotona3',
     player_choice: [
       {
@@ -249,7 +176,7 @@ const SofinKotona = {
         next_scene: 'Loppu',
       },
       {
-        text: 'tKotona4Laksuja',
+        text: 'tKotona4Laksyja',
         next_scene: 'Loppu',
       },
     ],
@@ -257,12 +184,12 @@ const SofinKotona = {
   Loppu: {
     _comment: 'Peli loppuu, ei next sceneä',
     type: 'linear',
-    background: '',
-    characters: [''],
-    text_type: 'speech',
+    background: 'OmaHuone',
+    characters: [],
+    text_type: 'narrator',
     text_position: 'speechLeft',
     text: 'tLoppu',
     next_scene: '',
   },
 };
-export default SofinKotona;
+export default PelinLoppu;

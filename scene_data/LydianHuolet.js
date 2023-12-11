@@ -162,6 +162,18 @@ const LydianHuolet = {
     ]
   },
 
+  "AnuKuulee2Lydia": {
+    _comment: "",
+    type: "linear",
+    background: "Roskikset",
+    characters: ["HahmoKuraattoriAnu", "HahmoSofiHuolestunut"],
+    text_type: "speech",
+    text_position: "speechLeft",
+    text: "tAnuKuulee2Lydia",
+    next_scene: "SofinViiltely1"
+  },
+
+
   "SofinViiltely1": {
     _comment: "",
     type: "linear",
