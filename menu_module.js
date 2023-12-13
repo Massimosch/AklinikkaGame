@@ -41,6 +41,7 @@ continueButton.addEventListener('click', function () {
 
 // restart from start
 restartButton.addEventListener('click', function () {
+  localStorage.removeItem('sceneIDSave');
   StartSetup();
   pauseMenuOpen = false;
   pauseMenu.classList.add('hidden');

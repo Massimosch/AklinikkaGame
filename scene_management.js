@@ -67,7 +67,13 @@ const pauseMenuElement = document.querySelector('.top-options-menu');
   Peli alkaa Start Menusta, klikkaa "Aloita peli" ja pääset valitsemaasi aloitussceneen
 */
 function StartSetup() {
-  nextScene = GetSceneData("EnsimmainenScene");
+  let save = localStorage.getItem('sceneIDSave');
+  if (save === null || save === 'Loppu'){
+    nextScene = GetSceneData("EnsimmainenScene");
+  }
+  else {
+    nextScene = GetSceneData(localStorage.getItem('sceneIDSave'));
+  }
   PopulateScene();
 }
 
@@ -76,6 +82,7 @@ let currentDataFile = PelinAlku;
 let currentBackground;
 let currentScene;
 let nextScene;
+let sceneID;
 let waitingForPlayerChoiceButtons = false;
 let timerForPlayerChoices;
 let playerChoiceDelayTime = 400; //milliseconds
@@ -89,6 +96,7 @@ AddClickEventListener();
 
 // This is for switching the SceneData file
 function GetSceneData(sceneName) {
+  sceneID = sceneName;
   if (currentDataFile[sceneName]) {
     return currentDataFile[sceneName];
   }
@@ -363,3 +371,7 @@ function GetFontSizeBasedOnStringLength(string) {
   }
   return largeFontSize;
 }
+
+window.addEventListener('beforeunload', function() {
+  localStorage.setItem('sceneIDSave', sceneID);
+});
