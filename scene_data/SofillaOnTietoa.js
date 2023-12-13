@@ -4,6 +4,12 @@ const SofillaOnTietoa = {
     type: "linear",
     background: "KoulunPiha",
     characters: ["HahmoSofi"],
+    animations: [
+      {
+        type: "SlideFromRight",
+        target: 0,
+      },
+    ],
     text_type: "narrator",
     text_position: "",
     text: "tSofillaOnTietoaAlku",
@@ -36,6 +42,12 @@ const SofillaOnTietoa = {
     background: "KoulunPiha",
     characters: ["HahmoSofiVihainen"],
     text_type: "speech",
+    animations: [
+      {
+        type: "Shake",
+        target: 0,
+      },
+    ],
     text_position: "speechLeft",
     text: "tSofillaOnTietoaHaloo",
     player_choice: [
@@ -91,7 +103,7 @@ const SofillaOnTietoa = {
     text: "tTerkanVastaus",
     next_scene: "MitaTiedatVapesta",
   },
-  
+
   MitaTiedatVapesta: {
     _comment: "",
     type: "options",

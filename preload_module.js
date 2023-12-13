@@ -13,8 +13,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
   const restOfTheImages = [
     './images/backgrounds/Energiajuoma.png',
-    './images/backgrounds/EnergiaJuomaPinkki.png',
-    './images/backgrounds/KannabisLiila.png',
     './images/backgrounds/Kaytava.png',
     './images/backgrounds/JuomaAutomaatti.png',
     './images/backgrounds/LuokanOvi.png',

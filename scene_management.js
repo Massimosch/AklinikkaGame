@@ -66,7 +66,7 @@ const pauseMenuElement = document.querySelector('.top-options-menu');
   Vaihda EnsimmainenScene siihen SceneID:en josta haluat aloittaa pelin. 
   Peli alkaa Start Menusta, klikkaa "Aloita peli" ja pääset valitsemaasi aloitussceneen
 */
-function StartSetup(){
+function StartSetup() {
   nextScene = GetSceneData("EnsimmainenScene");
   PopulateScene();
 }
@@ -82,7 +82,6 @@ let playerChoiceDelayTime = 400; //milliseconds
 
 let transitionDelayTime;
 let delayTimeInSeconds = 0.1;
-
 
 // game setup
 StartSetup();
@@ -112,7 +111,7 @@ function AddClickEventListener() {
     }
 
     // menu module click events
-    if(CheckIfClickedWhilePauseOpen() === true){
+    if (CheckIfClickedWhilePauseOpen() === true) {
       return;
     }
     if (event.target === pauseMenuElement) {
@@ -135,7 +134,7 @@ function AddClickEventListener() {
 
     if (currentScene.type === 'linear') {
       nextScene = GetSceneData(currentScene.next_scene);
-      if(nextScene == null){
+      if (nextScene == null) {
         return;
       }
       PopulateScene();
@@ -145,7 +144,7 @@ function AddClickEventListener() {
     for (let i = 0; i < playerChoiceElements.length; i++) {
       if (event.target.parentElement === playerChoiceElements[i]) {
         nextScene = GetSceneData(currentScene.player_choice[i].next_scene);
-        if(nextScene == null){
+        if (nextScene == null) {
           return;
         }
         PopulateScene();
@@ -155,7 +154,7 @@ function AddClickEventListener() {
   });
 }
 
-function StopFadeInAnimation(){
+function StopFadeInAnimation() {
   waitingForPlayerChoiceButtons = false;
   clearTimeout(timerForPlayerChoices);
   PlayerChoiceSetup();
@@ -222,7 +221,7 @@ function PopulateScene() {
   }
   if (nextScene.player_choice !== undefined) {
     timerForPlayerChoices = setTimeout(PlayerChoiceSetup, playerChoiceDelayTime);
-    waitingForPlayerChoiceButtons = true; 
+    waitingForPlayerChoiceButtons = true;
   }
 
   ResetAnimations();
@@ -232,6 +231,18 @@ function PopulateScene() {
 }
 
 function ResetAnimations() {
+  for (let i = 0; i < characterElements.length; i++) {
+    if (characterElements[i].classList.contains('zoom-in-animation')){
+      continue;
+    }
+    if (characterElements[i].classList.contains('hidden')) {
+      characterElements[i].className = 'character hidden';
+      continue;
+    }
+    characterElements[i].className = 'character';
+  }
+  //mainGameContainer.className = 'game-flex-container';
+
   topTextElement.classList.remove('fade-in-animation');
   bottomPlayerChoiceElement.classList.remove('fade-in-animation-long');
   // "in order to know what the offsetWidth is, the browser has to abandon
@@ -240,6 +251,41 @@ function ResetAnimations() {
 }
 function AnimateScene() {
   topTextElement.classList.add('fade-in-animation');
+  if (nextScene.animations !== undefined) {
+    nextScene.animations.forEach(anim => {
+      switch (anim.type) {
+        case "SlideFromLeft":
+          characterElements[anim.target].classList.add('slide-character-from-left-animation');
+          break;
+        case "SlideFromRight":
+          characterElements[anim.target].classList.add('slide-character-from-right-animation');
+          break;
+        case "BGFadeIn":
+          break;
+        case "CharacterFadeIn":
+          characterElements[anim.target].classList.add('fade-in-animation-long');
+          break;
+        case "CharacterFadeOut":
+          characterElements[anim.target].classList.add('fade-out-animation-long');
+          break;
+        case "ZoomInCharacter":
+          characterElements[anim.target].classList.add('zoom-in-animation');
+          break;
+        case "StopZoom":
+          characterElements[anim.target].classList.remove('zoom-in-animation');
+          break;
+        case "ZoomOutCharacter":
+          characterElements[anim.target].classList.add('zoom-out-animation');
+          break;
+        case "Shake":
+          characterElements[anim.target].classList.add('shake-animation');
+          break;
+        default:
+          console.log("default animation switch case triggered")
+          break;
+      }
+    });
+  }
 }
 
 function WriteInfobox() {
@@ -282,7 +328,7 @@ function WriteDialogue() {
 // player choice box setup
 function PlayerChoiceSetup() {
   bottomPlayerChoiceElement.classList.add('fade-in-animation-long');
-  
+
   for (let i = 0; i < playerChoiceElements.length; i++) {
     // hide null choices
     if (nextScene.type === 'linear' || i >= nextScene.player_choice.length) {
@@ -294,14 +340,14 @@ function PlayerChoiceSetup() {
       if (Language[nextScene.player_choice[i].text] == null) {
         console.error(
           'next scene text missing, typo here:? ' +
-            nextScene.player_choice[i].text
+          nextScene.player_choice[i].text
         );
       }
     }
   }
 }
 bottomPlayerChoiceElement.addEventListener('animationend', () => {
-    waitingForPlayerChoiceButtons = false;
+  waitingForPlayerChoiceButtons = false;
 });
 
 function GetFontSizeBasedOnStringLength(string) {
