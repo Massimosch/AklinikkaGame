@@ -210,7 +210,8 @@ function PopulateScene() {
     WriteDialogue();
   }
   if (nextScene.text_type === 'infobox' || nextScene.text_type === 'Infobox') {
-    WriteInfobox();
+    //WriteInfobox(); temp? muotoilu ongelman vuoksi vaihettu Narratoriksi
+    WriteNarrator();
   }
   if (nextScene.text_type === 'narrator') {
     WriteNarrator();
