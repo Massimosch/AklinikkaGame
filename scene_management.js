@@ -300,7 +300,7 @@ function AnimateScene() {
 function WriteInfobox() {
   infoboxElement.classList.remove('hidden');
   infoboxText.innerHTML = Language[nextScene.text];
-  infoboxElement.style.fontSize = GetFontSizeBasedOnStringLength(Language[nextScene.text]);
+  infoboxElement.style.fontSize = GetFontSizeBasedOnString(Language[nextScene.text]);
   // bottomChoiceContainer.transfrom = "translateX(0%)";
   speechBubbleLeft.classList.add('hidden');
   speechBubbleRight.classList.add('hidden');
@@ -310,7 +310,7 @@ function WriteInfobox() {
 function WriteNarrator() {
   narratorElement.classList.remove('hidden');
   narratorText.innerHTML = Language[nextScene.text];
-  narratorElement.style.fontSize = GetFontSizeBasedOnStringLength(Language[nextScene.text]);
+  narratorElement.style.fontSize = GetFontSizeBasedOnString(Language[nextScene.text]);
   // bottomChoiceContainer.transfrom = "translateX(0%)";
   speechBubbleLeft.classList.add('hidden');
   speechBubbleRight.classList.add('hidden');
@@ -337,6 +337,8 @@ function WriteDialogue() {
 // player choice box setup
 function PlayerChoiceSetup() {
   bottomPlayerChoiceElement.classList.add('fade-in-animation-long');
+  
+  let choiceTextLength = 0;
 
   for (let i = 0; i < playerChoiceElements.length; i++) {
     // hide null choices
@@ -346,6 +348,8 @@ function PlayerChoiceSetup() {
       playerChoiceElements[i].classList.remove('hidden');
       playerChoiceTextElements[i].innerHTML =
         Language[nextScene.player_choice[i].text];
+      choiceTextLength += Language[nextScene.player_choice[i].text].length;
+
       if (Language[nextScene.player_choice[i].text] == null) {
         console.error(
           'next scene text missing, typo here:? ' +
@@ -354,12 +358,14 @@ function PlayerChoiceSetup() {
       }
     }
   }
+  bottomPlayerChoiceElement.style.fontSize = GetFontSizeBasedOnStringLength(choiceTextLength);
 }
+
 bottomPlayerChoiceElement.addEventListener('animationend', () => {
   waitingForPlayerChoiceButtons = false;
 });
 
-function GetFontSizeBasedOnStringLength(string) {
+function GetFontSizeBasedOnString(string) {
   const smallFontSize = '1.16rem'
   const mediumFontSize = '1.3rem'
   const largeFontSize = '1.5rem'
@@ -367,6 +373,18 @@ function GetFontSizeBasedOnStringLength(string) {
     return smallFontSize;
   }
   else if (string.length > 150) {
+    return mediumFontSize;
+  }
+  return largeFontSize;
+}
+function GetFontSizeBasedOnStringLength(numbers) {
+  const smallFontSize = '1.25rem'
+  const mediumFontSize = '1.35rem'
+  const largeFontSize = '1.5rem'
+  if (numbers > 200) {
+    return smallFontSize;
+  }
+  else if (numbers > 110) {
     return mediumFontSize;
   }
   return largeFontSize;
