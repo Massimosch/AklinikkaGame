@@ -1,4 +1,4 @@
-const SofiaSaattamassa = {
+const Kotimatka = {
   SofiSaattaa1: {
     _comment: '',
     type: 'options',
@@ -41,7 +41,7 @@ const SofiaSaattamassa = {
   SofiSaattaa3: {
     _comment: '',
     type: 'linear',
-    background: 'Risteys',
+    background: 'Onnettomuus',
     characters: [],
     text_type: 'narrator',
     text_position: '',
@@ -63,8 +63,7 @@ const SofiaSaattamassa = {
     type: 'linear',
     background: 'Kannabis',
     characters: [],
-    text_type: 'speech',
-    text_position: 'speechLeft',
+    text_type: 'narrator',
     text: 'tVanhemmatKannabis1',
     next_scene: 'VanhemmatKannabis2',
   },
@@ -72,9 +71,9 @@ const SofiaSaattamassa = {
     _comment: '',
     type: 'linear',
     background: 'Risteys',
-    characters: [],
-    text_type: 'narrator',
-    text_position: '',
+    characters: ["HahmoSofiVakava"],
+    text_type: 'speech',
+    text_position: 'speechLeft',
     text: 'tVanhemmatKannabis2',
     next_scene: 'VanhemmatKannabis3',
   },
@@ -180,5 +179,69 @@ const SofiaSaattamassa = {
     text: 'tSofiaSaattamassa5',
     next_scene: 'SofinKotona',
   },
+  SofinKotona: {
+    _comment: '',
+    type: 'linear',
+    background: 'SofinKoti',
+    characters: ["HahmoSofinAiti"],
+    text_type: 'narrator',
+    text_position: 'speechLeft',
+    text: 'tSofinKotona',
+    next_scene: 'SofinKotona2',
+  },
+  SofinKotona2: {
+    _comment: '',
+    type: 'linear',
+    background: 'SofinKoti',
+    characters: ["HahmoSofinAiti", "HahmoSofiHuolestunut"],
+    text_type: 'narrator',
+    text_position: 'speechLeft',
+    text: 'tSofinKotona2',
+    next_scene: 'SofinKotona3',
+  },
+  SofinKotona3: {
+    _comment: '',
+    type: 'options',
+    background: 'SofinKoti',
+    characters: [],
+    text_type: 'narrator',
+    text_position: 'speechLeft',
+    text: 'tSofinKotona3',
+    player_choice: [
+      {
+        text: 'tSofinKotona3Suuttuis',
+        next_scene: 'SofinKotona4Vaikeaa',
+      },
+      {
+        text: 'tSofinKotona3EiKiinnosta',
+        next_scene: 'SofinKotona4Vaikeaa',
+      },
+      {
+        text: 'tSofinKotona3Keskustelu',
+        next_scene: 'SofinKotona4HyvatValit',
+      },
+    ],
+  },
+  SofinKotona4Vaikeaa: {
+    _comment: 'Puuttuu nextScene',
+    type: 'linear',
+    background: 'Vanhemmat',
+    characters: [],
+    text_type: 'narrator',
+    text_position: 'speechLeft',
+    text: 'tSofinKotona4Vaikeaa',
+    next_scene: 'Tekstari1',
+  },
+  SofinKotona4HyvatValit: {
+    _comment: 'Puuttuu nextScene',
+    type: 'linear',
+    background: 'Vanhemmat',
+    characters: [],
+    text_type: 'speech',
+    text_position: 'speechLeft',
+    text: 'tSofinKotona4HyvatValit',
+    next_scene: 'Tekstari1',
+  },
+
 };
-export default SofiaSaattamassa;
+export default Kotimatka;
