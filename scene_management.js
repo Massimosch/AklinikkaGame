@@ -68,8 +68,8 @@ const pauseMenuElement = document.querySelector('.top-options-menu');
 */
 function StartSetup() {
   let save = localStorage.getItem('sceneIDSave');
-  if (save === null || save === 'Loppu'){
-    nextScene = GetSceneData("EnsimmainenScene");
+  if (save === null || save === 'Loppu' || save === ''){
+    nextScene = GetSceneData('EnsimmainenScene');
   }
   else {
     nextScene = GetSceneData(localStorage.getItem('sceneIDSave'));
