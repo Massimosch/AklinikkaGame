@@ -143,6 +143,7 @@ body {
   z-index: 11;
   background-repeat: no-repeat;
   background-size: contain;
+  cursor: pointer;
 }
 
 .pausemenubutton {
