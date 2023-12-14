@@ -63,8 +63,8 @@ const RoopenNuuskat = {
     type: "linear",
     background: "Kaytava",
     characters: ["HahmoRoope"],
-    text_type: "speech",
-        text: "tRoopenNuuskat1",
+    text_type: "narrator",
+    text: "tRoopenNuuskat1",
     next_scene: "RoopenNuuskat2",
   },
 
