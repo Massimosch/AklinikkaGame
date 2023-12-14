@@ -1,11 +1,11 @@
 if (localStorage.getItem('savedScene') !== null) {
   scene_management.StartSetup();
 } else {
-  localStorage.setItem('savedScene', GetSceneData('EnsimmainenScene'));
+  localStorage.setItem('savedScene', 'EnsimmainenScene');
 }
 
 window.addEventListener('beforeunload', function () {
-  localStorage.setItem('savedScene', GetSceneData('EnsimmainenScene'));
+  localStorage.setItem('savedScene', 'EnsimmainenScene');
 });
 
 function startOver() {
