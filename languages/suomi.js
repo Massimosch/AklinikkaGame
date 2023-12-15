@@ -19,7 +19,7 @@ const Suomi = {
   "tMitaTiedatVapesta": "Mitä sä muuten tiedät vapesta?",
   "tMitaTiedatVapestaEVVK": "EVVK.",
   "tMitaTiedatVapestaEnTieda": "No en hirveesti.",
-  "tVapeInfobox": "Sähkösavukkeissa on samoja haitallisia aineita kuin savukkeissakin. Ne sisältävät usein nikotiinipitoista nestettä, johon jää herkästi koukkuun.   Sähkösavukkeet ovat vähemmän haitallisia terveydelle kuin savukkeet mutta eivät haitattomia. Pitkäaikaisen käytön vaikutuksia ei vielä tunneta. Yleisiä haittavakutuksia ovat rintakipu, nopeutunut syke, pää- ja kurkkukipu sekä nielun ja suun alueen ärsytys tai kuivuminen.<br>Katso lisää: <a href='https://nuortenlinkki.fi/tietopiste/tietoartikkelit/tupakointi/sahkotupakka/Sähkösavuke' target='_blank'>Sähkösavuke - Nuortenlinkki</a>",
+  "tVapeInfobox": "Sähkösavukkeissa on samoja haitallisia aineita kuin savukkeissakin. Ne sisältävät usein nikotiinipitoista nestettä, johon jää herkästi koukkuun.   Sähkösavukkeet ovat vähemmän haitallisia terveydelle kuin savukkeet mutta eivät haitattomia. Pitkäaikaisen käytön vaikutuksia ei vielä tunneta. Yleisiä haittavakutuksia ovat rintakipu, nopeutunut syke, pää- ja kurkkukipu sekä nielun ja suun alueen ärsytys tai kuivuminen.<br>Katso lisää: <a href='https://nuortenlinkki.fi/tietopiste/tietoartikkelit/tupakointi/vape/' target='_blank'>Sähkösavuke - Nuortenlinkki</a>",
   "tJuomaautomaatti1": "Kaipaat kipeästi energiajuomaa. Suuntaat siis koulun juoma-automaatille.",
   "tJuomaautomaatti2": "Automaatille päästyäsi huomaat, että energiajuomat on korvattu appelsiinimehulla!",
   "tJuomaautomaatti2Skippaan": "Skippaan",
