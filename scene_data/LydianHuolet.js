@@ -5,6 +5,12 @@ const LydianHuolet = {
     background: "Roskikset",
     characters: ["HahmoSofiHuolestunut", "HahmoLydia"],
     text_type: "speech",
+    animations: [
+      {
+        type: "SlideFromLeft",
+        target: 0,
+      },
+    ],
     text_position: "speechLeft",
     text: "tLydianHuolet1",
     next_scene: "LydianHuolet2"
@@ -16,7 +22,7 @@ const LydianHuolet = {
     background: "Roskikset",
     characters: ["HahmoSofi", "HahmoLydia"],
     text_type: "speech",
-    text_position: "speechLeft",
+    text_position: "speechRight",
     text: "tLydianHuolet2",
     next_scene: "LydianHuolet3"
   },
@@ -79,6 +85,12 @@ const LydianHuolet = {
     type: "linear",
     background: "Roskikset",
     characters: ["HahmoLydiaAhdistunut"],
+    animations: [
+      {
+        type: "ZoomInCharacter",
+        target: 0,
+      },
+    ],
     text_type: "speech",
     text_position: "speechLeft",
     text: "tLydianNude1",
@@ -101,6 +113,12 @@ const LydianHuolet = {
     type: "options",
     background: "Roskikset",
     characters: ["HahmoLydia"],
+    animations: [
+      {
+        type: "StopZoom",
+        target: 0,
+      },
+    ],
     text_type: "narrator",
     text_position: "",
     text: "tLydianNude3",
