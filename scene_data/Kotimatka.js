@@ -124,7 +124,7 @@ const Kotimatka = {
     _comment: '',
     type: 'options',
     background: 'Risteys',
-    characters: ["skootteri"],
+    characters: ["Skootteri"],
     text_type: 'narrator',
     text_position: '',
     text: 'tSofiaSaattamassa1',
