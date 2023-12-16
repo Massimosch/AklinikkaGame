@@ -172,7 +172,7 @@ const Suomi = {
   "tRoopenPillerit2Ei": "En todellakaan! On tosi vaarallista ottaa pillereitä, joista ei ees tiedä mitä niissä on.",
   "tRoopenPillerit2Joo": "Haluan!",
   "tRoopenPillerit3JooOletkoVarma": "Ootko ihan varma? On aina riski ostaa huumeita katukaupasta. Vaikka sinulle kerrottaisiin mitä huumeessa on, et voi kuitenkaan koskaan olla varma puhuuko myyjä totta. Yksikin pilleri voi olla hengenvaarallinen.",
-  "tRoopenPillerit3EiTotta": "Aivan totta. Vaikka sinulle kerrottaisiin mikä huume on kyseessä, et voi kuitenkaan koskaan olla varma puhuiko myyjä totta. Yksikin pilleri voi olla hengenvaarallinen. Suomi on Euroopan kärjessä nuorten huumekuolemissa.",
+  "tRoopenPillerit3EiTotta": "Aivan totta. Vaikka sinulle kerrottaisiin mikä huume on kyseessä, et voi kuitenkaan koskaan olla varma puhuiko myyjä totta. Yksikin pilleri voi olla hengenvaarallinen.",
   "tRoopenPillerit3Okei": "Okei ehkä jätän väliin.",
   "tRoopenPillerit3IhaSama": "Iha sama.",
   "tRoopenPillerit4": "Otat pienen valkoisen pillerin suuhun. Roopen kavereita naurattaa. Kyseessä olikin Xylitol-tabletti.",
