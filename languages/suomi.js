@@ -117,7 +117,7 @@ const Suomi = {
   "tOppitunti2": "Noniin, aloitellaanpa sitten. Tänään puhutaan mielenterveydestä.",
   "tOppitunti3": "Ohimenevä ahdistus on yleistä nuorilla.",
   "tOppitunti4": "Ahdistushäiriöstä on kyse silloin, kun ahdistuneisuudesta aiheutuu selvää toiminnallista haittaa tai kärsimystä.",
-  "tAhdistusInfobox": "Ahdistushäiriön muotoja voivat olla:<br>- Sosiaalisten tilanteiden pelko<br>Julkisten paikkojen pelko<br>- Yleistynyt ahdistuneisuushäiriö, jossa arkiset huolet tuntuvat hallitsemattomilta ja on vaikea rentoutua<br>Paniikkihäiriö<br>- Pakko-oireinen häiriö, johon liittyy pakonomaisia ajatuksia tai toimintoja<br>- Traumaperäinen stressihäiriö",
+  "tAhdistusInfobox": "Ahdistushäiriön muotoja voivat olla:<br>- Sosiaalisten tilanteiden pelko<br>- Julkisten paikkojen pelko<br>- Yleistynyt ahdistuneisuushäiriö, jossa arkiset huolet tuntuvat hallitsemattomilta ja on vaikea rentoutua<br>- Paniikkihäiriö<br>- Pakko-oireinen häiriö, johon liittyy pakonomaisia ajatuksia tai toimintoja<br>- Traumaperäinen stressihäiriö",
   "tOppitunti5": "Tiedätkö, kuinka moni nuori Suomessa kärsii ahdistuneisuushäiriöstä?",
   "tOppitunti5A": "1-2%",
   "tOppitunti5B": "4-11%",
