@@ -160,7 +160,7 @@ function AddClickEventListener() {
     // if choice elements clicked, set nextscene
     for (let i = 0; i < playerChoiceElements.length; i++) {
       if (event.target.parentElement === playerChoiceElements[i]) {
-        audioModule.playClickSound('./audio/aklinikka-clicked.mp3');
+        audioModule.playClickSound('./audio/aklinikka-clicked.mp3'); //play Baground music here? dunno
         nextScene = GetSceneData(currentScene.player_choice[i].next_scene);
         if (nextScene == null) {
           return;
