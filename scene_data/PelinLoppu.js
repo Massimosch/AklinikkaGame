@@ -125,11 +125,11 @@ const PelinLoppu = {
     player_choice: [
       {
         text: 'tKotona3Pizzaa',
-        next_scene: 'Loppu',
+        next_scene: 'Kotona4',
       },
       {
         text: 'tKotona3Salaattia',
-        next_scene: 'Loppu',
+        next_scene: 'Kotona4',
       },
     ],
   },
