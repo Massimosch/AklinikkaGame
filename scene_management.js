@@ -3,7 +3,11 @@
 */
 
 export { StartSetup };
-import { CheckIfClickedWhilePauseOpen, PauseMenuClicked, Language } from './menu_module.js';
+import {
+  CheckIfClickedWhilePauseOpen,
+  PauseMenuClicked,
+  Language,
+} from './menu_module.js';
 
 import EnergiajuomaNuuskaRahapelit from './scene_data/EnergiajuomaNuuskaRahapelit.js';
 import Kotimatka from './scene_data/Kotimatka.js';
@@ -18,6 +22,10 @@ import RoopenBileet from './scene_data/RoopenBileet.js';
 import SofillaOnTietoa from './scene_data/SofillaOnTietoa.js';
 import SofinSomeTauko from './scene_data/SofinSometauko.js';
 import TuomaksenKiusaaminen from './scene_data/TuomaksenKiusaaminen.js';
+
+//Audio import and new instance created
+import AudioModule from './audio_module.js';
+const audioModule = new AudioModule();
 
 // ordered by scene appearance
 const sceneDataFiles = [
@@ -44,7 +52,6 @@ const infoboxText = document.querySelector('.infoBoxText');
 const narratorElement = document.querySelector('.narratorBox');
 const narratorText = document.querySelector('.narratorBoxText');
 
-
 const speechBubbleLeft = document.querySelector('.speechBubbleLeft');
 const speechBubbleRight = document.querySelector('.speechBubbleRight');
 
@@ -55,7 +62,9 @@ const playerChoiceTextElements = document.querySelectorAll('.choiceBoxText');
 
 // animation containers
 const topTextElement = document.querySelector('.top-text-container');
-const bottomPlayerChoiceElement = document.querySelector('.bottom-choice-container');
+const bottomPlayerChoiceElement = document.querySelector(
+  '.bottom-choice-container'
+);
 
 // settings menu
 const pauseMenuElement = document.querySelector('.top-options-menu');
@@ -68,10 +77,10 @@ const pauseMenuElement = document.querySelector('.top-options-menu');
 */
 function StartSetup() {
   let save = localStorage.getItem('sceneIDSave');
-  if (save === null || save === 'Loppu' || save === ''){
+  audioModule.startBackgroundMusic('./audio/AKlinikka-BGM.mp3');
+  if (save === null || save === 'Loppu' || save === '') {
     nextScene = GetSceneData('EnsimmainenScene');
-  }
-  else {
+  } else {
     nextScene = GetSceneData(localStorage.getItem('sceneIDSave'));
   }
   PopulateScene();
@@ -151,6 +160,7 @@ function AddClickEventListener() {
     // if choice elements clicked, set nextscene
     for (let i = 0; i < playerChoiceElements.length; i++) {
       if (event.target.parentElement === playerChoiceElements[i]) {
+        audioModule.playClickSound('./audio/aklinikka-clicked.mp3');
         nextScene = GetSceneData(currentScene.player_choice[i].next_scene);
         if (nextScene == null) {
           return;
@@ -229,7 +239,10 @@ function PopulateScene() {
     playerChoiceElements[i].classList.add('hidden');
   }
   if (nextScene.player_choice !== undefined) {
-    timerForPlayerChoices = setTimeout(PlayerChoiceSetup, playerChoiceDelayTime);
+    timerForPlayerChoices = setTimeout(
+      PlayerChoiceSetup,
+      playerChoiceDelayTime
+    );
     waitingForPlayerChoiceButtons = true;
   }
 
@@ -241,7 +254,7 @@ function PopulateScene() {
 
 function ResetAnimations() {
   for (let i = 0; i < characterElements.length; i++) {
-    if (characterElements[i].classList.contains('zoom-in-animation')){
+    if (characterElements[i].classList.contains('zoom-in-animation')) {
       continue;
     }
     if (characterElements[i].classList.contains('hidden')) {
@@ -263,34 +276,42 @@ function AnimateScene() {
   if (nextScene.animations !== undefined) {
     nextScene.animations.forEach(anim => {
       switch (anim.type) {
-        case "SlideFromLeft":
-          characterElements[anim.target].classList.add('slide-character-from-left-animation');
+        case 'SlideFromLeft':
+          characterElements[anim.target].classList.add(
+            'slide-character-from-left-animation'
+          );
           break;
-        case "SlideFromRight":
-          characterElements[anim.target].classList.add('slide-character-from-right-animation');
+        case 'SlideFromRight':
+          characterElements[anim.target].classList.add(
+            'slide-character-from-right-animation'
+          );
           break;
-        case "BGFadeIn":
+        case 'BGFadeIn':
           break;
-        case "CharacterFadeIn":
-          characterElements[anim.target].classList.add('fade-in-animation-long');
+        case 'CharacterFadeIn':
+          characterElements[anim.target].classList.add(
+            'fade-in-animation-long'
+          );
           break;
-        case "CharacterFadeOut":
-          characterElements[anim.target].classList.add('fade-out-animation-long');
+        case 'CharacterFadeOut':
+          characterElements[anim.target].classList.add(
+            'fade-out-animation-long'
+          );
           break;
-        case "ZoomInCharacter":
+        case 'ZoomInCharacter':
           characterElements[anim.target].classList.add('zoom-in-animation');
           break;
-        case "StopZoom":
+        case 'StopZoom':
           characterElements[anim.target].classList.remove('zoom-in-animation');
           break;
-        case "ZoomOutCharacter":
+        case 'ZoomOutCharacter':
           characterElements[anim.target].classList.add('zoom-out-animation');
           break;
-        case "Shake":
+        case 'Shake':
           characterElements[anim.target].classList.add('shake-animation');
           break;
         default:
-          console.log("default animation switch case triggered")
+          console.log('default animation switch case triggered');
           break;
       }
     });
@@ -300,7 +321,9 @@ function AnimateScene() {
 function WriteInfobox() {
   infoboxElement.classList.remove('hidden');
   infoboxText.innerHTML = Language[nextScene.text];
-  infoboxElement.style.fontSize = GetFontSizeBasedOnString(Language[nextScene.text]);
+  infoboxElement.style.fontSize = GetFontSizeBasedOnString(
+    Language[nextScene.text]
+  );
   // bottomChoiceContainer.transfrom = "translateX(0%)";
   speechBubbleLeft.classList.add('hidden');
   speechBubbleRight.classList.add('hidden');
@@ -310,7 +333,9 @@ function WriteInfobox() {
 function WriteNarrator() {
   narratorElement.classList.remove('hidden');
   narratorText.innerHTML = Language[nextScene.text];
-  narratorElement.style.fontSize = GetFontSizeBasedOnString(Language[nextScene.text]);
+  narratorElement.style.fontSize = GetFontSizeBasedOnString(
+    Language[nextScene.text]
+  );
   // bottomChoiceContainer.transfrom = "translateX(0%)";
   speechBubbleLeft.classList.add('hidden');
   speechBubbleRight.classList.add('hidden');
@@ -337,7 +362,7 @@ function WriteDialogue() {
 // player choice box setup
 function PlayerChoiceSetup() {
   bottomPlayerChoiceElement.classList.add('fade-in-animation-long');
-  
+
   let choiceTextLength = 0;
 
   for (let i = 0; i < playerChoiceElements.length; i++) {
@@ -353,12 +378,13 @@ function PlayerChoiceSetup() {
       if (Language[nextScene.player_choice[i].text] == null) {
         console.error(
           'next scene text missing, typo here:? ' +
-          nextScene.player_choice[i].text
+            nextScene.player_choice[i].text
         );
       }
     }
   }
-  bottomPlayerChoiceElement.style.fontSize = GetFontSizeBasedOnStringLength(choiceTextLength);
+  bottomPlayerChoiceElement.style.fontSize =
+    GetFontSizeBasedOnStringLength(choiceTextLength);
 }
 
 bottomPlayerChoiceElement.addEventListener('animationend', () => {
@@ -366,30 +392,28 @@ bottomPlayerChoiceElement.addEventListener('animationend', () => {
 });
 
 function GetFontSizeBasedOnString(string) {
-  const smallFontSize = '1.16rem'
-  const mediumFontSize = '1.3rem'
-  const largeFontSize = '1.5rem'
+  const smallFontSize = '1.16rem';
+  const mediumFontSize = '1.3rem';
+  const largeFontSize = '1.5rem';
   if (string.length > 240) {
     return smallFontSize;
-  }
-  else if (string.length > 150) {
+  } else if (string.length > 150) {
     return mediumFontSize;
   }
   return largeFontSize;
 }
 function GetFontSizeBasedOnStringLength(numbers) {
-  const smallFontSize = '1.25rem'
-  const mediumFontSize = '1.35rem'
-  const largeFontSize = '1.5rem'
+  const smallFontSize = '1.25rem';
+  const mediumFontSize = '1.35rem';
+  const largeFontSize = '1.5rem';
   if (numbers > 200) {
     return smallFontSize;
-  }
-  else if (numbers > 110) {
+  } else if (numbers > 110) {
     return mediumFontSize;
   }
   return largeFontSize;
 }
 
-window.addEventListener('beforeunload', function() {
+window.addEventListener('beforeunload', function () {
   localStorage.setItem('sceneIDSave', sceneID);
 });
