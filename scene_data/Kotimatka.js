@@ -108,7 +108,7 @@ const Kotimatka = {
     text_type: 'narrator',
     text_position: '',
     text: 'tVanhemmatKannabis4Vaikeaa',
-    next_scene: 'Tekstari1',
+    next_scene: 'EiTekstaria',
   },
   VanhemmatKannabis4HyvatValit: {
     _comment: 'SofiaSaattamassaLoppuu',
@@ -118,7 +118,7 @@ const Kotimatka = {
     text_type: 'narrator',
     text_position: '',
     text: 'tVanhemmatKannabis4HyvatValit',
-    next_scene: 'Tekstari1',
+    next_scene: 'EiTekstaria',
   },
   SofiaSaattamassa1: {
     _comment: '',

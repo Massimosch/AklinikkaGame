@@ -196,7 +196,7 @@ const OppituntiAlkamassa = {
       },
       {
         text: "tKouluLoppuuKotiin",
-        next_scene: "Tekstari1",
+        next_scene: "EiTekstaria",
       },
     ],
   },
