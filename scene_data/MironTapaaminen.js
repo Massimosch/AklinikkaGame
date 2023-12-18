@@ -15,6 +15,12 @@ const MironTapaaminen = {
     background: "JuomaAutomaatti",
     characters: ["HahmoSofi"],
     text_type: "speech",
+    animations: [
+      {
+        type: "CloseUp",
+        target: 0,
+      },
+    ],
     text_position: "speechLeft",
     text: "tEnergiajuomat2",
     player_choice: [

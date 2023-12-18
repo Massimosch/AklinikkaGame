@@ -186,7 +186,7 @@ const LydianHuolet = {
     background: "Roskikset",
     characters: ["HahmoKuraattoriAnu", "HahmoSofiHuolestunut"],
     text_type: "speech",
-    text_position: "speechLeft",
+    text_position: "speechRight",
     text: "tAnuKuulee2Lydia",
     next_scene: "SofinViiltely1"
   },

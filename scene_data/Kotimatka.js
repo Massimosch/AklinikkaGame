@@ -41,9 +41,15 @@ const Kotimatka = {
   SofiSaattaa3: {
     _comment: '',
     type: 'linear',
-    background: 'Onnettomuus',
-    characters: [],
+    background: 'OnnettomuusSininen',
+    characters: ["OnnettomuusEffekti"],
     text_type: 'narrator',
+    animations: [
+      {
+        type: "Shake",
+        target: 0,
+      },
+    ],
     text_position: '',
     text: 'tSofiSaattaa3',
     next_scene: 'SofiSaattaa4',
@@ -152,9 +158,15 @@ const Kotimatka = {
   SofiaSaattamassa3Huono: {
     _comment: '',
     type: 'linear',
-    background: 'Onnettomuus',
-    characters: [],
+    background: 'OnnettomuusSininen',
+    characters: ["OnnettomuusEffekti"],
     text_type: 'narrator',
+    animations: [
+      {
+        type: "Shake",
+        target: 0,
+      },
+    ],
     text_position: '',
     text: 'tSofiaSaattamassa3Huono',
     next_scene: 'SofiaSaattamassa4Sakot',
