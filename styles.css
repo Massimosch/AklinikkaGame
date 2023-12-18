@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Jura', sans-serif;
 }
 
 body {
@@ -144,6 +144,7 @@ body {
   background-repeat: no-repeat;
   background-size: contain;
   cursor: pointer;
+  filter: drop-shadow(3px 4px 0px rgb(0 0 0 / 0.25));
 }
 
 .pausemenubutton {
@@ -361,4 +362,8 @@ body {
 
 .hidden {
   display: none;
+}
+
+a {
+  font-family: 'Jura', sans-serif;
 }
