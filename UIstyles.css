@@ -125,7 +125,6 @@
 .speechBubbleLeft {
   position: relative;
   width: 80%;
-  display: flex;
   padding: 10px 16px 10px;
   align-items: flex-start;
   font-size: 1.5rem;

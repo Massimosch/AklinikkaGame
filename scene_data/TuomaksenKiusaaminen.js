@@ -55,6 +55,12 @@ const TuomaksenKiusaaminen = {
     background: "LuokanOvi",
     characters: ["HahmoTuomas"],
     text_type: "narrator",
+    animations: [
+      {
+        type: "CloseUp",
+        target: 0,
+      },
+    ],
     text: "tTuomaksenTukeminen",
     player_choice: [
       {
@@ -73,6 +79,12 @@ const TuomaksenKiusaaminen = {
     background: "LuokanOvi",
     characters: ["HahmoTuomas"],
     text_type: "narrator",
+    animations: [
+      {
+        type: "CloseUp",
+        target: 0,
+      },
+    ],
     text: "tTuomaksenTukeminenHyvaPaatos",
     next_scene: "Oppitunti1",
   },
@@ -82,6 +94,12 @@ const TuomaksenKiusaaminen = {
     background: "LuokanOvi",
     characters: ["HahmoTuomas"],
     text_type: "narrator",
+    animations: [
+      {
+        type: "CloseUp",
+        target: 0,
+      },
+    ],
     text: "tTuomaksenTukeminenTiesitko",
     next_scene: "Oppitunti1",
   },

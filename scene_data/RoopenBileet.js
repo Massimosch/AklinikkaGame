@@ -5,6 +5,12 @@ const RoopenBileet = {
     background: 'RoopenKoti',
     characters: ['HahmoRoopeYlpea', 'HahmoMironKaveri2'],
     text_type: 'narrator',
+    animations: [
+      {
+        type: "CloseUp",
+        target: 0,
+      },
+    ],
     text: 'tRoopenSteroidit1',
     next_scene: 'RoopenSteroidit2',
   },

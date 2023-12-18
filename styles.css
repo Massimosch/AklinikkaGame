@@ -208,6 +208,7 @@ body {
   justify-content: flex-end safe;
   align-items: flex-end safe;
   flex-direction: row;
+  overflow: clip;
 }
 
 .character {
@@ -232,6 +233,11 @@ body {
   z-index: 10;
   padding-bottom: 3vh;
 }
+
+.close-up-animation {
+  transform: scale(1.5) translate(0, 10vh);
+}
+
 
 .fade-in-animation-long {
   animation-name: fade-in;

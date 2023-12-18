@@ -1,4 +1,4 @@
-const OppituntiAlkamassa = {
+  const OppituntiAlkamassa = {
   Oppitunti1: {
     _comment: "",
     type: "linear",
@@ -14,6 +14,12 @@ const OppituntiAlkamassa = {
     background: "Luokkahuone",
     characters: ["HahmoOpettajaPirkka"],
     text_type: "speech",
+    animations: [
+      {
+        type: "CloseUp",
+        target: 0,
+      },
+    ],
     text_position: "speechLeft",
     text: "tOppitunti2",
     next_scene: "Oppitunti3",
@@ -24,6 +30,12 @@ const OppituntiAlkamassa = {
     background: "Luokkahuone",
     characters: ["HahmoOpettajaPirkka"],
     text_type: "speech",
+    animations: [
+      {
+        type: "CloseUp",
+        target: 0,
+      },
+    ],
     text_position: "speechLeft",
     text: "tOppitunti3",
     next_scene: "Oppitunti4",
@@ -34,6 +46,12 @@ const OppituntiAlkamassa = {
     background: "Luokkahuone",
     characters: ["HahmoOpettajaPirkka"],
     text_type: "speech",
+    animations: [
+      {
+        type: "CloseUp",
+        target: 0,
+      },
+    ],
     text_position: "speechLeft",
     text: "tOppitunti4",
     next_scene: "AhdistusInfobox",
@@ -55,6 +73,12 @@ const OppituntiAlkamassa = {
     background: "Luokkahuone",
     characters: ["HahmoOpettajaPirkka"],
     text_type: "speech",
+    animations: [
+      {
+        type: "CloseUp",
+        target: 0,
+      },
+    ],
     text_position: "speechLeft",
     text: "tOppitunti5",
     player_choice: [
@@ -79,6 +103,12 @@ const OppituntiAlkamassa = {
     background: "Luokkahuone",
     characters: ["HahmoOpettajaPirkka"],
     text_type: "speech",
+    animations: [
+      {
+        type: "CloseUp",
+        target: 0,
+      },
+    ],
     text_position: "speechLeft",
     text: "tOppitunti6",
     next_scene: "Oppitunti7",
@@ -90,6 +120,12 @@ const OppituntiAlkamassa = {
     background: "Luokkahuone",
     characters: ["HahmoOpettajaPirkka"],
     text_type: "speech",
+    animations: [
+      {
+        type: "CloseUp",
+        target: 0,
+      },
+    ],
     text_position: "speechLeft",
     text: "tOppitunti7",
     next_scene: "Oppitunti8",
@@ -100,6 +136,12 @@ const OppituntiAlkamassa = {
     background: "Luokkahuone",
     characters: ["HahmoOpettajaPirkka"],
     text_type: "speech",
+    animations: [
+      {
+        type: "CloseUp",
+        target: 0,
+      },
+    ],
     text_position: "speechLeft",
     text: "tOppitunti8",
     next_scene: "Oppitunti9",
@@ -111,6 +153,12 @@ const OppituntiAlkamassa = {
     background: "Luokkahuone",
     characters: ["HahmoOpettajaPirkka"],
     text_type: "speech",
+    animations: [
+      {
+        type: "CloseUp",
+        target: 0,
+      },
+    ],
     text_position: "speechLeft",
     text: "tOppitunti9",
     next_scene: "Oppitunti10",
@@ -121,6 +169,12 @@ const OppituntiAlkamassa = {
     background: "Luokkahuone",
     characters: ["HahmoOpettajaPirkka"],
     text_type: "speech",
+    animations: [
+      {
+        type: "CloseUp",
+        target: 0,
+      },
+    ],
     text_position: "speechLeft",
     text: "tOppitunti10",
     next_scene: "Oppitunti11",
@@ -131,6 +185,12 @@ const OppituntiAlkamassa = {
     background: "Luokkahuone",
     characters: ["HahmoOpettajaPirkka"],
     text_type: "speech",
+    animations: [
+      {
+        type: "CloseUp",
+        target: 0,
+      },
+    ],
     text_position: "speechLeft",
     text: "tOppitunti11",
     player_choice: [
@@ -165,6 +225,12 @@ const OppituntiAlkamassa = {
     background: "Luokkahuone",
     characters: ["HahmoOpettajaPirkka"],
     text_type: "speech",
+    animations: [
+      {
+        type: "CloseUp",
+        target: 0,
+      },
+    ],
     text_position: "speechLeft",
     text: "tOppitunti11Sekasin",
     next_scene: "Oppitunti12",
@@ -176,6 +242,12 @@ const OppituntiAlkamassa = {
     background: "Luokkahuone",
     characters: ["HahmoOpettajaPirkka"],
     text_type: "speech",
+    animations: [
+      {
+        type: "CloseUp",
+        target: 0,
+      },
+    ],
     text_position: "speechLeft",
     text: "tOppitunti12",
     next_scene: "KouluLoppuu",

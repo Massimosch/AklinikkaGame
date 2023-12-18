@@ -289,6 +289,9 @@ function AnimateScene() {
         case "Shake":
           characterElements[anim.target].classList.add('shake-animation');
           break;
+        case "CloseUp":
+          characterElements[anim.target].classList.add('close-up-animation');
+          break;
         default:
           console.log("default animation switch case triggered")
           break;
