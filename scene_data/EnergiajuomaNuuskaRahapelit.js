@@ -73,7 +73,7 @@ const RoopenNuuskat = {
     type: "options",
     background: "Kaytava",
     characters: ["HahmoRoopeYlpea"],
-    text_type: "narrator",
+    text_type: "speech",
     text_position: "speechLeft",
     text: "tRoopenNuuskat2",
     player_choice: [

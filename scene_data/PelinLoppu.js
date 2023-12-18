@@ -1,7 +1,7 @@
 const PelinLoppu = {
 
   Tekstari1: {
-    _comment: 'Puuttuu nextScene',
+    _comment: '',
     type: 'linear',
     background: 'OmaHuone',
     characters: [],
@@ -9,16 +9,17 @@ const PelinLoppu = {
     text: 'tTekstari1',
     next_scene: 'Tekstari2Sofi',
   },
-  Tekstari2MikaFiilis: {
+
+  EiTekstaria: {
     _comment: '',
     type: 'linear',
-    background: 'PuhelinKirjoitaViesti',
+    background: 'OmaHuone',
     characters: [],
     text_type: 'narrator',
-    text_position: 'speechLeft',
-    text: 'tTekstari2MikaFiilis',
-    next_scene: 'Tekstari3OmaKommentti',
+    text: 'tTekstari1',
+    next_scene: 'Kotona3',
   },
+
   Tekstari2Sofi: {
     _comment: '',
     type: 'options',
@@ -29,45 +30,19 @@ const PelinLoppu = {
     player_choice: [
       {
         text: 'tTekstari3EiVastata',
-        next_scene: 'Kotona3',
+        next_scene: 'Kotona4',
       },
       {
         text: 'tTekstari3Vastaa',
-        next_scene: 'Tekstari3OmaKommentti',
+        next_scene: 'Kotona4',
       },
     ],
   },
-  Tekstari2Tuomas: {
-    _comment: '',
-    type: 'options',
-    background: 'OmaHuone',
-    characters: [],
-    text_type: 'narrator',
-    text: 'tTekstari2Tuomas',
-    player_choice: [
-      {
-        text: 'tTekstari3EiVastata',
-        next_scene: 'Kotona3',
-      },
-      {
-        text: 'tTekstari3Vastaa',
-        next_scene: 'Tekstari3OmaKommentti',
-      },
-    ],
-  },
-  Tekstari3OmaKommentti: {
-    _comment: '',
-    type: 'linear',
-    background: 'PuhelinKirjoitaViesti',
-    characters: [],
-    text_type: 'narrator',
-    text: 'tTekstari3OmaKommentti',
-    next_scene: 'Kotona3',
-  },
+
   Kotona1: {
     _comment: '',
     type: 'linear',
-    background: 'PuhelinKirjoitaViesti',
+    background: 'Keittio',
     characters: [],
     text_type: 'narrator',
     text: 'tKotona1',
@@ -150,11 +125,11 @@ const PelinLoppu = {
     player_choice: [
       {
         text: 'tKotona3Pizzaa',
-        next_scene: 'Loppu',
+        next_scene: 'Kotona4',
       },
       {
         text: 'tKotona3Salaattia',
-        next_scene: 'Loppu',
+        next_scene: 'Kotona4',
       },
     ],
   },
@@ -163,8 +138,7 @@ const PelinLoppu = {
     type: 'options',
     background: 'OmaHuone',
     characters: [],
-    text_type: 'speech',
-    text_position: 'speechLeft',
+    text_type: 'narrator',
     text: 'tKotona4',
     player_choice: [
       {
