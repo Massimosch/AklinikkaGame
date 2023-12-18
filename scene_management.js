@@ -329,11 +329,13 @@ function WriteDialogue() {
     speechBubbleLeft.classList.remove('hidden');
     speechBubbleRight.classList.add('hidden');
     speechBubbleLeft.innerHTML = Language[nextScene.text];
+    speechBubbleLeft.style.fontSize = GetFontSizeBasedOnString(Language[nextScene.text]);
   } else {
     //bottomChoiceContainer.transfrom = "translateX(0%)";
     speechBubbleRight.classList.remove('hidden');
     speechBubbleLeft.classList.add('hidden');
     speechBubbleRight.innerHTML = Language[nextScene.text];
+    speechBubbleRight.style.fontSize = GetFontSizeBasedOnString(Language[nextScene.text]);
   }
 }
 
@@ -372,10 +374,10 @@ function GetFontSizeBasedOnString(string) {
   const smallFontSize = '1.16rem'
   const mediumFontSize = '1.3rem'
   const largeFontSize = '1.5rem'
-  if (string.length > 240) {
+  if (string.length > 220) {
     return smallFontSize;
   }
-  else if (string.length > 150) {
+  else if (string.length > 100) {
     return mediumFontSize;
   }
   return largeFontSize;
