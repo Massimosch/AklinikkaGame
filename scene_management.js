@@ -329,13 +329,13 @@ function WriteDialogue() {
     speechBubbleLeft.classList.remove('hidden');
     speechBubbleRight.classList.add('hidden');
     speechBubbleLeft.innerHTML = Language[nextScene.text];
-    speechBubbleLeft.style.fontSize = GetFontSizeBasedOnString(Language[nextScene.text]);
+    //speechBubbleLeft.style.fontSize = GetFontSizeBasedOnString(Language[nextScene.text]);
   } else {
     //bottomChoiceContainer.transfrom = "translateX(0%)";
     speechBubbleRight.classList.remove('hidden');
     speechBubbleLeft.classList.add('hidden');
     speechBubbleRight.innerHTML = Language[nextScene.text];
-    speechBubbleRight.style.fontSize = GetFontSizeBasedOnString(Language[nextScene.text]);
+    //speechBubbleRight.style.fontSize = GetFontSizeBasedOnString(Language[nextScene.text]);
   }
 }
 

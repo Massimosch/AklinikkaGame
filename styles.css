@@ -165,7 +165,20 @@ body {
   align-items: center;
   gap: 17px;
 }
-
+.pause-menu-text-only-continue {
+  font-family: JetBrains Mono;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.pause-menu-text-only-restart {
+  font-family: JetBrains Mono;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
 .backicon {
   position: relative;
   display: block;
