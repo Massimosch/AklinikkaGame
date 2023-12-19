@@ -111,7 +111,7 @@ const Puistossa = {
       },
       {
         text: 'tPuistossa9Tultiin',
-        next_scene: 'SofiSaattaa1',
+        next_scene: 'SofiaSaattamassa1',
       },
     ],
   },
