@@ -9,6 +9,10 @@ const SofillaOnTietoa = {
         type: "SlideFromRight",
         target: 0,
       },
+      {
+        type: "CharacterFadeIn",
+        target: 0,
+      },
     ],
     text_type: "narrator",
     text_position: "",
