@@ -285,3 +285,19 @@
   flex-grow: 1;
   z-index: 10;
 }
+
+@media (max-width: 520px) {
+  .narratorBox {
+    width: 95vw;
+  }
+  .choiceBox {
+    width: 95vw;
+  }
+  .speechBubbleRight {
+    width: 95vw;
+  }
+  .speechBubbleLeft {
+    width: 95vw;
+  }
+  
+}
