@@ -110,24 +110,24 @@ function ChangeButtonLanguage(buttonLanguage) {
   }
 }
 
-//ChangeLanguage('suomi');
+// TODO change SuomiData to specific language when they are created
 function ChangeLanguage(chosenLanguage) {
   switch (chosenLanguage) {
     case 'suomi':
       Language = SuomiData;
       ChangeButtonLanguage('suomi');
-      // update UI text
       break;
+
     case 'english':
       Language = SuomiData;
       ChangeButtonLanguage('english');
-      // update UI text
       break;
+
     case 'swedish':
       Language = SuomiData;
       ChangeButtonLanguage('swedish');
-      // update UI text
       break;
+
     default:
       console.log('typo in language button events??');
       break;
