@@ -157,13 +157,18 @@ const PelinLoppu = {
   },
   Loppu: {
     _comment: 'Peli loppuu, ei next sceneä',
-    type: 'linear',
+    type: 'options',
     background: 'OmaHuone',
     characters: [],
     text_type: 'narrator',
     text_position: 'speechLeft',
     text: 'tLoppu',
-    next_scene: '',
+    player_choice: [
+      {
+        text: 'tAloitaAlusta',
+        next_scene: 'PelinAlkuTutorial',
+      },
+    ]
   },
 };
 export default PelinLoppu;

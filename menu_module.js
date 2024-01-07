@@ -10,6 +10,31 @@ import { StartSetup } from './scene_management.js';
 const pauseMenu = document.querySelector('.pauseMenuBox');
 const continueButton = document.querySelector('.continue-button');
 const restartButton = document.querySelector('.restart-button');
+const startButton = document.querySelector('.start-button-text');
+const continueButtonText = document.querySelector('.pause-menu-text-only-continue');
+const restartButtonText = document.querySelector('.pause-menu-text-only-restart');
+
+import SuomiData from './languages/suomi.js';
+//import EnglishData from "./languages/english.js";
+//import SwedishData from "./languages/swedish.js";
+Language = SuomiData;
+
+const buttonsSuomi = {
+  start: "Aloita<br>peli",
+  continue: "Jatka peliä",
+  reset: "Aloita alusta",
+}
+const buttonsEnglish = {
+  start: "Start<br>game",
+  continue: "Continue",
+  reset: "Start over",
+}
+const buttonsSwedish = {
+  start: "Starta<br>spelet",
+  continue: "Fortsätt spelet",
+  reset: "Återställ spelet",
+}
+
 
 let pauseMenuOpen = false;
 
@@ -59,31 +84,48 @@ startButtonElement.addEventListener('click', function () {
 });
 
 // language switch behaviour
-const suomiButton = document.querySelector('.suomi-button');
-const englishButton = document.querySelector('.english-button');
-const swedishButton = document.querySelector('.swedish-button');
+const suomiButtons = document.querySelectorAll('.suomi-button');
+const englishButtons = document.querySelectorAll('.english-button');
+const swedishButtons = document.querySelectorAll('.swedish-button');
 
-suomiButton.addEventListener('click', ChangeLanguage('suomi'));
-englishButton.addEventListener('click', ChangeLanguage('english'));
-swedishButton.addEventListener('click', ChangeLanguage('swedish'));
+suomiButtons.forEach(button => button.addEventListener('click', (event) => ChangeLanguage('suomi')));
+englishButtons.forEach(button => button.addEventListener('click', (event) => ChangeLanguage('english')));
+swedishButtons.forEach(button => button.addEventListener('click', (event) => ChangeLanguage('swedish')));
 
-import SuomiData from './languages/suomi.js';
-//import EnglishData from "./languages/english.js";
-//import SwedishData from "./languages/swedish.js";
+function ChangeButtonLanguage(buttonLanguage) {
+  if (buttonLanguage === 'suomi') {
+    startButton.innerHTML = buttonsSuomi.start;
+    continueButtonText.innerHTML = buttonsSuomi.continue;
+    restartButtonText.innerHTML = buttonsSuomi.reset;
+  }
+  if (buttonLanguage === 'english') {
+    startButton.innerHTML = buttonsEnglish.start;
+    continueButtonText.innerHTML = buttonsEnglish.continue;
+    restartButtonText.innerHTML = buttonsEnglish.reset;
+  }
+  if (buttonLanguage === 'swedish') {
+    startButton.innerHTML = buttonsSwedish.start;
+    continueButtonText.innerHTML = buttonsSwedish.continue;
+    restartButtonText.innerHTML = buttonsSwedish.reset;
+  }
+}
 
 //ChangeLanguage('suomi');
 function ChangeLanguage(chosenLanguage) {
   switch (chosenLanguage) {
     case 'suomi':
       Language = SuomiData;
+      ChangeButtonLanguage('suomi');
       // update UI text
       break;
     case 'english':
-      //language = EnglishData;
+      Language = SuomiData;
+      ChangeButtonLanguage('english');
       // update UI text
       break;
     case 'swedish':
-      //language = SwedishData;
+      Language = SuomiData;
+      ChangeButtonLanguage('swedish');
       // update UI text
       break;
     default:

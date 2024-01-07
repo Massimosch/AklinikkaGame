@@ -3,10 +3,14 @@ const SofillaOnTietoa = {
     _comment: "",
     type: "linear",
     background: "KoulunPiha",
-    characters: ["HahmoSofi"],
+    characters: ["HahmoSofiJuoksee"],
     animations: [
       {
         type: "SlideFromRight",
+        target: 0,
+      },
+      {
+        type: "CharacterFadeIn",
         target: 0,
       },
     ],

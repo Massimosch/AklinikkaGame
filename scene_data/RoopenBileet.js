@@ -5,6 +5,16 @@ const RoopenBileet = {
     background: 'RoopenKoti',
     characters: ['HahmoRoopeYlpea', 'HahmoMironKaveri2'],
     text_type: 'narrator',
+    animations: [
+      {
+        type: "CloseUp",
+        target: 0,
+      },
+      {
+        type: "CloseUp",
+        target: 1,
+      },
+    ],
     text: 'tRoopenSteroidit1',
     next_scene: 'RoopenSteroidit2',
   },
@@ -14,6 +24,16 @@ const RoopenBileet = {
     background: 'RoopenKoti',
     characters: ['HahmoRoopeYlpea', 'HahmoMironKaveri2'],
     text_type: 'speech',
+    animations: [
+      {
+        type: "CloseUp",
+        target: 0,
+      },
+      {
+        type: "CloseUp",
+        target: 1,
+      },
+    ],
     text_position: 'speechLeft',
     text: 'tRoopenSteroidit2',
     next_scene: 'RoopenSteroidit3',
@@ -78,6 +98,16 @@ const RoopenBileet = {
     background: 'RoopenKoti',
     characters: ['HahmoKiusaajaTytto', 'HahmoRoope'],
     text_type: 'narrator',
+    animations: [
+      {
+        type: "CloseUp",
+        target: 0,
+      },
+      {
+        type: "CloseUp",
+        target: 1,
+      },
+    ],
     text: 'tRoopenPillerit1',
     next_scene: 'RoopenPillerit2',
   },
@@ -87,6 +117,16 @@ const RoopenBileet = {
     background: 'RoopenKoti',
     characters: ['HahmoKiusaajaTytto', 'HahmoRoope'],
     text_type: 'speech',
+    animations: [
+      {
+        type: "CloseUp",
+        target: 0,
+      },
+      {
+        type: "CloseUp",
+        target: 1,
+      },
+    ],
     text_position: 'speechLeft',
     text: 'tRoopenPillerit2',
     player_choice: [
@@ -144,6 +184,12 @@ const RoopenBileet = {
     type: 'options',
     background: 'RoopenKoti',
     characters: ['HahmoRoope'],
+    animations: [
+      {
+        type: "CloseUp",
+        target: 0,
+      },
+    ],
     text_type: 'speech',
     text_position: 'speechLeft',
     text: 'tRoopenJointti1',

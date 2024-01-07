@@ -125,7 +125,6 @@
 .speechBubbleLeft {
   position: relative;
   width: 80%;
-  display: flex;
   padding: 10px 16px 10px;
   align-items: flex-start;
   font-size: 1.5rem;
@@ -285,4 +284,20 @@
   row-gap: 2vh;
   flex-grow: 1;
   z-index: 10;
+}
+
+@media (max-width: 520px) {
+  .narratorBox {
+    width: 95vw;
+  }
+  .choiceBox {
+    width: 95vw;
+  }
+  .speechBubbleRight {
+    width: 95vw;
+  }
+  .speechBubbleLeft {
+    width: 95vw;
+  }
+  
 }

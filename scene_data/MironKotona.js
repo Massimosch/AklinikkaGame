@@ -44,6 +44,16 @@ const MironKotona = {
     background: 'MironKoti',
     characters: ['HahmoMiroHuolestunut', 'HahmoMironIsa'],
     text_type: 'narrator',
+    animations: [
+      {
+        type: "CloseUp",
+        target: 0,
+      },
+      {
+        type: "CloseUp",
+        target: 1,
+      },
+    ],
     text_position: 'speechLeft',
     text: 'tMironKotona2',
     next_scene: 'MironKotona3',
@@ -54,6 +64,16 @@ const MironKotona = {
     background: 'MironKoti',
     characters: ['HahmoMiroHuolestunut', 'HahmoMironIsa'],
     text_type: 'speech',
+    animations: [
+      {
+        type: "CloseUp",
+        target: 0,
+      },
+      {
+        type: "CloseUp",
+        target: 1,
+      },
+    ],
     text_position: 'speechLeft',
     text: 'tMironKotona3',
     next_scene: 'MironKotona4',
@@ -64,6 +84,16 @@ const MironKotona = {
     background: 'MironKoti',
     characters: ['HahmoMiroHuolestunut', 'HahmoMironIsa'],
     text_type: 'speech',
+    animations: [
+      {
+        type: "CloseUp",
+        target: 0,
+      },
+      {
+        type: "CloseUp",
+        target: 1,
+      },
+    ],
     text_position: 'speechRight',
     text: 'tMironKotona4',
     next_scene: 'MironKotona5',
@@ -74,6 +104,12 @@ const MironKotona = {
     background: 'MironKoti',
     characters: ['HahmoMiroAhdistunut'],
     text_type: 'narrator',
+    animations: [
+      {
+        type: "CloseUp",
+        target: 0,
+      },
+    ],
     text_position: 'speechLeft',
     text: 'tMironKotona5',
     next_scene: 'MironKotona6',

@@ -17,6 +17,15 @@
     text-align: left;
   }
   
+  .start-button-text {
+    font-family: JetBrains Mono;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal; 
+    text-transform: uppercase;
+    text-align: left;
+  }
   .starticon {
       position: relative;
       display: block;
