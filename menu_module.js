@@ -15,8 +15,8 @@ const continueButtonText = document.querySelector('.pause-menu-text-only-continu
 const restartButtonText = document.querySelector('.pause-menu-text-only-restart');
 
 import SuomiData from './languages/suomi.js';
-//import EnglishData from "./languages/english.js";
-//import SwedishData from "./languages/swedish.js";
+import EnglishData from "./languages/english.js";
+import SwedishData from "./languages/swedish.js";
 Language = SuomiData;
 
 const buttonsSuomi = {
