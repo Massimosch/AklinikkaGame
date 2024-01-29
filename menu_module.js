@@ -119,12 +119,12 @@ function ChangeLanguage(chosenLanguage) {
       break;
 
     case 'english':
-      Language = SuomiData;
+      Language = EnglishData;
       ChangeButtonLanguage('english');
       break;
 
     case 'swedish':
-      Language = SuomiData;
+      Language = SwedishData;
       ChangeButtonLanguage('swedish');
       break;
 
