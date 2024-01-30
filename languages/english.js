@@ -116,7 +116,7 @@ const English = {
   "tOppitunti2": "Well, let’s get started then. Today we are talking about mental health.",
   "tOppitunti3": "Transient anxiety is common in young people.",
   "tOppitunti4": "An anxiety disorder is when anxiety causes clear functional impairment or distress.",
-  "tAhdistusInfobox": "Forms of anxiety disorder can include:<br>- Fear of social situations<br>Fear of public places<br>- Generalised anxiety disorder, where everyday worries feel uncontrollable and it is difficult to relax<br>- Panic disorder<br>- Obsessive-compulsive disorder, involving obsessive thoughts or actions<br> - Post-traumatic stress disorder",
+  "tAhdistusInfobox": "Forms of anxiety disorder can include:<br>- Fear of social situations<br>- Fear of public places<br>- Generalised anxiety disorder, where everyday worries feel uncontrollable and it is difficult to relax<br>- Panic disorder<br>- Obsessive-compulsive disorder, involving obsessive thoughts or actions<br> - Post-traumatic stress disorder",
   "tOppitunti5": "Do you know how many young people in Finland suffer from an anxiety disorder?",
   "tOppitunti5A": "1-2%",
   "tOppitunti5B": "4-11%",
