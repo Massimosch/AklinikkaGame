@@ -170,7 +170,7 @@ const Swedish = {
   "tRoopenPillerit2": "Vill du prova?",
   "tRoopenPillerit2Ei": "Verkligen inte! Det är superfarligt att ta piller som man inte ens vet vad de innehåller.",
   "tRoopenPillerit2Joo": "Ja, det vill jag!",
-  "tRoopenPillerit3JooOletkoVarma": "Är du helt säker? Det är alltid en risk att köpa droger i gatuhandeln. Även om du skulle få berättat för dig vad drogen innehåller, kan du ändå aldrig vara helt säker på om säljaren talar sanning. Redan ett enda piller kan kosta dig livet och Finland ligger på topp bland de europeiska länderna i antalet drogrelaterade dödsfall bland unga.",
+  "tRoopenPillerit3JooOletkoVarma": "Är du helt säker? Det är alltid en risk att köpa droger i gatuhandeln. Även om du skulle få berättat för dig vad drogen innehåller, kan du ändå aldrig vara helt säker på om säljaren talar sanning. Redan ett enda piller kan kosta dig livet.",
   "tRoopenPillerit3EiTotta": "Helt sant. Även om du skulle få berättat för dig vilken drog det handlar om, kan du ändå aldrig vara helt säker på om säljaren talade sanning. Redan ett enda piller kan kosta dig livet. Finland ligger på topp bland de europeiska länderna i antalet drogrelaterade dödsfall bland unga.",
   "tRoopenPillerit3Okei": "Okej, då hoppar jag nog över.",
   "tRoopenPillerit3IhaSama": "Helt detsamma.",

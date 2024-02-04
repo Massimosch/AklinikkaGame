@@ -170,7 +170,7 @@ const English = {
   "tRoopenPillerit2": "Do you want to try?",
   "tRoopenPillerit2Ei": "No way! It's really dangerous to take pills that you don't even know what's in them.",
   "tRoopenPillerit2Joo": "Sure!",
-  "tRoopenPillerit3JooOletkoVarma": "Are you sure? There is always a risk of buying drugs on the street. Even if you are told what is in the drug, you can never be sure if the seller is telling the truth.<br>Even one pill can be life-threatening and Finland is at the top of the European statistics for drug-related deaths among young people.",
+  "tRoopenPillerit3JooOletkoVarma": "Are you sure? There is always a risk of buying drugs on the street. Even if you are told what is in the drug, you can never be sure if the seller is telling the truth. Even one pill can be life-threatening.",
   "tRoopenPillerit3EiTotta": "Very true. Even if you are told which drug it is, you can never be sure if the seller is telling the truth. Even one pill can be life-threatening. Finland is at the top of the European statistics for drug-related deaths among young people.",
   "tRoopenPillerit3Okei": "Okay, maybe I’ll pass.",
   "tRoopenPillerit3IhaSama": "Whatever.",
