@@ -30,9 +30,9 @@ const buttonsEnglish = {
   reset: "Start over",
 }
 const buttonsSwedish = {
-  start: "Starta<br>spelet",
-  continue: "Fortsätt spelet",
-  reset: "Återställ spelet",
+  start: "Börja<br>spelet",
+  continue: "Fortsätt spela",
+  reset: "Börja om",
 }
 
 
