@@ -162,7 +162,7 @@ const Swedish = {
   "tRoopenSteroidit3Tiedan": "Jo, jag vet.",
   "tRoopenSteroidit3Mita": "Vilka då?",
   "tSteroiditInfobox1": "Användningen av steroider kan leda till <br>- hjärtsjukdomar och sjukdomar i cirkulationssystemet <br>- lever- och njursvikt, levercancer <br>- hudproblem: acne, hårbortfall, hudbristningar <br>- psykisk ohälsa: aggressivitet, lättretlighet, depression, trötthet, missnöje med den egna kroppen, beroende, svåra psykiska störningar",
-  "tSteroiditInfobox2": "Hos män låga testosteronhalter, sexuella dysfunktioner (minskad spermieproduktion, krympning av testiklarna, nedsatt fertilitet, impotens), tillväxt av bröstkörtlarna. <br>Hos kvinnor ökad kroppsbehåring och skäggväxt, röstförändringar, menstruationsrubbningar, klitoristillväxt, livmoderatrofi och nedsatt fertilitet. Mer information om dopingpreparat finns på adressen <a href='https://dopinglinkki.fi/sv/' target='_blank'>www.dopinglinkki.fi/en/</a>",
+  "tSteroiditInfobox2": "Hos män låga testosteronhalter, sexuella dysfunktioner (minskad spermieproduktion, krympning av testiklarna, nedsatt fertilitet, impotens), tillväxt av bröstkörtlarna. <br>Hos kvinnor ökad kroppsbehåring och skäggväxt, röstförändringar, menstruationsrubbningar, klitoristillväxt, livmoderatrofi och nedsatt fertilitet. Mer information om dopingpreparat finns på adressen <a href='https://dopinglinkki.fi/sv/' target='_blank'>www.dopinglinkki.fi/sv/</a>",
   "tRoopenSteroidit4": "Är det värt att använda steroider?",
   "tRoopenSteroidit4Okei": "Okej, det lönar sig verkligen inte att använda dem.",
   "tRoopenSteroidit4IhaSama": "Helt detsamma.",
